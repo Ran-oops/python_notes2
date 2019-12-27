@@ -1,0 +1,26 @@
+环境搭建 --- scrapy
+
+pip install pypiwin32
+pip twisted
+pip install scrapy
+
+运行项目如果出现错误
+    import win32api 出现ImportError: DLL load failed 错误的解决方法
+    解决方案，操作后重启电脑
+    http://blog.csdn.net/V_aer/article/details/77863170
+
+
+创建项目
+    如果在虚拟环境下搭建，需要激活环境并且保证scrapy安装成功
+    scrapy startproject 项目名称
+
+
+运行爬虫
+    进入项目目录
+    运行命令
+        scrapy crawl 爬虫名称
+
+scrapy 命令行工具
+scrapy shell http://www.baidu.com
+
+

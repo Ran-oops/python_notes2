@@ -1,0 +1,11 @@
+安装  selenium （浏览器界的案件精灵）
+    pip install selenium
+    安装驱动
+        phantomjs 无界面浏览器
+        能看到就能得到，所见即所得
+
+    安装chrome驱动
+        http://chromedriver.storage.googleapis.com/index.html
+
+    按键精灵9 ---自动打怪，自动打副本
+        提供了很多鼠标和键盘的api接口

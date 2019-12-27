@@ -1,0 +1,30 @@
+百度翻译
+
+贴吧
+
+虚拟环境
+    pip install virtualenv
+
+    确定在哪建立虚拟环境
+    进入相应目录
+    执行命令：
+        virtualenv 环境名称
+
+    进入虚拟环境文件夹下的scripts
+
+    激活环境
+        activate
+
+    在虚拟环境下安装相应模块
+
+数据接口的问题 返回类型json
+
+模拟登陆问题
+    有些网站需要登录认证以后才能看到一些页面
+    1.直接获取 登陆以后的cookie，然后构造请求的时候带上cookie
+        最暴力，最有效，也是最简单的，但是可能需要长期维护
+    2.账号密码直接post到接口上
+
+https 的证书忽略
+    import ssl
+    ssl._create_default_https_context = ssl._create_unverified_context # 默认不许要校验网站证书

@@ -1,0 +1,23 @@
+安装java8或以上版本
+下载 elesticsearch-rtf （github搜索）
+
+安装head插件  需要安装nodejs（https://github.com/mobz/elasticsearch-head）
+https://nodejs.org/en/ （node官网）
+
+安装cnpm插件（国内镜像）
+http://npm.taobao.org/ （官网）
+运行命令：
+
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+
+安装head依赖参考github官网
+         进入head插件文件夹运行命令
+               cnpm install
+               cnpm run start
+
+         然后访问本机9100端口，发现集群没有连接，需要配置elasticsearch 配置文件，加入如下配置，重启服务：
+
+http.cors.enabled: true
+http.cors.allow-origin: "*"
+http.cors.allow-methods: OPTIONS,HEAD,GET,POST,PUT,DELETE
+http.cors.allow-headers: "X-Requested-with,Content-Type,Content-Length,X-User"

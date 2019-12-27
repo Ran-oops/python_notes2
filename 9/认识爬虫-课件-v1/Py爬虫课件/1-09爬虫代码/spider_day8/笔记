@@ -1,0 +1,23 @@
+安装：
+    pip install greenlet
+    pip install gevent
+
+协程：
+    单进程 单线程
+
+    调度由代码来实现
+
+    可以称为轻量级线程，用户线程
+
+    优点：程序之间切换消耗资源更小
+
+    并发量可以设置很大
+
+
+操作数据库
+    pip install pymysql
+    启动数据库服务
+    cmd 执行 services.msc
+
+
+

@@ -1,0 +1,14 @@
+安装requests
+    pip install requests
+
+解析json的第三方模块
+    安装
+        pip install jsonpath
+
+安装xpath html解析器
+
+xpath 规则返回的结果是一定是列表
+
+
+兄弟连项目：
+所有项目主页：//div[@class="php_zuopin_fenlei"]//a/@href

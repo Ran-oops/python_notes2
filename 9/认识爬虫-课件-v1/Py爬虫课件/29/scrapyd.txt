@@ -1,0 +1,26 @@
+1.安装
+    pip install scrapyd
+    pip install scrapyd-client
+
+2.创建一个目录进入后运行scrapyd服务
+
+3.进入site-packages，添加scrapyd-deploy.bat 文件(windows特有,linux跳过)，添加如下内容
+@echo off
+"C:\pythonenv\scrapy\Scripts\python.exe" "C:\pythonenv\scrapy\Scripts\scrapyd-deploy" %1 %2 %3 %4 %5 %6 %7 %8 %9
+
+4.scrapy项目配置文件
+[deploy:alice]
+url = http://localhost:6800/
+project = innotree
+
+5.进入scrapy项目目录运行测试命令
+    scrapyd-deploy -l
+    scrapy list
+
+6.打包发布scrapy项目到scrapyd
+    scrapyd-deploy alice -p innotree
+
+7.scrapyd调度爬虫参考文档
+
+
+

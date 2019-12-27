@@ -1,0 +1,54 @@
+1.redis服务 运行良好
+
+2.安装scrapy-redis
+
+3.scrapy的爬虫运行良好
+
+4.设置settings
+    # 配置scrapy-redis 去重类
+    DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+    # 配置scrapy-redis 调度器
+    SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+    # 调度器是否能中止
+    SCHEDULER_PERSIST = True
+
+    # 请求队列模式
+    # 按照优先级调度请求  request  priority属性（默认0）  q = (0,0,0,1,1,3)
+    SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderPriorityQueue"
+    # 按照FIFO 队列 调度请求
+    #SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
+    # 按照LIFO 队列 调度请求
+    #SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderStack"
+
+    ITEM_PIPELINES = {
+        'example.pipelines.ExamplePipeline': 300,
+        'scrapy_redis.pipelines.RedisPipeline': 400, # 数据加入到redis里
+    }
+
+    # LOG_LEVEL = 'DEBUG'
+
+    # Introduce an artifical delay to make use of parallelism. to speed up the
+    # crawl.
+    DOWNLOAD_DELAY = 1
+
+    # redis 连接信息
+    REDIS_HOST = '172.16.238.160'
+    REDIS_PORT = 6379
+
+5.升级爬虫文件
+    通用爬虫继承     from scrapy_redis.spiders import RedisSpider
+    crawlspider继承  from scrapy_redis.spiders import RedisCrawlSpider
+
+
+6.爬虫设置一个属性：redis_key = 'myspider:start_urls' # 在redis里启动爬虫的键
+
+
+7.运行爬虫(多台机器同时运行)
+    scrapy runspider 爬虫文件名
+
+
+8.向redis请求队列加入请求
+    a 连接redis
+    b lpush mycrawler:start_urls http://www.hao123.com

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>51job岗位信息搜索&分页显示</title>
+    <style type="text/css">
+        a.page{display:block;width:50px;height:30px;background-color: #ddd;float:left;margin:3px;}
+		a.active{background-color:#fc0;}
+    </style>
+</head>
+<body>
+    <center>
+        <h2>51job岗位信息的搜索&分页显示</h2>
+        <br/>
+        <a href="{% url 'index' %}">返回首页</a>
+        <br>
+        <form action="{% url 'job51list' 1 %}" method="get">
+            <br>
+
+            发布时间：<input type="'text" name="date_time" value="{{ request.GET.date_time }}">
+            公司名称：<input type="'text" name="address" value="{{ request.GET.address }}">
+            <input type="submit" value="搜索"/>
+        </form>
+        <br>
+        <hr/>
+        <table width="1200",border="1">
+            <tr>
+                <th>职位名称</th>
+                <th>薪资</th>
+                <th>公司名称</th>
+                <th>公司地址</th>
+                <th>发布时间</th>
+                <th>详情</th>
+            </tr>
+            {% for vo in list %}
+            <tr>
+                <td><a href="">{{ vo.title }}</a></td>
+                <td>{{ vo.salary }}</td>
+                <td>{{ vo.company }}</td>
+                <td>{{ vo.address }}</td>
+                <td>{{ vo.date_time }}</td>
+                <td>{{ vo.detail }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+
+        <button onclick="window.location='{% url 'job51list' pIndex|add:-1 %}'">上一页</button>
+	    {{pIndex}}
+	    <button onclick="window.location='{% url 'job51list' pIndex|add:1 %}'">下一页</button>
+        ---共{{ max }}页---
+    </center>
+
+</body>
+</html>

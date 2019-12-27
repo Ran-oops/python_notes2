@@ -1,0 +1,32 @@
+
+# print(res)
+# print(json.dumps(data,ensure_ascii=False,indent=4))
+# goods_list = response.xpath('//div[@class="items"]/div')
+# print(goods_list)
+# for goods in goods_list:
+    # # 商品链接
+    # detail_url = goods.xpath('.//div[@class="pic"]/a/@href').extract()[0]
+    # detail_url = request.urljoin(response.url,detail_url)
+    #
+    # # 获取名称
+    # goods_name = goods.xpath('.//div[@class="pic"]/a/img/@alt').extract()[0]
+    #
+    # # 获取图片链接
+    # img_url = goods.xpath('.//div[@class="pic"]/a/img/@src').extract()[0]
+    # img_url = request.urljoin(response.url,img_url)
+    #
+    # # 获取价格
+    # price = goods.xpath('.//div[@class="price g_price g_price-highlight"]/strong/text()').extract()[0]
+    #
+    # # 累计付款
+    # deal_cnt = goods.xpath('.//div[@class="deal-cnt"]/text()').extract()[0]
+    #
+    # # 店铺名称
+    # shop_name = goods.xpath('.//div[@class="shop"]/a/span[2]/text()').extract()[0]
+    #
+    # # 店铺地址
+    # shop_location = goods.xpath('.//div[@class="location"]/text()').extract()[0]
+
+    # print(detail_url)
+    # print(img_url)
+    # print(price,deal_cnt,shop_name,shop_location)

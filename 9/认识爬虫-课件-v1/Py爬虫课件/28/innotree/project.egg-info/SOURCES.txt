@@ -1,0 +1,14 @@
+setup.py
+innotree/__init__.py
+innotree/items.py
+innotree/middlewares.py
+innotree/pipelines.py
+innotree/settings.py
+innotree/spiders/__init__.py
+innotree/spiders/areaspider.py
+innotree/spiders/company.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

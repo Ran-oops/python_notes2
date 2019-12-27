@@ -1,0 +1,17 @@
+
+软件架构分类
+    cs ： client（客户端）  --  server
+    bs ： brwoser（浏览器） --  server
+
+
+cookie : 存在浏览器端的信息（key-value）
+session：基于cookie实现的信息存储
+
+
+环境搭建 --  python35  pycharm  windows
+虚拟环境搭建： virtualenv
+
+
+User-Agent 历史 ： netscape(网景)  vs  IE
+
+IE胜出 ，网景公司就没了，技术人出来，Mozilla(开源性)

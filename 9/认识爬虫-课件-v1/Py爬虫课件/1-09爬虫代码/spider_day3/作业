@@ -1,0 +1,17 @@
+1.电话正则，邮箱正则，ip地址正则
+
+2.百度贴吧：输入贴吧名称，起始和结束页，提示用户一共有多少页
+  自动建立贴吧文件夹
+  下载图片
+
+
+3.完善豆瓣登陆，正则匹配相应提交内容
+
+4.抓取代理ip 抓100页
+    http://www.66ip.cn/areaindex_35/1.html
+    http://www.xicidaili.com/nn/
+
+5.抓取豆瓣所有分类电影
+
+6.雪球：
+    https://xueqiu.com/hq#exchange=CN&firstName=1&secondName=1_0&page=1

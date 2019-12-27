@@ -1,0 +1,10 @@
+{
+    "Server": [
+        {
+            "name": "Redis-localhost",
+            "ip": "localhost",
+            "port": 6379,
+            "auth": ""
+        }
+    ]
+}

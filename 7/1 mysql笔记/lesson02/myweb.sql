@@ -1,0 +1,1 @@
+mysqltypeTableName1typegoodstypegoodstypegoodsusersordersgoodsdetailusers

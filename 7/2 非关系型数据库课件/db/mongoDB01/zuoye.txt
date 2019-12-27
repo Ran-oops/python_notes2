@@ -1,0 +1,18 @@
+1.软件安装
+
+
+ 	mongodb数据库
+ 	安装pymongo
+ 		sudo pip3 install pymongo
+
+ 	安装  redis
+ 	Python 访问 Redis
+
+
+
+2.mysql命令 增删改查 手操1遍
+
+3.用mysql完成一个 用户留言版的 增删改查  id  username content addtime
+
+
+4.mongodb命令 手敲一遍 抄一遍

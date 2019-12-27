@@ -1,0 +1,167 @@
+
+	Python3 MySQL 数据库连接
+======================================================
+
+1. 什么是 PyMySQL？
+	PyMySQL 是在 Python3.x 版本中用于连接 MySQL 服务器的一个库，Python2中则使用mysqldb。
+	PyMySQL 遵循 Python 数据库 API v2.0 规范，并包含了 pure-Python MySQL 客户端库。
+	
+2. PyMySQL安装
+
+	PyMySQL下载地址：https://github.com/PyMySQL/PyMySQL。
+	
+	2.1 使用pip命令进行安装：
+	$ pip install PyMySQL
+	
+	2.2 使用 git 命令下载安装包安装(你也可以手动下载)：
+	$ git clone https://github.com/PyMySQL/PyMySQL
+	$ cd PyMySQL/
+	$ python3 setup.py install
+	
+3. 数据库连接
+    
+   通过如下代码测试数据库连接
+----------------------------------------------------------------------
+    #!/usr/bin/python3
+
+    import pymysql
+
+    # 打开数据库连接
+    db = pymysql.connect("localhost","root","123456","mydb" )
+
+    # 使用 cursor() 方法创建一个游标对象 cursor
+    cursor = db.cursor()
+
+    # 使用 execute()  方法执行 SQL 查询 
+    cursor.execute("SELECT VERSION()")
+
+    # 使用 fetchone() 方法获取单条数据.
+    data = cursor.fetchone()
+
+    print ("Database version : %s " % data)
+
+    # 关闭数据库连接
+    db.close()
+    
+    
+4. 执行数据查询：
+-------------------------------------------------------------------
+    #!/usr/bin/python3
+
+    import pymysql
+
+    # 打开数据库连接
+    db = pymysql.connect("localhost","root","","mydemo" )
+
+    # 使用 cursor() 方法创建一个游标对象 cursor
+    cursor = db.cursor()
+
+    # SQL 查询语句
+    sql = "select * from stu limit %d" % (3)
+    #sql = "select * from stu"
+
+    try:
+       # 执行SQL语句
+       cursor.execute(sql)
+       # 获取所有记录列表
+       results = cursor.fetchall()
+       for row in results:
+          id = row[0]
+          name = row[1]
+          sex = row[2]
+          age = row[3]
+          classid = row[4]
+           # 打印结果
+          print ("id=%d,name=%s,sex=%s,age=%d,classid=%s" % (id,name,sex,age,classid))
+    except:
+       print ("Error: unable to fetch data")
+
+    # 关闭数据库连接
+    db.close()
+ 
+5. 执行数据添加
+---------------------------------------------------------------------
+#!/usr/bin/python3
+
+import pymysql
+
+# 打开数据库连接
+db = pymysql.connect("localhost","root","","mydemo" )
+
+# 使用 cursor() 方法创建一个游标对象 cursor
+cursor = db.cursor()
+
+# SQL 插入语句
+sql = "INSERT INTO stu(name,sex,age,classid) values('%s','%c','%d','%s')" % ('uu142','m',22,'lamp180') 
+
+try:
+   # 执行sql语句
+   cursor.execute(sql)
+   # 执行sql语句
+   db.commit()
+   print("ok: %d " % (cursor.rowcount))
+except:
+   # 发生错误时回滚
+   db.rollback()
+
+# 关闭数据库连接
+db.close() 
+    
+6. 执行删除操作
+---------------------------------------------------------------------
+    #!/usr/bin/python3
+
+    import pymysql
+
+    # 打开数据库连接
+    db = pymysql.connect("localhost","root","","mydemo" )
+
+    # 使用 cursor() 方法创建一个游标对象 cursor
+    cursor = db.cursor()
+
+    # SQL 删除语句
+    sql = "delete from stu where id = '%d'" % (13)
+    try:
+       # 执行SQL语句
+       cursor.execute(sql)
+       # 提交修改
+       db.commit()
+    except:
+       # 发生错误时回滚
+       db.rollback()
+
+    # 关闭数据库连接
+    db.close()
+    
+    
+数据库查询操作：  
+    Python查询Mysql使用 fetchone() 方法获取单条数据, 使用fetchall() 方法获取多条数据。
+        fetchone(): 该方法获取下一个查询结果集。结果集是一个对象
+        fetchall(): 接收全部的返回结果行.
+        rowcount: 这是一个只读属性，并返回执行execute()方法后影响的行数。
+        
+        
+        
+pip命令
+------------------------------------------------------------
+列出已安装的包：
+    $ pip list
+    $ pip freeze     # 查看自己安装的
+
+安装软件（安装特定版本的package，通过使用==, &gt;=, &lt;=, &gt;, &lt;来指定一个版本号）**
+    $ pip install SomePackage
+    $ pip install 'Markdown<2.0'
+    $ pip install 'Markdown>2.0,<2.0.3'
+    
+卸载软件pip uninstall SomePackage
+    $ pip uninstall SomePackage
+    
+下载所需的软件包：
+    $ pip download SomePackage -d directory 
+    例如下载PyMySQL软件包
+    $ pip download PyMySQL -d D:/pypackage
+
+安装下载好的软件包文件
+    $ pip install 目录/软件包文件名
+    如安装PyMySQL软件包
+    $ pip3.6 install D:/pypackage/PyMySQL-0.7.11-py2.py3-none-any.whl

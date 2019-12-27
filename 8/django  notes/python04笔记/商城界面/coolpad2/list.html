@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>全部商品</title>
+    <link rel="shortcut icon" href="./public/img/coolyun.ico">
+
+    <!-- <link rel="shortcut icon" href="./public/img/favicon.ico"> -->
+    <!-- Bootstrap -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./public/css/index.css" rel="stylesheet">
+    <link href="./public/css/list.css" rel="stylesheet">
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/circular.navigation.css" />
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./public/js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/index.js"></script>
+    <script src="./public/js/modernizr-2.6.2.min.js"></script>
+    <script src="./public/js/polyfills.js"></script>
+    <script src="./public/js/circular.navigation.js"></script>
+    <script src="./public/js/list.js"></script>
+
+  </head>
+  <body>
+     
+      <button class="cn-button" id="cn-button">+</button>
+      <div class="cn-wrapper" id="cn-wrapper">
+        <ul>
+          <li><a href="./buy.html"><span class="glyphicon glyphicon-phone"></span></a></li>
+          <li><a href="./gouwucar.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a href="./list.html"><span class="glyphicon glyphicon-th"></span></a></li>
+          <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span></a></li>
+         </ul>
+      </div>
+      <div id="cn-overlay" class="cn-overlay"></div>
+
+
+
+
+
+    <!-- 导航卡 -->
+    <div id="card">
+      <ul>
+        <li>一楼</li>
+        <li>二楼</li>
+        <li>三楼</li>
+      </ul>
+      <div class="top">返回顶部</div>
+    </div>
+
+
+
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="touzi">酷派商城</a></li>
+            <li><a href="#" class="touzi">Cool系列</a></li>
+            <li><a href="#" class="touzi">全部商品</a></li>
+            <li><a href="#" class="touzi">酷友社区</a></li>
+            <li><a href="#" class="touzi">云服务</a></li>
+            <li><a href="#" class="touzi">以旧换新</a></li>
+            <li><a href="" class="toubiao"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+            <li><a href="" class="toubiao"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+            <li><a href="" class="toubiao headyou denglucart"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 登录框 -->
+    <div class="cart denglucart">
+      <a href="" class="glyphicon glyphicon-user xiaodeng" > 登录账户</a>
+      <a href="" class="glyphicon glyphicon-pencil xiaodeng" > 注册账户</a>
+    </div>
+    <!-- 主体 -->
+    <div class="center">
+      <div class="container">
+
+        <!-- 热销手机 -->
+        <div class="row goods">
+
+            <div class="col-xs-6 col-md-6">
+              <div class="quanbushangpin">全部商品</div>
+              <ul class="topword">
+                <li><a href="">全部商品</a></li>
+                <li>·</li>
+                <li><a href="">手机</a></li>
+                <li>·</li>
+                <li><a href="">手机配件</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-md-6">
+              <ul class="topword topyou">
+                <li><a href="">综合排序</a></li>
+                <li>·</li>
+                <li><a href="">最新</a></li>
+                <li>·</li>
+                <li><a href="">价格由低到高</a></li>
+                <li>·</li>
+                <li><a href="">价格由高到低</a></li>
+              </ul>
+            </div>
+
+          <div id="f1">
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_1.jpg"  class="img-responsive" >
+                <p>Cool S1</p>
+                <h6>送价值999元AKG耳机</h6>
+                <h4>¥2599.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_2.png"  class="img-responsive" >
+                <p>Cool1 dual桀骜银</p>
+                <h6>双1300万摄像头</h6>
+                <h4>¥1099.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_3.jpg"  class="img-responsive" >
+                <p>锋尚MAX全网通版尊爵金</p>
+                <h6>3+16G内存 5.5寸弧面屏</h6>
+                <h4>¥1099.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_4.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+          
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_5.png"  class="img-responsive">
+                <p>锋尚N1移动版</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_6.jpg"  class="img-responsive">
+                <p>Cool S1</p>
+                <h6>活动购机</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_7.jpg"  class="img-responsive">
+                <p>AKG N18耳机</p>
+                <h6>说明文档</h6>
+                <h4>¥999.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_8.jpg"  class="img-responsive">
+                <p>酷派改变者S1真皮保护套</p>
+                <h6>保护</h6>
+                <h4>¥69.00</h4>
+              </div>
+            </div>
+          
+          <div class="clearfix"></div>
+          </div>
+          <!-- f1结尾 -->
+
+
+
+          <div id="f2">
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_9.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_10.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_11.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_12.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_13.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_14.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_15.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_16.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            </div>
+            <!-- f2结尾 -->
+
+          <div id="f3">
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_17.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_18.png"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_19.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_20.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_21.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_22.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_23.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <div class="rexiao">
+                <img src="./public/img/list_24.jpg"  class="img-responsive">
+                <p>锋尚mini智尚白</p>
+                <h6>炫耀双镜面</h6>
+                <h4>¥1199.00</h4>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- foot -->
+    <div class="foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_1.png"><span>7天退货保障</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_2.png"><span>15天换货保障</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_3.png"><span>满100元包邮</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_4.png"><span>835个售后网点</span></div>
+        </div>
+        <hr>
+        <div class="footoption">
+          <div class="row">
+            <div class="about">
+              <ul>
+                <li>购物指南</li>
+                <li><a href="">购物流程</a></li>
+                <li><a href="">优惠券</a></li>
+                <li><a href="">常见问题</a></li>
+              </ul>
+              <ul>
+                <li>关于支付</li>
+                <li><a href="">关于支付</a></li>
+                <li><a href="">关于发票</a></li>
+              </ul>
+              <ul>
+                <li>配送说明</li>
+                <li><a href="">配送方式</a></li>
+                <li><a href="">签收说明</a></li>
+              </ul>
+              <ul>
+                <li>售后服务</li>
+                <li><a href="">售后政策</a></li>
+                <li><a href="">线下网点</a></li>
+                <li><a href="">预约到店</a></li>
+                <li><a href="">预约上门</a></li>
+                <li><a href="">寄修服务</a></li>
+              </ul>
+              <ul>
+                <li>关注我们</li>
+                <li><a href="">客服微博</a></li>
+                <li><a href="">联系我们</a></li>
+              </ul>
+            </div>
+            <div class="phone">
+              <h3>400-888-1388</h3>
+              <p>周一至周日 8:30-18:30(仅收市话费)</p>
+              <a href="">在线咨询</a>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="footoption_tt">
+          <p>Copyright © 2016, Coolpad Co., Ltd. All Right Reserved. 宇龙计算机通信科技（深圳）有限公司</p>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

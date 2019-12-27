@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>购物车</title>
+    <link rel="shortcut icon" href="./public/img/coolyun.ico">
+
+    <!-- <link rel="shortcut icon" href="./public/img/favicon.ico"> -->
+    <!-- Bootstrap -->
+    <link href="./public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./public/css/index.css" rel="stylesheet">
+    <link href="./public/css/gouwucar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/circular.navigation.css" />
+    <script src="./public/js/modernizr-2.6.2.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./public/js/jquery-1.12.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./public/js/bootstrap.min.js"></script>
+    <script src="./public/js/index.js"></script>
+    <script src="./public/js/polyfills.js"></script>
+    <script src="./public/js/circular.navigation.js"></script>
+    <script src="./public/js/gouwucar.js"></script>
+
+  </head>
+  <body>
+    
+     <button class="cn-button" id="cn-button">+</button>
+      <div class="cn-wrapper" id="cn-wrapper">
+        <ul>
+          <li><a href="./buy.html"><span class="glyphicon glyphicon-phone"></span></a></li>
+          <li><a href="./gouwucar.html"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
+          <li><a href="./index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a href="./list.html"><span class="glyphicon glyphicon-th"></span></a></li>
+          <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span></a></li>
+         </ul>
+      </div>
+      <div id="cn-overlay" class="cn-overlay"></div>
+
+
+
+    <nav class="navbar navbar-default navbar-inverse">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="touzi">酷派商城</a></li>
+            <li><a href="#" class="touzi">Cool系列</a></li>
+            <li><a href="#" class="touzi">全部商品</a></li>
+            <li><a href="#" class="touzi">酷友社区</a></li>
+            <li><a href="#" class="touzi">云服务</a></li>
+            <li><a href="#" class="touzi">以旧换新</a></li>
+            <li><a href="" class="toubiao"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a></li>
+            <li><a href="" class="toubiao"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></li>
+            <li><a href="" class="toubiao headyou denglucart"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- 登录框 -->
+    <div class="cart denglucart">
+      <a href="" class="glyphicon glyphicon-user xiaodeng" > 登录账户</a>
+      <a href="" class="glyphicon glyphicon-pencil xiaodeng" > 注册账户</a>
+    </div>
+      
+
+   
+
+
+
+
+    <div class="all">
+      <div class="container xiamiande">
+          <div class="col-md-12 col-xs-12 car">
+            <h4>我的购物车</h4>
+            <div class="shangpin col-md-12">
+              <span class="spname col-md-3 col-xs-7">商品名称</span>
+              <span class="danjia col-md-2 col-md-offset-2">单价</span>
+              <span class="spnum col-md-1">数量</span>
+              <span class="zongji col-md-1 col-md-offset-1 col-xs-2">小计</span>
+              <span class="col-md-1 col-xs-2">操作</span>
+
+            </div>
+
+            <div class="xiangxi col-md-12 col-xs-12">
+              <div class="col-md-1"><input type="checkbox" id="checkbox_name" class="ckbox"></div>
+              <img src="./public/img/66027a55-22fe-423a-ba7e-0fbedc1e17cc.jpg" class="col-md-2 col-xs-3" alt="">
+              <span class="col-md-2 col-xs-4">BH03耳机</span>
+              <span class="col-md-2 col-md-offset-1 danjia">￥<span class="danjiaya">158.00</span></span>
+              <div class="btn-group col-md-2 anniu" role="group">
+                <button type="button" class="btn btn-default jian">-</button>
+                <button type="button" class="btn btn-default disabled shuliang">1</button>
+                <button type="button" class="btn btn-default jia">+</button>
+              </div>
+              <span class="col-md-1">￥<span class="zongjiaya">158.00</span></span>
+              <span class="glyphicon glyphicon-remove-sign col-md-1 shanchu"></span>
+            </div>
+
+            <div class="xiangxi col-md-12 col-xs-12">
+              <div class="col-md-1"><input type="checkbox" id="checkbox_name" class="ckbox"></div>
+              <img src="./public/img/54216f8a-61b0-4a80-8bac-8305aa55966d.png" class="col-md-2 col-xs-3" alt="">
+              <span class="col-md-2 col-xs-4">手机游戏手柄</span>
+              <span class="col-md-2 col-md-offset-1 danjia">￥<span class="danjiaya">129.00</span></span>
+              <div class="btn-group col-md-2 anniu" role="group">
+                <button type="button" class="btn btn-default jian">-</button>
+                <button type="button" class="btn btn-default disabled shuliang">1</button>
+                <button type="button" class="btn btn-default jia">+</button>
+              </div>
+              <span class="col-md-1">￥<span class="zongjiaya">129.00</span></span>
+              <span class="glyphicon glyphicon-remove-sign col-md-1 shanchu"></span>
+            </div>
+
+            <div class="xiangxi col-md-12 col-xs-12">
+              <div class="col-md-1"><input type="checkbox" id="checkbox_name" class="ckbox"></div>
+              <img src="./public/img/35e67ddd-cf00-4411-811e-50fdd88d5533.jpg" class="col-md-2 col-xs-3" alt="">
+              <span class="col-md-2 col-xs-4">智能手环</span>
+              <span class="col-md-2 col-md-offset-1 danjia">￥<span class="danjiaya">129.00</span></span>
+              <div class="btn-group col-md-2 anniu" role="group">
+                <button type="button" class="btn btn-default jian">-</button>
+                <button type="button" class="btn btn-default disabled shuliang">1</button>
+                <button type="button" class="btn btn-default jia">+</button>
+              </div>
+              <span class="col-md-1">￥<span class="zongjiaya">129.00</span></span>
+              <span class="glyphicon glyphicon-remove-sign col-md-1 shanchu"></span>
+            </div>
+
+
+
+
+           
+           
+
+
+          </div>
+
+
+
+          <div class="col-md-12 carmain">
+            <div class="col-md-1"><input type="checkbox" id="checkedAll" class="ckbox"></div>
+            <div>
+
+              <span class="quan col-md-2">全选</span>
+              <p class="col-md-4 word">
+                共
+                <span class="gong">0</span>
+                件商品,已选择
+                <span class="yixuan">0</span>
+                件商品
+              </p>
+            </div>
+            
+            <div class="zongjia col-md-3">
+              <p class="zjzi">
+                总计(不含运费)：<span class="qian">￥<span class="zongjiya">0.00</span></span>
+              </p>
+              <p class="youhui">活动已优惠￥0.00</p>
+            </div>
+            <button class="btn btn-info jiesuan col-md-2">前往结算</button>
+
+
+
+          </div>
+          
+
+
+
+      </div>
+    <div>
+
+
+
+
+    <!-- foot -->
+    <div class="foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_1.png"><span>7天退货保障</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_2.png"><span>15天换货保障</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_3.png"><span>满100元包邮</span></div>
+          <div class="col-xs-3 col-md-3"><img src="./public/img/4_4.png"><span>835个售后网点</span></div>
+        </div>
+        <hr>
+        <div class="footoption">
+          <div class="row">
+            <div class="about">
+              <ul>
+                <li>购物指南</li>
+                <li><a href="">购物流程</a></li>
+                <li><a href="">优惠券</a></li>
+                <li><a href="">常见问题</a></li>
+              </ul>
+              <ul>
+                <li>关于支付</li>
+                <li><a href="">关于支付</a></li>
+                <li><a href="">关于发票</a></li>
+              </ul>
+              <ul>
+                <li>配送说明</li>
+                <li><a href="">配送方式</a></li>
+                <li><a href="">签收说明</a></li>
+              </ul>
+              <ul>
+                <li>售后服务</li>
+                <li><a href="">售后政策</a></li>
+                <li><a href="">线下网点</a></li>
+                <li><a href="">预约到店</a></li>
+                <li><a href="">预约上门</a></li>
+                <li><a href="">寄修服务</a></li>
+              </ul>
+              <ul>
+                <li>关注我们</li>
+                <li><a href="">客服微博</a></li>
+                <li><a href="">联系我们</a></li>
+              </ul>
+            </div>
+            <div class="phone">
+              <h3>400-888-1388</h3>
+              <p>周一至周日 8:30-18:30(仅收市话费)</p>
+              <a href="">在线咨询</a>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="footoption_tt">
+          <p>Copyright © 2016, Coolpad Co., Ltd. All Right Reserved. 宇龙计算机通信科技（深圳）有限公司</p>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

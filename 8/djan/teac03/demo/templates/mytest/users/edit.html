@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users demo</title>
+</head>
+<body>
+	<center>
+		
+		{% include "mytest/users/menu.html" %}
+
+		<h3> Edit Users</h3>
+		<form action="{% url 'update_users' %}" method="post">
+			{% csrf_token %}
+			<input type="hidden" name="id" value="{{ user.id }}"/>
+			<table width="320">
+				<tr>
+					<td>Name: </td>
+					<td><input type="text" name="name" value="{{ user.name }}"/></td>
+				</tr>
+				<tr>
+					<td>Age: </td>
+					<td><input type="text" name="age" value="{{ user.age }}"/></td>
+				</tr>
+				<tr>
+					<td>Phone: </td>
+					<td><input type="text" name="phone" value="{{ user.phone }}"/></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit"/>
+						<input type="reset"/>
+					</td>
+				</tr>
+			</table>
+		</form>
+
+	</center>
+</body>
+</html>

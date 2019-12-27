@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>在模板中输出各种信息</title>
+</head>
+<body>
+	<h3>在模板中输出各种信息</h3>
+
+	<a href="{% url "index" %}">返回首页</a><br/><br/>
+
+	1. 输出单个name信息：{{ name }} <br/><br/>
+	2. 输出单个age信息：{{ age }} <br/><br/>
+	3. 输出列表信息：{{ arr }}   单个值：{{ arr.1 }}<br/><br/>
+	4. 遍历列表：
+		{% for v in arr %}
+			{{ v }}
+		{% endfor%} <br/><br/>
+	5. 使用过滤器输出：{{ arr|join:"@" }} 
+			
+		<ul><li>{{ arr|join:"</li><li>"}}</li></ul>
+		<br/><br/>
+	6. 输出字典数据：{{ stu }} <br/>
+	    单个值：姓名：{{ stu.name }} ； 年龄：{{ stu.age }} ；班级：{{ stu.classid }}
+		<br/><br/>
+	
+	7. 输出字典中数据：{{ vstu.id }} : {{ vstu.name }} : {{ vstu.sex }} : {{ vstu.age }} : {{ vstu.classid }} 
+		<br/>
+	   后追加的属性city：{{ vstu.city }} <br/>
+		性别：{% if vstu.sex == 'm' %}
+					男
+			  {% else %}
+			  		女
+			  {% endif %}
+		<br/><br/>
+
+	 {# 8. 输出一个不存在的值：你好！{{ loginname|default:"游客" }} #}
+
+	 8. HTML输出：{{ htmlinfo }}
+	 9. HTML输出（关闭转义）：{{ htmlinfo|safe }}
+</body>
+</html>

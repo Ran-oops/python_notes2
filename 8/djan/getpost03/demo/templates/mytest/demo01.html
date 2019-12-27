@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GET/POST demo</title>
+</head>
+<body>
+	<h2>GET/POST demo</h2>
+	<a href="{% url 'index' %}">Back Index</a><br><br>
+
+	<h4>GET Request</h4>
+	<form action="{% url 'myget' %}" method="get">
+		Name: <input type="text" name="uname"/><br/>
+		Sex:<input type="radio" name="sex" value="1"/>man
+			<input type="radio" name="sex" value="0"/>woman<br/>
+		Year:<select name="year">
+				<option value='2015'>2015</option>
+				<option value='2016'>2016</option>
+				<option value='2017'>2017</option>
+				<option value='2018'>2018</option>
+				
+			</select><br/><br/>
+		hobbies:<input type="checkbox" name="hobbies" value="aa"/>AA
+			<input type="checkbox" name="hobbies" value="bb"/>BB
+			<input type="checkbox" name="hobbies" value="cc"/>CC
+			<input type="checkbox" name="hobbies" value="dd"/>DD
+			<br>
+		<input type="submit" value="submit">
+	</form>
+
+	<h4>POST Request</h4>
+	<form action="{% url 'mypost' %}" method="post">
+		{% csrf_token %}
+		Name: <input type="text" name="uname"/><br/>
+		Sex:<input type="radio" name="sex" value="1"/>man
+			<input type="radio" name="sex" value="0"/>woman<br/>
+		Year:<select name="year">
+				<option value='2015'>2015</option>
+				<option value='2016'>2016</option>
+				<option value='2017'>2017</option>
+				<option value='2018'>2018</option>
+				
+			</select><br/><br/>
+			hobbies:<input type="checkbox" name="hobbies" value="aa"/>AA
+			<input type="checkbox" name="hobbies" value="bb"/>BB
+			<input type="checkbox" name="hobbies" value="cc"/>CC
+			<input type="checkbox" name="hobbies" value="dd"/>DD
+			<br>
+		<input type="submit" value="submit">
+	</form>
+	<br/><br/>
+	<hr/>
+</body>
+</html>

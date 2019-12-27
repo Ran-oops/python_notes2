@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>使用session做购物车练习</title>
+	</head>
+<body>
+	<center>
+	{% include "myweb/shop/menu.html" %}
+	
+	<h3>我的购物车</h3>
+	<table width="700" border="1">
+		<tr>
+			<th>Id号</th>
+			<th>商品名称</th>
+			<th>单价</th>
+			<th>数量</th>
+			<th>小计</th>
+			<th>操作</th>
+		</tr>
+		{% for vo in request.session.shoplist.values %}
+			<tr>
+				<td>{{ vo.id }}</td>
+				<td>{{ vo.name }}</td>
+				<td>{{ vo.price }}</td>
+				<td>{{ vo.m }}</td>
+				<td>{% widthratio vo.m 1 vo.price %}</td>
+				<td><a href="{% url 'delcart' vo.id %}">删除</a></td>
+			</tr>
+		{% endfor %}
+	</table>
+
+	</center>
+	<hr align="center" width="80%">
+  </body>
+</html>

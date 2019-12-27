@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>函数定义与使用</title>
+	</head>
+	<body>
+		<button onclick='love()'>函数的使用</button>
+		
+		<script type='text/javascript'>
+		//在函数前或函数后调用都可以！
+			/*love();
+			//第一种函数定义
+			function love(){
+				alert('love');
+			}*/
+		//love();
+		//第二种 表达式方式定义函数  匿名函数
+		miss();//表达式方式定义的函数不能再定义之前调用
+		var miss=function(){
+			alert('miss');
+		}
+		//miss();
+		</script>
+	</body>
+</html>

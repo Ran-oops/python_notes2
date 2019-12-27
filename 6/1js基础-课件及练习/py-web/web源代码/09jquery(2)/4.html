@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘移动div</title>
+	<style type="text/css">
+		#move{
+			width: 150px;
+			height: 150px;
+			background: #369;
+			position: absolute;
+			top:0px;left:0px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="move"></div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//全局变量
+	var step = 5;//移动的步进
+
+	//绑定键盘按下事件
+	$(window).keydown(function(e){
+		//获取按键信息
+		var k = e.keyCode;
+		switch(k){
+			case 38:
+			case 87:
+				moveUp();
+				break;
+			case 40:
+			case 83:
+				moveDown();
+				break;
+			case 37:
+			case 65:
+				moveLeft();
+				break;
+			case 39:
+			case 68:
+				moveRight();
+				break;
+		}
+	})
+
+	//向下移动
+	function moveDown(){
+		//当前元素的位置 + 步进
+		var t = $('#move').position().top;
+		//计算
+		var NewT = t+step;
+		//设置
+		$('#move').css({top:NewT+'px'});
+
+	}
+
+	//向上移动
+	function moveUp(){
+		//当前元素的位置 + 步进
+		var t = $('#move').position().top;
+		//计算
+		var NewT = t-step;
+		//设置
+		$('#move').css({top:NewT+'px'});
+
+	}
+		//向右移动
+	function moveRight(){
+		//当前元素的位置 + 步进
+		var t = $('#move').position().left;
+		//计算
+		var NewT = t+step;
+		//设置
+		$('#move').css({left:NewT+'px'});
+
+	}
+
+		//向左移动
+	function moveLeft(){
+		//当前元素的位置 + 步进
+		var t = $('#move').position().left;
+		//计算
+		var NewT = t-step;
+		//设置
+		$('#move').css({left:NewT+'px'});
+
+	}
+
+
+
+
+	</script>
+</body>
+</html>

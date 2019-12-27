@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		喜欢做的事情：<br/>
+		<input type='checkbox'>韩语</body><br/>
+		<input type='checkbox'>英语</body><br/>
+		<input type='checkbox'>计算机</body><br/>
+		<input type='checkbox'>吉他</body><br/>
+		<input type='checkbox'>金融知识</body><br/>
+		<button onclick='func(1)'>全选</button>
+		<button onclick='func(2)'>全不选</button>
+		<button onclick='func(3)'>反选</button>
+		<script type='text/javascript'>
+		function func(opt){
+			//获取页面中所有的input标签 得出的结果是一个数组，然后通过这个数组获取元素、集合
+			var inps=document.getElementsByTagName('input');
+			//遍历
+			for (var i=0; i<inps.length;i++){
+				
+				if(opt==1){
+					//设置全部选中
+					inps[i].checked=true;
+				}else if(opt==2){
+					//设置全部取消选中
+					inps[i].checked=false;
+				}else{
+					inps[i].checked=!inps[i].checked;
+				}
+			}
+
+		}
+		</script>
+	</body>
+</html>

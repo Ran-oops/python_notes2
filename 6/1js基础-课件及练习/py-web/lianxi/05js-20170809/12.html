@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		// function love(a=1,b=2){
+		// 	console.log(a,b);
+		// }
+		// love();
+		// love(2,3)
+		// love(3,4,5)
+
+
+		var love = 100;
+
+		function func(){
+			var love = 200;//局部变量
+			love = 200;//全局变量
+		}
+		func();
+		alert(love);
+
+
+	</script>
+</body>
+</html>

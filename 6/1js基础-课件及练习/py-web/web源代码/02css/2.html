@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择符</title>
+	<style type="text/css">
+		.abc{width: 100px;height: 100px;border:1px solid red;}
+
+		/* hover  当鼠标移动到当前这个元素上时 执行的样式*/
+		/*.abc:hover{width: 200px;height: 200px;background: #f39;border:5px solid yellow;}*/
+
+		.abc:before{content:"Hello";}         /*在这个元素之前插入内容*/
+		.abc:after{content:"world";}        /*在这个元素之后插入内容*/
+	</style>
+</head>
+<body>
+	<div class="abc">abc</div>
+</body>
+</html>

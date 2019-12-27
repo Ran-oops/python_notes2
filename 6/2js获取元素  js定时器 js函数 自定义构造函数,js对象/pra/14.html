@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+		//四舍五入
+		//var res=Math.round(5.214);
+		//var res=Math.max(5,214,33);
+		//var res=Math.min(5,214,33);
+		//var res=Math.abs(-214);
+		//var res=Math.floor(5.214);
+		//var res=Math.ceil(5.214);
+		//幂运算 用来获取x的y次方 2的3次方
+		//var res=Math.pow(2,3);
+		//开方运算  返回一个数的平方值
+		//var res=Math.sqrt(9);
+		//随机数的方法，这是重点 会取0-1之间 随机小数，取不到1
+		//var res=Math.random();
+		//随机数 0-10之间的小数
+		//var res=Math.random()*10;
+		//0-9的随机整数(包括0和9)
+		//var res=Math.floor(Math.random()*10);
+		//1-10的随机整数（包括1和10）
+		//var res=Math.floor(Math.random()*10)+1;		
+		//5-15随机整数（两边都包括）*（15-5+1）+5
+		//var res=Math.floor(Math.random()*11)+5;
+		//m-n  *(n-m+1)+m
+		function rand(m,n){
+			return Math.floor(Math.random()*(n-m+1))+m;
+		}
+		res=rand(20,30);
+
+		alert(res);
+
+		</script>
+	</body>
+</html>

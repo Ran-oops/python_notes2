@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML 实例</title>
+    </head>
+    <body>
+        <h1>HTML 实例--form表单（HTML5）</h1>
+        <br/>
+		<!--   ulr地址     发送方式  文档样式 宽  -->
+        <form action="#" method="get" style="width:400px;">
+            <fieldset>
+                <legend>会员登录：</legend>
+            账号：<input type="text" name="uname"/><br/><br/>
+            密码：<input type="password" name="upass"/><br/><br/>
+            </fieldset>
+            <br/>
+            <fieldset>
+                <legend>会员详情：</legend>
+            数值：<input type="number" name="num1"/><br/><br/>
+            邮箱：<input type="email" name="mail"/><br/><br/>
+            网址：<input type="url" name="myurl"/><br/><br/>
+            日期：<input type="date" name="date"/><br/><br/>
+            时间：<input type="time" name="date"/><br/><br/>
+            搜索：<input list="browsers" placeholder="关键字" type="search" name="keyword"/><br/><br/>
+                    <datalist id="browsers">
+						<option value="zhangsan">
+						<option value="zhangsanfeng">
+						<option value="zhangwuji">
+						<option value="lisi">
+						<option value="wangwu">
+					</datalist>
+            班级：<select name="classid">
+                        <optgroup label="PHP学科">
+                            <option>lamp180</option>
+                            <option>lamp181</option>
+                            <option>lamp182</option>
+                            <option>lamp183</option>
+                        </optgroup>
+                        <optgroup label="HTML5学科">
+                            <option>html50</option>
+                            <option>html51</option>
+                            <option>html52</option>
+                        </optgroup>
+                  </select>
+            </fieldset>
+            <br/>
+            <input type="submit"/>
+            
+        </form>
+    </body>
+</html>

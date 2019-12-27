@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action="" id="myform">
+		<input type="text" name="username" value="abc">
+		<button type="button" onclick="love()">获取值</button>
+	</form>
+	
+	<script type="text/javascript">
+		// window.onload = function(){
+		// 	var abc = document.getElementById('abc')
+		// 	console.log(abc);
+		// 	abc.innerHTML = 'mylove';
+		// 	var my = abc.innerHTML;
+		// 	alert(my);
+
+		// 	abc.style.background="#963";
+		// 	abc.style.color="gold"
+		// 	abc.style.fontSize='50px'
+		// }
+
+
+		var myform = document.getElementById('myform');
+		console.log(myform);
+		myform.username.value="qwer"
+
+		function love(){
+			var m = myform.username.value;
+			alert(m);
+		}
+
+
+
+	</script>
+	<div id="abc" style="width:100px;height:100px;background:red">a</div>
+
+</body>
+</html>

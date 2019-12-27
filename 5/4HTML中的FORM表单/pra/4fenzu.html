@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="get">
+			<fieldset>
+				<legend>基本信息</legend>
+				用户名：
+				<input type="text" name="username" id=""/><br/>
+				年龄：
+				<input type="number" name="age" value=""/><br/>
+				学历：
+				<select name="xueli">
+					<option value="xz">--请选择--</option>
+					<option value="0">小本</option>
+					<option value="1">中本</option>
+					<option value="2">日本</option>
+				</select>
+			</fieldset>
+			<fieldset>
+				<legend>健康信息</legend>
+				身高：
+				<input type="text" name="height" value=""/><br/>
+				体重：
+				<input type="text" name="weight" value=""/><br/>
+				三围：
+				<input type="text" name="sanwei" value=""/><br/>
+			</fieldset>
+			<hr/>
+			<!--下拉列表定义分组-->
+			<select name="">
+				<option value="">--请选择--</option>
+				<optgroup label="服装">
+					<option value="">男装</option>
+					<option value="">女装</option>
+					<option value="">童装</option>
+				</optgroup>
+				
+				<optgroup label="数码">
+					<option value="">手机</option>
+					<option value="">电脑</option>
+					<option value="">相机</option>
+				</optgroup>
+			
+				<optgroup label="母婴用品">
+					<option value="">尿不湿</option>
+					<option value="">奶粉</option>
+					<option value="">孕妇衣</option>
+				</optgroup>
+			</select>
+	</body>
+</html>

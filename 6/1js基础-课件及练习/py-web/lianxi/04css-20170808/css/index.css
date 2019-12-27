@@ -1,0 +1,282 @@
+body,div,img,form,input,span,h3{
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+
+.clearfix:after,.clearfix:before{ content: "";display: table;}
+.clearfix:after{ clear:both;}
+.clearfix{zoom:1;}
+
+.shop{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+/*头*/
+.head{
+	height: 50px;
+
+}
+.logo{
+	float: left;
+    height: 50px;
+    width: 20%;
+    margin: 6px auto;
+}
+.logo img{
+	width: 100%;
+}
+
+
+/*搜索*/
+.ss{
+	float: left;
+	width: 76%;
+	height: 32px;
+	border: 2px solid red;
+	margin: 9px 0px;
+}
+.ss form{
+	height: 32px;
+}
+.ss input{
+	font: 12px/32px "微软雅黑";
+	width: 76%;
+	border:none;
+}
+.ss .ssbut{
+	width: 20%;
+	font-size: 14px;
+	height: 32px;
+	float: right;
+	background: #F03726;
+}
+
+/*中间内容*/
+.content{
+	position: absolute;
+	top:50px;left:0px;right:0px;bottom: 50px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-top: 5px;
+}
+/*内容区*/
+.content{
+	top: 50px;
+	right: 0px;
+	bottom: 50px;
+	left: 0px;
+	position: absolute;
+	margin-top: 5px;
+}
+/*轮播区*/
+.content .lbt{
+	width: 100%;
+	height: 169px;
+}
+
+/*菜单区*/
+.cd{
+	height: 77px;
+	width: 100%;
+	margin-top:10px; 
+}
+.cd .ml{
+	float: left;
+	width: 25%;
+	height: 77px;
+}
+.ml div{
+	height: 40px;
+	width: 45%;
+	margin: 0 auto;
+}
+.ml .fl{
+	background: url(../img/navsmall.jpg) no-repeat;
+	background-size: contain;
+}
+.ml .djh{
+	background: url(../img/huismall.jpg) no-repeat;
+	background-size: contain;
+}
+.ml .grzx{
+	background: url(../img/mansmall.jpg) no-repeat;
+	background-size: contain;
+}
+.ml .tzlc{
+	background: url(../img/moneysmall.jpg) no-repeat;
+	background-size: contain;
+}
+.ml span{
+	display: block;
+	font-size: 1px;
+	text-align: center;
+	line-height: 37px;
+}
+
+
+/*活动*/
+.hd{
+	width: 100%;
+	height: 40px;
+	background: #EEE;
+	overflow: hidden;
+}
+.hd h3{
+	text-align: center;
+	font-weight: normal;
+
+	line-height: 1px;
+	margin: 20px;
+	border-right: 100px solid #F5F5FF;
+	border-left: 100px solid #F5F5FF;
+}
+
+/*活动列表*/
+.hdlb{
+	height: 125px;
+	width: 100%;
+	margin-top:10px; 
+	margin-left: 2px;
+}
+.hdlb .hd1{
+	float: left;
+	width: 25%;
+	height: 125px;
+}
+.hd1 div{
+	height: 95px;
+	/*width: 45%;*/
+	margin: 0 auto;
+}
+.hd1 .ms{
+	background: url(../img/activity1.jpg) no-repeat;
+	background-size: contain;
+}
+.hd1 .th{
+	background: url(../img/activity2.jpg) no-repeat;
+	background-size: contain;
+}
+.hd1 .tg{
+	background: url(../img/activity3.jpg) no-repeat;
+	background-size: contain;
+}
+.hd1 .cz{
+	background: url(../img/activity4.jpg) no-repeat;
+	background-size: contain;
+}
+.hd1 span{
+	display: block;
+	font-size: 1px;
+	text-align: center;
+	line-height: 35px;
+}
+
+
+/*甜点*/
+.td{
+	width: 100%;
+	height: 40px;
+	background: #EEE;
+	overflow: hidden;
+}
+.td h3{
+	text-align: center;
+	font-weight: normal;
+
+	line-height: 1px;
+	margin: 20px;
+	border-right: 100px solid #F5F5FF;
+	border-left: 100px solid #F5F5FF;
+}
+
+/*活动列表*/
+.tdlb{
+	height: 125px;
+	width: 100%;
+	margin-top:10px; 
+	margin-left: 2px;
+}
+.tdlb .td1{
+	float: left;
+	width: 25%;
+	height: 125px;
+}
+.td1 div{
+	height: 95px;
+	/*width: 45%;*/
+	margin: 0 auto;
+}
+.td1 .ms{
+	background: url(../img/activity1.jpg) no-repeat;
+	background-size: contain;
+}
+.td1 .th{
+	background: url(../img/activity2.jpg) no-repeat;
+	background-size: contain;
+}
+.td1 .tg{
+	background: url(../img/activity3.jpg) no-repeat;
+	background-size: contain;
+}
+.td1 .cz{
+	background: url(../img/activity4.jpg) no-repeat;
+	background-size: contain;
+}
+.td1 span{
+	display: block;
+	font-size: 1px;
+	text-align: center;
+	line-height: 35px;
+}
+
+
+
+
+/*固定底部*/
+.footer{
+	height: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	position: absolute;
+	background: #996;
+}
+.footer .foo{
+	float: left;
+	width: 25%;
+	height: 50px;
+}
+.foo div{
+	height: 33px;
+	width: 45%;
+	margin: 0 auto;
+}
+.foo .sy{
+	background: url(../img/home1.png) no-repeat;
+	background-size: contain;
+}
+.foo .fl{
+	background: url(../img/other.png) no-repeat;
+	background-size: contain;
+}
+.foo .gwc{
+	background: url(../img/goods_fill.png) no-repeat;
+	background-size: contain;
+}
+.foo .my{
+	background: url(../img/people_fill.png) no-repeat;
+	background-size: contain;
+}
+.foo span{
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+

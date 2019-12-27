@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//单次定时
+		var init = setTimeout(function(){
+			alert('2');
+		},1000);
+
+
+		//定时循环
+		setInterval(function(){
+			console.log('1');
+		},1000);
+
+		setInterval('love()',1000)
+
+		function love(){
+			console.log('2');
+		}
+	</script>
+</body>
+</html>

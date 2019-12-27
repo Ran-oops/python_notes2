@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.12.4.min.js"></script>
+	
+</head>
+<body>
+	<button onclick="aa()">点击</button>
+	<h2>购物车实例</h2>
+	<table class="mycart" width="700" border="1">
+		<tr>
+			<td><input class="myall" type="checkbox"/></td>
+			<th>商品名称</th>
+			<th>单价</th>
+			<th>购买量</th>
+			<th>小计</th>
+			<th>操作</th>
+		</tr>
+		<tr>
+			<td><input total="3600" ids="1" class="shop-item" type="checkbox" name="ids" value="1"/></td>
+			<td>手机</td>
+			<td>1200</td>
+			<td>3</td>
+			<td>3600</td>
+			<td>删除</td>
+		</tr>
+		<tr>
+			<td><input total="600" ids="2" class="shop-item" type="checkbox" name="ids" value="2"/></td>
+			<td>服装</td>
+			<td>200</td>
+			<td>3</td>
+			<td>600</td>
+			<td>删除</td>
+		</tr>
+		<tr>
+			<td><input total="240" ids="3" class="shop-item" type="checkbox" name="ids" value="3"/></td>
+			<td>MP3</td>
+			<td>120</td>
+			<td>2</td>
+			<td>240</td>
+			<td>删除</td>
+		</tr>
+	</table>
+	<div> 
+		你选中<span style="color:red" class="mycount">0</span>商品  
+		共计金额：<span style="color:red" class="mytotal">0</span>
+		<button onclick="window.location='orderadd.html?ids='+loadTotal().join(',')">结算</button>
+	</div>
+	<script type="text/javascript">
+		
+        $(function(){
+            $("table.mycart input.myall").click(function(){
+                //获取当前全选择框是否选中
+                b = $(this).prop('checked');
+                //获取所有商品的选择框
+                $("table.mycart input.shop-item").prop("checked",b);
+            });
+            
+            $("table.mycart :checkbox").click(function(){
+                loadTotal();
+            });
+            
+            $("table.mycart input.myall").trigger("click");
+        });
+        
+        //统计总计金额函数
+        function loadTotal(){
+            //获取表格中所有选中的选择框节点对象，
+            list = $("table.mycart input.shop-item:checked");
+            
+            $("span.mycount").html(list.length); //数量
+            
+            var total=0
+            //遍历累计总金额
+            list.each(function(){
+                total += parseFloat($(this).attr('total'))
+            });
+            $("span.mytotal").html(total);
+        }
+        
+	</script>
+</body>
+</html>

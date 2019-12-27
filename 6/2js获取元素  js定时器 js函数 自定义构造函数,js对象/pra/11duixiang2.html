@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>js对象</title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+		//第一种
+		var obj=new Object();
+		//属性操作
+		obj.name='zhangsan';
+		obj.age=21;
+		var h='height';
+		obj[h]='177';
+		obj['sanwei']='80 60 70';
+
+		//方法
+		obj.sing=function(){
+			console.log('我喜欢唱歌！')
+		}
+		obj['dance']=function(){
+			console.log('不会跳舞');
+		}
+		obj.info=function(){
+			//this 这个 代表当前这个对象
+			console.log(this.name);
+		}
+		obj.sing();
+		//obj.dance();
+		//obj['dance']();
+		obj.info();
+		console.log(obj);
+
+
+		</script>
+	</body>
+</html>

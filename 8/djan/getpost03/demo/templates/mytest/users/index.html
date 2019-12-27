@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users demo</title>
+</head>
+<body>
+	<center>
+		<h2>Users demo</h2>
+		<a href="{% url 'index' %}">Back Users</a>|
+		<a href="{% url 'index_users' %}">Show Users</a> |
+		<a href="{% url 'add_users' %}">Add Users</a>
+		<hr/>
+
+		<h3>Show Users</h3>
+		<table width="700" border="1">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Age</th>
+				<th>Phone</th>
+				<th>edit/del</th>
+			</tr>
+			{% for vo in list %}
+				<tr>
+					<td>{{ vo.id}}</td>
+					<td>{{ vo.name}}</td>
+					<td>{{ vo.age}}</td>
+					<td>{{ vo.phone}}</td>
+					<td>
+						<a href="{% url 'edit_users' vo.id %}">edit</a>
+						<a href="{% url 'del_users' vo.id %}">del</a>
+					</td>
+					
+				</tr>
+			{% endfor%}
+		</table>
+
+	</center>
+</body>
+</html>

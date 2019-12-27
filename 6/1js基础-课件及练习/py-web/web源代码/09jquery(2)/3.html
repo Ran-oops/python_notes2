@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>键盘事件</title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+
+	//键盘事件 keydown  keyup
+	//在键盘事件中向要获取用户的按键信息,需要在事件中传递事件对象 e event
+
+
+	//键盘按下事件
+	$(window).keydown(function(e){
+		// console.log('down');
+		var k = e.keyCode;
+		console.log(k);
+	})
+	//键盘抬起事件
+	$(window).keyup(function(){
+		console.log('up');
+	})
+
+	</script>
+</body>
+</html>

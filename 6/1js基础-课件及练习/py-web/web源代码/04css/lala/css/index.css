@@ -1,0 +1,227 @@
+*{margin: 0;padding: 0;}
+a{
+	text-decoration:none;
+	font-size: 12px;
+}
+.clearfix:after,.clearfix:before{ content: "";display: table;}
+.clearfix:after{ clear:both;}
+.clearfix{zoom:1;}
+
+.shop{
+	position: absolute;
+	top:0px;left:0px;right:0px;bottom: 0px;
+	background: #fff;
+}
+
+/*头部*/
+.header{
+	height: 53px;
+}
+/*logo*/
+.logo{
+    float: left;
+    height: 41px;
+    width: 19%;
+    margin: 6px auto;
+}
+.logo img{
+	width: 100%;
+}
+/*搜索框*/
+.search{
+	height: 41px;
+	margin: 8px 20px 0 77px;
+}
+.search form{
+	border: 2px solid #F03726;
+    max-width: 670px;
+}
+.search input{
+	padding-left: 5px;
+	box-sizing: border-box;
+    height: 32px;
+    width: 78%;
+    font-size: 12px;
+    border: none;
+}
+
+.search .submit{
+	width: 20%;
+    height: 32px;
+    border: none;
+    float: right;
+    background: #F03726;
+    color: #F5F5F2;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/*中间内容*/
+.content{
+	position: absolute;
+	top:50px;left:0px;right:0px;bottom: 50px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding-top: 5px;
+}
+
+/*轮播*/
+.banner{
+	height: 169px;
+	padding-bottom:10px;
+}
+
+/*导航*/
+.nav{
+	height: 66px;
+	/*padding: 10px 0px;*/
+	text-align: center;
+
+}
+ul,li{
+	list-style: none;
+	margin: 0;padding: 0;
+}
+li{
+	width: 25%;
+	float: left;
+	height: 56px;
+}
+li img{
+	width: 40px;height: 40px;
+}
+
+/*走马灯*/
+.marqueen{
+	height: 32px;
+	border-top: 1px solid #F5F5F5;
+	border-bottom: 1px solid #F5F5F5;
+	font-size: 12px;
+	line-height: 32px;
+}
+
+.marqueen .m-title{
+	float: left;
+	border-right:  1px solid #F5F5F5;
+	
+	margin: 0 10px;
+	padding-right: 10px;
+	
+}
+
+
+/*活动*/
+.s-title{
+	height: 40px;
+	background: #eee;
+	overflow: hidden;
+}
+.s-title h3{
+	text-align: center;
+	/*font:normal 14px/40px '微软雅黑';*/
+	font-size: 14px;
+	font-weight:normal;
+	line-height: 1px;
+	margin: 20px 0;
+	border-right: 100px solid #F5F5F5;
+	border-left: 100px solid #F5F5F5;
+}
+
+.s-list{
+	height: 115px;
+	padding: 10px 0; 
+}
+.col-25{
+	width: 25%;
+	float: left;
+	min-height: 100px;
+	box-sizing: border-box;
+	padding: 0 2px;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.icon-sale{
+	width: 0;
+    height: 0;
+    border-top: 40px solid #9b0d5f;
+    border-right: 40px solid transparent;
+    position: absolute;
+}
+.icon-sale.one{
+	border-top-color: #b48c66;
+}
+.icon-sale.two {
+    border-top-color: #7fb113;
+}
+.icon-sale.three {
+    border-top-color: #0087e5;
+}
+.s-list h4{
+	position: absolute;
+    color: #fff;
+    top: 5px;
+    left: 2px;
+}
+.activityMain{
+	height: 95px;
+}
+.s-list img{width: 100%;}
+.s-list h3,h4{
+	font-size: 12px;
+	font-weight:normal;
+}
+
+/*商品列表*/
+.title{
+	text-align: center;
+}
+.title h3{color:red;font-size: 14px;}
+
+/*尾部*/
+.footer{
+	position: absolute;
+	left:0px;right:0px;bottom:0px;
+	height: 50px;
+}
+
+.icons{
+	float: left;
+	width: 25%;
+	height: 50px;
+}
+
+.icons div{
+	width: 30%;
+	height: 30px;
+	margin: 0 auto;
+
+}
+
+.icons .home{
+	background:url(../img/home1.png) no-repeat;
+	background-size: contain;
+
+}
+.icons .other{
+	background:url(../img/other.png) no-repeat;
+	background-size: contain;
+
+}
+.icons .goods_fill{
+	background:url(../img/goods_fill.png) no-repeat;
+	background-size: contain;
+
+}
+.icons .people_fill{
+	background:url(../img/people_fill.png) no-repeat;
+	background-size: contain;
+
+}
+
+.icons span{
+	display: block;
+	font-size: 12px;
+	text-align: center;
+}
+

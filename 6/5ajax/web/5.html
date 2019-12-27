@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table width="600" height="600" border="1">
+		<tr>
+			<td>id</td>
+			<td>用户名</td>
+			<td>邮箱</td>
+			<td>年龄</td>
+			<td>班级</td>
+			<td>操作</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>admin</td>
+			<td>admin@qq.com</td>()
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>zhangsan</td>
+			<td>zhangsan@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>lisi</td>
+			<td>lisi@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>wangwu</td>
+			<td>wangwu@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>zhaoliu</td>
+			<td>zhaoliu@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>tianqi</td>
+			<td>tianqi@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td><button>删除</button>|修改</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>wangba</td>
+			<td>wangba@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td>
+				<button>删除</button>|修改
+			</td>
+		</tr>
+		<tr>
+			<td>8</td>
+			<td>yongjiu</td>
+			<td>yongjiu@qq.com</td>
+			<td>20</td>
+			<td>02</td>
+			<td>
+				<button>删除</button>|修改
+			</td>
+		</tr>
+	</table>
+
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('button').click(function(){
+		//获取用户编号 id
+		var uid = $(this).parents('tr').find('td:first').text();
+		var btn  = $(this);
+		//发送ajax 将用户编号发送给python
+		$.get('./cgi-bin/5.py',{id:uid},function(data){
+			if(data == 0){
+				//删除成功,需要在页面中直接删除当前这条数据
+				// $(this).parents('tr').remove(); //X
+				// console.log($(this));//当前位置$(this)代表ajax对象(XMLHttpRequest)
+				btn.parents('tr').remove();
+
+				alert('成功');
+			}else{
+				//删除失败
+				alert('失败');
+			}
+		})
+
+	})
+
+	</script>
+</body>
+</html>

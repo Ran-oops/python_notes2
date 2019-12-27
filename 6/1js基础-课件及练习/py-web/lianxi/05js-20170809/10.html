@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<img src="./img/p1.png" alt="" id="img">
+
+	<script type="text/javascript">
+	var imgs = document.getElementById('img')
+
+	var i = 1;
+	setInterval(
+		function(){
+			i++;
+			if(i > 5){
+				i = 1;
+			}
+			imgs.src = './img/p'+i+'.png';
+		},200);
+	</script>
+</body>
+</html>

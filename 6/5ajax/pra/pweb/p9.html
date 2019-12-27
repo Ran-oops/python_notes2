@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title><button>删除</button>操作</title>
+	</head>
+	<body>
+		<table width='800px',border='1'>
+			<tr>
+				<td>id</td>
+				<td>用户名</td>
+				<td>邮箱</td>
+				<td>班级</td>
+				<td>操作</td>
+			</tr>
+
+			<tr>
+				<td>1</td>
+				<td>admin</td>
+				<td>123@qq.com</td>
+				<td>02</td>
+				<td><button>删除</button>|修改</td>
+			</tr>
+
+
+			<tr>
+				<td>2</td>
+				<td>xiaowu</td>
+				<td>13@qq.com</td>
+				<td>02</td>
+				<td><button>删除</button>|修改</td>
+			</tr>
+
+			<tr>
+				<td>3</td>
+				<td>wuwei</td>
+				<td>1@qq.com</td>
+				<td>02</td>
+				<td><button>删除</button>|修改</td>
+			</tr>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		$('button').click(function(){
+			//获取用户编号 id
+			var uid=$(this).parents('tr').find('td:first').text();
+			var btn=$(this);
+			//发送ajax 将用户编号发送给Python
+			$.get('./cgi-bin/p5.py',{id:uid},function(data){
+				if(data==0){
+					//删除成功，需要在页面中直接删除这条数据
+					//$(this).parents('tr').remove();/x
+					//console.log($(this));//当前位置$(this)代表ajax对象(XMLHttpRequest)
+					btn.parents('tr').remove();
+					alert('成功')
+				}else{
+					//删除失败
+					alert('失败')
+				}
+			})
+		})
+
+
+		</script>
+
+
+
+		</table>
+	</body>
+</html>

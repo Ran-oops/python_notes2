@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#all{
+			width: 100px;height: 100px;background: #369;
+		}
+	</style>
+</head>
+<body>
+	<div id="all"></div>
+	<script type="text/javascript">
+	//元素对象获取
+	var all = document.getElementById('all');
+	// console.log(all);
+
+	all.onclick = function(){
+		alert(2);
+		//修改样式
+		// all.style.background = "#f39";
+		//代表当前这个对象,代表当前触发事件的元素对象
+		this.style.background = '#969';
+	}
+
+	console.log(this);
+
+
+	</script>
+</body>
+</html>

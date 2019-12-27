@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选择器</title>
+	<link rel="stylesheet" href="./1.css">
+	<style type="text/css">
+		/**{
+			margin: 0;padding: 0;
+		}*/
+		html,body,div{
+			margin: 0;padding: 0;
+		}
+		div{
+			border: 5px solid;
+		}
+		.a{
+			width: 100px;
+			height: 50px;
+			border: 10px solid blue;
+			color:blue;
+		}
+		#a{
+			font-size:10px;
+			color:blue;
+		}
+
+		.b{
+			font-size:20px;
+			font-family: '楷体';
+		}
+
+		div p{
+			color:red;
+		}
+
+		#a p{
+			font-size:20px;
+		}
+		
+		.c,.d,.e{
+			font-sizi:30px;
+			color:#963;
+			font-family:"华文彩云";
+		}
+
+	</style>
+</head>
+<body>
+	<div>css选择器</div>
+	<div>css选择器</div>
+	<div class="a">css选择器</div>
+	<div style="width:50px;height:50px;border:dashed;color:blue">css选择器</div>
+
+	<div id="a">
+		<p>id="a"</p>
+	</div>
+
+	<div class="b">类元素类元素类元素类元素</div>
+	
+	<ol>
+		<li class="c">ABC选择器</li>
+		<li class="d">DEF选择器</li>
+		<li class="e">GHI选择器</li>
+	</ol>
+</body>
+</html>

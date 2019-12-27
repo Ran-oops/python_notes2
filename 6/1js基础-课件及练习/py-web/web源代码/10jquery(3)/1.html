@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery效果</title>
+	<style type="text/css">
+		#move{
+			width: 100px;
+			height: 100px;
+			background: #369;
+			position: absolute;
+
+		}
+
+	</style>
+</head>
+<body>
+	<button>显示</button>
+	<button>隐藏</button>
+	<button>切换</button>
+	<button>自定义动画</button>
+	<button>暂停</button>
+	<button>延时</button>
+	<br><br>
+	<div id="move"></div>
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('button').eq(0).click(function(){
+		// $('#move').show(2000);//显示
+		// $('#move').slideDown();//滑动显示
+		$('#move').fadeIn();//渐变
+	})
+
+	$('button').eq(1).click(function(){
+		// $('#move').hide(2000,function(){
+		// 	alert('隐藏成功');
+		// });//隐藏
+
+		// $('#move').slideUp();//滑动隐藏
+		$('#move').fadeOut();//渐变
+	})
+
+	$('button').eq(2).click(function(){
+		// $('#move').toggle(2000);//隐藏和显示切换
+		// $('#move').slideToggle(2000);//滑动隐藏和显示切换
+		$('#move').fadeToggle(2000);//渐变隐藏和显示切换
+	})
+
+	$('button').eq(3).click(function(){
+		//执行自定义动画
+		$('#move').animate({
+			width:'300px',
+			height:'500px',
+			top:'100px',
+			left:'200px'
+		},3000);
+	})
+
+	$('button').eq(4).click(function(){
+		//暂停动画效果
+		$('#move').stop();
+	})
+
+	$('button').eq(5).click(function(){
+		//延时执行自定义动画
+		$('#move').delay(1000).animate({
+			width:'300px',
+			height:'500px',
+			top:'100px',
+			left:'200px'
+		},3000);
+	})
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

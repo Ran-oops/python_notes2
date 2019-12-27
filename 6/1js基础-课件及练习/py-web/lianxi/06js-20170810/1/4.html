@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<label><input type="checkbox" >啊</label><br/>
+	<label><input type="checkbox" >吧</label><br/>
+	<label><input type="checkbox" >成</label><br/>
+	<label><input type="checkbox" >的</label><br/>
+	<label><input type="checkbox" >额</label><br/>
+	<label><input type="checkbox" >符</label><br/>
+
+	<button onclick="func(1)">全选</button>
+	<button onclick="func(2)">全不选</button>
+	<button onclick="func(3)">反选</button>
+
+	<script type="text/javascript">
+	function func(a){
+		var inps = document.getElementsByTagName("input")
+		console.log(inps);
+
+		for(i=0;i<inps.length;i++){
+			switch(a){
+				case 1:
+					inps[i].checked=true;
+					break;
+				case 2:
+					inps[i].checked=false;
+					break;
+				case 3:
+					inps[i].checked = !inps[i].checked;
+					break;
+			}
+
+		};
+
+	}
+
+	</script>
+
+</body>
+</html>

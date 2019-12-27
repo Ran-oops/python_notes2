@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type='text/css'>
+			#father{
+				background:red;
+				width:650px;
+				/*float:left;*/
+				/*让父元素自动感知子类的高度    自适应高度*/
+				overflow:hidden;
+			}
+			#one{
+				background:green;
+				width:200px;
+				height:200px;
+				float:left;
+			}
+			#two{
+				width:200px;
+				height:200px;
+				background:yellow;
+				float:left;
+			}
+			#three{
+				width:200px;
+				height:200px;
+				background:purple;
+				float:left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="father">
+			<span id="one">这是行内元素，没有宽高属性，并且不会独占一行</span>
+			<div id="two"></div>
+			<div id="three"></div>
+		</div>
+
+	</body>
+</html>

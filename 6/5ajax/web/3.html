@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于返回的数据</title>
+</head>
+<body>
+	<button>ajax</button>
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	$('button').click(function(){
+		$.get('/cgi-bin/2.py',{uname:'zhangsan'},function(data){
+
+			console.log(data);
+			alert(1);
+			
+			// eval()
+			// eval('var arr = '+data);
+			// console.log(arr);
+			// console.log(typeof(arr));
+
+			//第四个参数 json 要求返回的数据类型必须时json格式数据
+			/*
+				注意,在python中如果直接返回列表,在ajax中写了第四个参数json后,会自动转成js中的数组
+				在python中直接返回字典或字符串.数字,那么当前ajax会认为不是json格式数据,
+				那么就认为当前ajax请求失败
+				如果返回的数据时json格式,那么不光能接收到数据,而且自动使用eval转换
+				以后在使用时注意,如果要求json格式,那么在python返回数据使用 使用json.dumps(),转完返回
+			*/
+		},'json')
+
+	})
+
+
+	</script>
+</body>
+</html>

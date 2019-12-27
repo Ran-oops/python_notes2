@@ -1,0 +1,390 @@
+/* pc */
+@media (min-width: 768px){
+	body,ul,li,a{
+		margin: 0;
+		padding: 0;
+		list-style:none;
+		text-decoration: none;
+	}
+	.container_l_z{
+		float: left;
+		/*margin-top: 700px;*/
+	}
+	#small{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top:100px;
+		z-index: 888;
+	}
+
+	#big{
+		width: 400px;
+		height: 400px;
+		overflow: hidden;
+		position: absolute;
+		top:100px;left:460px;
+		display: none;
+		z-index: 999;
+	}
+
+	.uimg{
+		width: 430px;
+		height: 80px;
+		position: absolute;
+		top:510px;
+	}
+
+	.uimg li{
+		width: 80px;
+		height: 80px;
+		float: left;
+		margin-right: 5px;
+		border:1px solid #eee;
+	}
+
+	#move{
+		position: absolute;
+		top: 0;left: 0;
+		border: 1px solid blue;
+		display: none;
+	}
+	.container_l_x .fuwu{
+		font-size: 16px;
+		color: #666;
+		float: left;
+		width: 150px;
+		padding-left: 5px;
+		margin-top: 600px;
+	}
+	.container_l_x .fuwu span{
+		margin-left: 10px;
+	}
+	.container_r{
+		width: 500px;
+		height: 500px;
+		margin-top: 30px;
+		float: right;
+	}
+	.container_r h4{
+		font-weight: bold;
+	}
+	.container_r h3{
+		color:#55a0ff;
+	}
+	.shixian{
+		/*width: 400px;
+		height: 200px;*/
+		/*border: 1px solid red;*/
+		background: #fff;
+		display: none;
+		position: absolute;
+		z-index: 1000;
+	}
+	.dizhi{
+		margin-top: 50px;
+		width: 160px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px;
+		border-radius: 5px;
+		border: 1px solid #666;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.fenqi{
+		margin-top: 20px;
+	}
+	.fenqi span{
+		font-size: 13px;
+		color: #666;
+	}
+	.fenqi em,a{
+		color: red;
+		text-decoration: none;
+	}
+	.colors{
+		margin-top: 20px;
+		float: left;
+	}
+	.colors p{
+		color: #666;
+		font-size: 13px;
+	}
+	.colors .colors_j{
+		width: 200px;
+		height: 40px;
+		float: left;
+		text-align: center;
+		line-height: 40px;
+		border: 1px solid #55a0ff;
+		border-radius: 5px;
+	}
+	.colors .colors_h{
+		width: 200px;
+		height: 40px;
+		color: #ccccd6;
+		float: left;
+		text-align: center;
+		line-height: 40px;
+		margin-left: 10px;
+		border: 1px dotted #ccccd6;
+		border-radius: 5px;
+
+	}
+	.tixing{
+		float: left;
+		margin-top: 40px;
+	}
+	.tixing p{
+		color: #888;
+		font-size: 18px;
+	}
+	.tixing h2{
+		color: #666;
+		font-size: 13px;
+	}
+	.tixing h5{
+		padding: 5px 0px;
+		font-size: 18px;
+	}
+	.tixing h5 em{
+		color: #55a0ff;
+	}
+	.tixing div{
+		padding: 20px 100px;
+		color: #fff;
+		background: #55a0ff;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.options{
+		margin-top: 40px;
+		margin-left: 70px;
+		overflow: hidden;
+	}
+	.options li{
+		width: 100px;
+		height: 40px;
+		line-height: 40px;
+		text-align:center;
+		float: left;
+		color: #999;
+		font-size: 16px;
+		border-bottom:1px solid #e5e5e5;
+		box-sizing:border-box;
+		cursor:pointer;
+	}
+
+	.options li:last-child{
+		border-right:none;
+	}
+	.card{
+		/*padding-top: 40px;*/
+		/*margin-top: 40px;*/
+		
+	}
+	.parameter-table{
+		margin-left: 100px;
+		text-align: left;
+	}
+	.parameter-details{
+		padding-right: 300px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.parameter-name{
+		padding: 5px 100px 5px 0px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.parameter-space{
+		padding: 5px 100px;
+	}
+	.card li{
+		display: none;
+		text-align:center;
+		line-height:80px;
+	}
+
+	.options .active{
+		border-bottom:none;
+		background: #fff;
+	}
+
+	.card .active{
+		display: block;
+	}
+	.vender{
+		width: 1200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: left;
+		margin-left: 75px;
+		background: #f9f9fc;
+		font-size: 20px;
+	}
+	.vender img{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.vender2{
+		width: 1200px;
+		background: #f9f9fc;
+		margin-left: 75px;
+	}
+	.vender_minute{
+		width: 1200px;
+		text-align: left;
+		margin-left: 120px;
+		padding-bottom: 50px;
+	}
+	.vender_minute p{
+		height: 25px;
+	}
+	.body{
+		display: none;
+	}
+}
+/* 移动端 */
+@media (max-width: 768px){
+	ul,ol{
+		padding: 0px;
+		margin: 0px;
+	}
+	.denglucart{
+		display: none;
+	}
+	.body{
+		background: #eee;
+	}
+	.part{
+		display: none;
+	}
+	.col-xs-12{
+		padding-left: 20px;
+	}
+	.col-xs-12 h3{
+		margin: 0px;
+	}
+	.jg{
+		color: red;
+		font-size: 20px;
+	}
+	.jg em{
+		font-size: 14px;
+	}
+	.jiage{
+		width: 100%;
+		height: 50px;
+		background: #fff;
+
+	}
+	.fenqi{
+		width: 100%;
+		height: 50px;
+		background: #fff;
+		margin-top: 20px;
+		line-height: 50px;
+		color: #999;
+		font-weight: bold;
+	}
+	.fenqi em{
+		color: red;
+	}
+	.options li{
+		width: 20%;
+		height: 40px;
+		text-align:center;
+		float: left;
+		color: #999;
+		font-size: 16px;
+		border-bottom:1px solid #e5e5e5;
+		box-sizing:border-box;
+		cursor:pointer;
+		padding: 10px 5px;
+	}
+
+	.options li:last-child{
+		border-right:none;
+	}
+	.card ul{
+		padding: 10px;
+		
+	}
+	.parameter-table{
+		margin-left: 10px;
+		text-align: left;
+	}
+	.parameter-details{
+		padding-right: 30px;
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.parameter-name{
+		border-bottom: 1px solid #e5e5e5;
+	}
+	.parameter-space{
+		padding: 5px 30px;
+	}
+	.card li{
+		display: none;
+		text-align:center;
+		line-height:80px;
+	}
+
+	.options .active{
+		border-bottom:none;
+		background: #fff;
+	}
+
+	.card .active{
+		display: block;
+		padding: 0px;
+		margin: 0px;
+	}
+	.vender{
+		width: 100%;
+		height: 50px;
+		line-height: 50px;
+		text-align: left;
+		font-size: 20px;
+	}
+	.vender img{
+		margin-left: 20px;
+		margin-right: 20px;
+		width: 5%;
+	}
+	.vender_minute{
+		width: 100%;
+		text-align: left;
+		padding-bottom: 50px;
+		margin-top: 20px;
+		padding-left: 20px;
+	}
+
+	.color{
+		background: #fff;
+		margin-top: 20px;
+		color: #ccc;
+		padding-left: 20px;
+	}
+	.color_j{
+		width: 70px;
+		height: 40px;
+		color: blue;
+		border: 1px solid blue;
+		text-align: center;
+		line-height: 40px;
+		float: left;
+	}
+	.color_s{
+		padding: 30px 0px;
+	}
+	.color_h{
+		width: 70px;
+		height: 40px;
+		border: 1px solid #ccc;
+		text-align: center;
+		line-height: 40px;
+		margin-left: 100px;	
+	}
+
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var r = Math.random();
+
+	var r = Math.random()*10;
+
+	var r = Math.floor(Math.random()*10);
+
+	//1-10
+	var r = Math.floor(Math.random()*10)+1;
+
+	//0-10
+	var r = Math.floor(Math.random()*11);
+
+	//5-15
+	var r = Math.floor(Math.random()*11)+5; 
+
+	//3-99
+	var r = Math.floor(Math.random()*97)+3;
+
+	console.log(r);
+
+	//n-m
+	function func(n,m){
+		return Math.floor(Math.random()*(m-n+1))+n;
+	}
+	var rand = func(2,3);
+	console.log(rand);
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#abc{
+			width: 100px;height: 100px;background: #369;
+		}
+
+	</style>
+</head>
+<body>
+	<form id="myform" action="">
+		<input type="text" name="username" value="aaa">
+		<button type="button" onclick="love()">获取值</button>
+	</form>
+
+	<script type="text/javascript">
+
+	//文档加载完毕事件
+	window.onload = function(){
+		//获取元素对象 document文档,get获取Element元素By通过Id
+		var abc = document.getElementById('abc');
+
+		// console.log(abc);
+
+		//文本操作
+		abc.innerHTML = 'iloveyou';
+		// var t = abc.innerHTML;
+		// alert(t);
+
+
+			//获取元素后,绑定事件,
+			// abc.onclick = function(){
+			// 	//样式操作
+			// 	abc.style.background = '#f39';
+			// }
+		//样式操作 style 只能针对行内样式操作
+			abc.style.background = '#969';
+			abc.style.color='red';
+			// abc.style.font-size = '18px';// X
+			abc.style.fontSize = '38px';//双拼词,把横岗去掉,后面单次首字母大写
+
+			// var size = abc.style.fontSize;
+			// var w = abc.style.width;
+			// console.log(w);
+
+		//表单元素的value操作
+		var myform = document.getElementById('myform');
+
+		// console.log(myform);
+		// myform.username.value = 'abcdef';//赋值
+		
+	}
+
+	function love(){
+		var r = myform.username.value;//获取
+		alert(r);
+	}
+	
+
+	</script>
+	<div id="abc" style="width: 200px;">aaa</div>
+
+</body>
+</html>

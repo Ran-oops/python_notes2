@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>关于返回的数据</title>
+	</head>
+	<body>
+		<button>ajax</button>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		
+		$('button').click(function(){
+			$.get('/cgi-bin/p2.py',{uname:'zhangsan'},function(data){
+				
+				//eval()  返回的数据都是字符串格式的  用eval()可以转换成原生的列表格式，和js中的数组格式是一致的
+				eval('var arr='+data);
+
+				console.log(arr);
+				console.log(typeof(arr))
+			})
+		})
+
+
+
+		</script>
+	</body>
+</html>

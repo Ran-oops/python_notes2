@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js定时器</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+	// 单次定时 setTimeout(要执行的代码,时间) 要多长时间后来执行 毫秒
+	// 清除单次定时器  clearTimeout()
+		var init = setTimeout(function(){
+			alert('2');
+		},2000);	
+
+		// setTimeout('love()',2000);
+		// setTimeout(love,2000);
+
+		// clearTimeout(init);
+	
+	// 多次定时 setInterval() 每隔多长时间执行一次  毫秒
+		// setInterval(function(){
+		// 	console.log(33);
+		// },2000)
+
+		var init = setInterval(love,1000)
+
+		// setInterval('love()',1000)
+
+		// clearInterval(init);
+
+		function love(){
+			console.log('22');
+		}
+
+		// setTimeout(function(){
+		// 	clearInterval(init);
+		// },5000)
+
+
+	</script>
+</body>
+</html>

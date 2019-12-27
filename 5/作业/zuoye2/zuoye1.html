@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>信息采集</title>
+	</head>
+	<body>
+		<table border="1" align="center" cellspacing=0 cellpadding=20 >
+		<tr align="center">
+			<td colspan="4"><h3>信息采集</h3></td>
+			<!--<td></td>-->
+			<!--<td></td>-->
+			<!--<td></td>-->
+			<!--<td></td>-->	
+		</tr>
+		<tr>
+			<td>姓名：</td>
+			<td>
+				<form action="" method="get">
+					<input type="text" name="na" value=""/>
+			</td>
+			<td>性别：</td>
+			<td>
+				<form action="" method="get">
+					<input type="radio" name="sex" value="0" />女
+				    <input type="radio" name="sex" value="1"/>男
+			</td>
+		</tr>
+		<tr>
+			<td>地区：</td>
+			<td>
+				<form action="" method="get">
+			<!--下拉列表-->
+					<select name="Addr">
+				    <option value="0">--请选择--</option>
+				    <option value="1">北京</option>
+				    <option value="2">上海</option>
+				    <option value="3">西安</option>
+			</td>
+			<td>联系电话：</td>
+			<td>
+				<form action="" method="get">
+					<input type="text" name="tel" value=""/>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td colspan="3">
+				<form action="" method="get">
+					<input type="checkbox" name="hobby[]" value="0"/>绘画
+					<input type="checkbox" name="hobby[]" value="1"/>读书
+					<input type="checkbox" name="hobby[]" value="2"/>音乐
+					<input type="checkbox" name="hobby[]" value="3"/>跳舞
+					<input type="checkbox" name="hobby[]" value="4"/>运动
+			</td>
+			<!--<td></td>-->
+			<!--<td></td>-->
+		</tr>
+		<tr>
+			<td>备注：</td>
+			<td colspan="3">
+				<textarea name="remark" rows="5" cols="30">没有备注。。(摊手)
+				</textarea>
+			</td>
+			<!--<td></td>-->
+			<!--<td></td>-->
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="submit" value="提交"/>
+			</td>
+			<td>
+				<input type="reset"  name="reset"  value="重置"/>
+			</td>
+			<td></td>
+		</tr>
+	</body>
+</html>

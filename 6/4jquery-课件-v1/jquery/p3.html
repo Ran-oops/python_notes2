@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>相关尺寸</title>
+		<style type='text/css'>
+			body{
+				margin:0px;
+				padding:0px;
+				height:3000px;
+				width:3000px;
+
+
+			}
+			.all{
+				width:500px;
+				height:500px;
+				border:1px solid red;
+				position:absolute;
+				top:200px;
+				left:200px;
+			}
+			#move{
+				width:100px;
+				height:200px;
+				background:#369;
+				position:absolute;
+				top:200px;
+				left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='all'>
+			<div id='move'></div>
+		</div>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		//获取元素相对于文档的偏移量  即背景
+		/*var os=$('#move').offset();//返回的是对象
+		var os1=$('#move').offset().top;
+		var os2=$('#move').offset().left;
+		console.log(os);
+		console.log(os1);
+		console.log(os2);*/
+
+		//获取元素相对于父级元素的偏移量
+		/*var ps=$('#move').position();
+		var ps1=$('#move').position().top;
+		var ps2=$('#move').position().left;
+		console.log(ps)
+		console.log(ps1)
+		console.log(ps2)*/
+
+
+		//获取文档的滚动距离
+		/*var st=$(document).scrollTop();
+		var sl=$(document).scrollLeft();
+		console.log(st,sl);*/
+
+		//设置滚动距离
+		//$(window).scrollTop(400);
+		
+		
+		//获取当前元素的宽高
+		/*var w=$('#move').width();
+		var h=$('#move').height();
+
+		//当前元素的宽高既可以获取也可以设置
+		$('#move').width(250);
+
+		console.log(w,h)*/
+
+		//获取当前可视区域的宽高
+		//console.log($(window).width());
+		//console.log($(window).height());
+		
+		//获取文档的宽高
+		console.log($(document).width());
+		console.log($(document).height())
+		</script>
+	</body>
+</html>

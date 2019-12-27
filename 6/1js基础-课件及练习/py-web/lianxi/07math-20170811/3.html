@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.all{
+			width: 500px;
+			height: 500px;
+			margin: 0 auto;
+			text-align:center;
+			
+		}
+		#names{
+			width: 300px;
+			height: 200px;
+			border: 2px solid blue;
+			margin: 0 auto;
+			line-height: 200px;
+			font-size: 30px
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div id="names"></div>
+		<button id='but'>开始</button>
+
+		<script type="text/javascript">
+		var arr = ['刘备','关羽','张飞','诸葛亮','曹操','小乔','大乔','貂蝉'];
+
+		var names = document.getElementById('names');
+		var but = document.getElementById('but');
+		//设置一个开关
+		var isStart = false;
+		var init=0;
+
+		//给按钮添加单击事件
+		but.onclick = function(){
+			if(isStart){
+				clearInterval(init);
+				but.innerHTML = '开始';
+
+			}else if(!isStart){
+
+			}
+
+		// 	if(isStart){
+		// 		clearInterval(init);
+		// 		isStart = false;
+		// 		but.innerHTML = '开始';
+		// 		console.log(init);
+
+		// 		return;
+		// 	}
+
+		// 	init = setInterval(function(){
+		// 		//随机获取arr中的元素
+		// 		var len = arr.length-1;
+		// 		var r = rand(0,len);
+		// 		names.innerHTML = arr[r];
+		// 		but.innerHTML = '停止';
+		//		isStart = true;
+		// 	},1000);
+
+		 };
+
+		function rand(m,n){
+			return Math.floor(Math.random()*(n-m+1))+m;
+		}
+
+		</script>
+	</div>
+</body>
+</html>

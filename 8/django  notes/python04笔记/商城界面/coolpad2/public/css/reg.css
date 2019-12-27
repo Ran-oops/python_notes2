@@ -1,0 +1,136 @@
+body{
+	background: #f5f8ff;
+	/*height: 2000px;*/
+}
+.biaoti{
+	text-align: center;
+	padding: 20px;
+	border-bottom: 1px solid #ccc;
+}
+
+form{
+	margin-top: 20px;
+}
+
+.logo{
+	text-align: center;
+	margin-top: 90px;
+	margin-bottom: 16px;
+}
+
+
+.box{
+	background: #fff;
+	box-shadow: 0px 2px 20px #eee;
+	border-radius: 10px;
+}
+
+.form-control{
+	border-radius: 4px;
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #CCCCD6;
+    color: #333;
+    font-size: 16px;
+    width: 350px;
+    margin: 0 auto;
+}
+
+.btn-info{
+	width: 350px;
+    height: 50px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+.butn{
+	margin: 0 auto;
+	width: 350px;
+    height: 50px;
+}
+
+.form-group{
+	position: relative;
+}
+.form-control-feedback{
+	line-height: 44px;
+	right: 20px;
+}
+
+.form-control1{
+	background:url(../img/phone_gray_02.png)  16px center no-repeat;  
+	padding-left: 42px;
+}
+.form-control4{
+	background:url(../img/key_gray_02.png)  16px center no-repeat;  
+	padding-left: 42px;
+}
+
+.form-control2{
+	background:url(../img/getAuthCode.jpg)  270px center no-repeat;  
+}
+
+.mamama{
+	position: absolute;
+	top: 0px;
+	right:100px;
+	width: 100px;
+	height: 44px;
+	line-height: 44px;
+	color: #55A0FF;
+	cursor: pointer;
+	text-align: center;
+}
+
+.denglu{
+	font-size: 14px;
+	float: right;
+	margin-right: 100px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+a:link { 
+color: #666; 
+text-decoration: none; 
+} 
+a:visited { 
+color: #666; 
+text-decoration: none; 
+} 
+a:hover { 
+color: #55A0FF; 
+text-decoration: none; 
+} 
+.footer{
+	text-align: center;
+	padding: 30px;
+}
+
+
+@media (max-width: 768px){
+	.box{
+		width: 100%;
+		height: 100%;
+	}
+	.biaoti{
+		text-align: center;
+		padding: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	.denglu{
+		margin-right: 5px;
+	}
+	form{
+		margin-top: 20px;
+	}
+	.footer{
+		margin-top: 0;
+		margin-right: 0;
+	}
+	.mamama{
+		right: 20px;
+	}
+	.logo{
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+}

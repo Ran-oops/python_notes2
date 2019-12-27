@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优先级</title>
+	<!-- 外联 -->
+	<link rel="stylesheet" href="./1.css">
+	<style type="text/css">
+		/*内联*/
+		#all{width: 150px;height: 150px;background: #696;}
+
+		.box{width: 100px;height: 100px;background: #f49;}
+		
+		div{width: 50px;height: 50px;background: #369;margin: 10px;}
+
+
+		/*div -->  class --> id --> 行内*/
+		
+
+		/*#all,.box{width: 250px;height: 250px;background: RGB(100,200,400)}*/
+		#all,.box{width: 250px;height: 250px;background: RGBA(100,200,400,0.5)}
+
+	</style>
+</head>
+<body>
+	<!-- 行内 -->
+	<!-- <div class="box" id="all" style="width: 200px;height: 200px;background: #963;"></div> -->
+	<div class="box" id="all" ></div>
+	<div class="box"></div>
+	<div class="box"></div>
+</body>
+</html>

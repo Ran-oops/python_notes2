@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>楼层导航</title>
+	<style type="text/css">
+		body,div,ul,li{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+		#f1{width: 100%;height: 900px;background: #369;}
+		#f2{width: 100%;height: 930px;background: #696;}
+		#f3{width: 100%;height: 900px;background: #966;}
+		#f4{width: 100%;height: 970px;background: #609;}
+		#f5{width: 100%;height: 900px;background: #906;}
+		#f6{width: 100%;height: 930px;background: #963;}
+		#f7{width: 100%;height: 980px;background: #369;}
+		#card{
+			width: 60px;
+			position: fixed;
+			top:10%;left:25px;
+		}
+		#card li{
+			width: 60px;
+			height: 60px;
+			background: #fff;
+			text-align:center;
+			line-height:60px;
+			font-size:14px;
+		}
+
+		#card li:hover{
+			background: #603;
+			color:#fff;
+		}
+		#card .cur{
+			background: #603;
+			color:#fff;
+		}
+		#card div{
+			width: 60px;
+			height: 60px;
+			background: #fff;
+			margin-top: 5px;
+			text-align:center;
+			line-height:30px;
+			font-size:14px;
+
+		}
+
+		#card div:hover{
+			background: #603;
+			color:#fff;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="f1">一楼</div>
+	<div id="f2">二楼</div>
+	<div id="f3">三楼</div>
+	<div id="f4">四楼</div>
+	<div id="f5">五楼</div>
+	<div id="f6">六楼</div>
+	<div id="f7">七楼</div>
+	<div id="card" style="display: none;">
+		<ul>
+			<li >导航一</li>
+			<li >导航二</li>
+			<li >导航三</li>
+			<li>导航四</li>
+			<li>导航五</li>
+			<li>导航六</li>
+			<li>导航七</li>
+		</ul>
+		<div>
+			<span>返回<br>顶部</span>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//返回顶部
+	$('#card div').click(function(){
+		$('body').animate({scrollTop:0+'px'},1500);
+	})
+
+	//给导航li绑定单击事件,单击时将文档拉倒指定位置
+	$('#card li').click(function(){
+		//获取当前点击的楼层
+		var ind = $(this).index()+1;
+		//获取真实楼层距离文档顶部的距离
+		var Topval = $('#f'+ind).offset().top;
+		$('body').animate({scrollTop:Topval+'px'},1000);
+		//给当前的楼号加样式,其它移出
+		// $(this).addClass('cur').siblings().removeClass('cur');
+	})
+
+	//文档滚动事件,当文档发送滚动时触发的事件
+	$(window).scroll(InitScroll);
+
+	InitScroll();
+	function InitScroll(){
+		//获取当前文档滚动距离
+		var sTop = $(document).scrollTop();
+
+		//获取每个楼层距离文档顶部的距离
+		var f1 = $('#f1').offset().top;
+		var f2 = $('#f2').offset().top;
+		var f3 = $('#f3').offset().top;
+		var f4 = $('#f4').offset().top;
+		var f5 = $('#f5').offset().top;
+		var f6 = $('#f6').offset().top;
+		var f7 = $('#f7').offset().top;
+
+		//判断是否隐藏
+		if(sTop <= f2-100){
+			$('#card').fadeOut(500);
+		}else{
+			$('#card').fadeIn(500);
+
+		}
+
+		//判断当前文档是否滚动到当前的楼层
+		if(sTop >= f1){$('#card li').eq(0).addClass('cur').siblings().removeClass('cur');}
+
+		if(sTop >= f2-100){$('#card li').eq(1).addClass('cur').siblings().removeClass('cur');}
+		if(sTop >= f3-100){$('#card li').eq(2).addClass('cur').siblings().removeClass('cur');}
+		if(sTop >= f4-100){$('#card li').eq(3).addClass('cur').siblings().removeClass('cur');}
+		if(sTop >= f5-100){$('#card li').eq(4).addClass('cur').siblings().removeClass('cur');}
+		if(sTop >= f6-100){$('#card li').eq(5).addClass('cur').siblings().removeClass('cur');}
+		if(sTop >= f7-100){$('#card li').eq(6).addClass('cur').siblings().removeClass('cur');}
+
+	}
+
+
+	</script>
+
+</body>
+</html>

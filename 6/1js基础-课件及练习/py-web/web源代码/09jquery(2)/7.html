@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" id="shen">
+		<option value="">--请选择省--</option>
+	</select>
+
+	<select name="" id="shi">
+		<option value="">--请选择市--</option>
+	</select>
+
+	<select name="" id="x">
+		<option value="">--请选择县--</option>
+	</select>
+	
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//定义省市的关系
+	var city = {};
+	city['山东'] = ['济南','济宁'];
+	city['山西'] = ['太原','大同'];
+	city['河南'] = ['郑州','洛阳'];
+	city['河北'] = ['保定','石家庄'];
+
+	//定义市县的关系
+	var xian = {};
+	xian['济南'] = ['历下区','槐荫区'];
+	xian['济宁'] = ['汶上县','梁山县'];
+	xian['太原'] = ['迎泽区','小店区'];
+	xian['大同'] = ['林丘区','左云区'];
+	xian['郑州'] = ['金水区','管城区'];
+	xian['洛阳'] = ['洛阳1区','洛阳2区'];
+	xian['保定'] = ['雄县','安新'];
+	xian['石家庄'] = ['鹿泉区','元氏区'];
+
+	init();
+	//定义函数 初始化操作
+	function init(){
+		var str = '<option value="">--请选择省--</option>';
+		//遍历所有的省,
+		for(var i in city){
+			str += '<option value="'+i+'">'+i+'</option>';
+		}
+		$('#shen').html(str);
+	}
+
+	//给省绑定change事件
+	$('#shen').change(function(){
+		//当元素的值改变时,获取当前用户选中的省份
+		var v = $(this).val();
+		//通过用户的选择,找到对应的市
+		var arr = city[v];
+		var str = '<option value="">--请选择市--</option>';
+		for(var i in arr){
+			str += '<option value="'+arr[i]+'">'+arr[i]+'</option>';
+		}
+		$('#shi').html(str);
+	})
+
+	//给市绑定事件
+	$('#shi').change(function(){
+		//获取用户选择的市
+		var v = $(this).val();
+		//通过市找对应的县
+		var arr = xian[v];
+		var str = '<option value="">--请选择县--</option>';
+		for(var i in arr){
+			str += '<option value="'+arr[i]+'">'+arr[i]+'</option>';
+		}
+		$('#x').html(str);
+	})
+
+
+
+
+	</script>
+</body>
+</html>

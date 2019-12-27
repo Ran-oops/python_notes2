@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type='text/css'>
+			#one{
+				width:100px;
+				height:100px;
+				border:1px solid red;
+				/*box-shadow:-10px 10px 5px 10px #000;*/
+				/*仅位移*/
+				/*box-shadow:-10px -10px;*/
+				/*位移和颜色*/
+				/*box-shadow:10px 10px purple;*/
+				/*位移和模糊*/
+				/*box-shadow:10px 10px 5px;*/
+				/*模糊+外延*/
+				/*box-shadow:0px 0px 5px 10px;*/
+				/*内置阴影*/
+				/*box-shadow:0px 0px 5px 10px inset;*/
+			}
+			#two{
+				width:200px;
+				height:200px;
+				border:1px solid red;
+				border-radius:100px;
+				position:relative;
+				left:100px;
+				top:100px;
+				box-shadow:0px 0px 5px 5px red,
+					0px 0px 5px 10px orange,
+					0px 0px 5px 15px yellow,
+					0px 0px 5px 20px green,
+					0px 0px 5px 25px blue,
+					0px 0px 5px 30px purple;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="one">
+		</div>
+		<div id="two"></div>
+	</body>
+</html>

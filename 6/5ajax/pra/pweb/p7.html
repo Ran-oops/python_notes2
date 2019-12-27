@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>关于返回的数据</title>
+	</head>
+	<body>
+		<button>ajax</button>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		
+		$('button').click(function(){
+			/*$.get('/cgi-bin/p2.py',{uname:'zhangsan'},function(data){
+				
+				console.log(data);
+				console.log(typeof(data));
+				
+				//eval('var arr='+data);
+				//console.log(arr);
+				//console.log(typeof(arr))
+				
+				//第四个参数 json 要求返回的数据类型必须是json数据。注意：在Python中如果直接返回列表，在ajax中写了第四个参数json之后，会自动转换成js中的数组。但是如果在Python中直接返回字典或者字符串，数字，那么当前ajax会认为不是json格式数据，那么就认为当前ajax请求失败。
+
+				//如果在Python中是字典格式，则需要写
+				arr={'a':'abc','b':'bbc','c':'ccc'}
+				print(json.dumps(arr))
+				 
+
+			},'json')*/
+
+			//ajax方法
+				$.ajax({
+					url:'/cgi-bin/p2.py',//当前请求的url
+					type:'post',//当前请求的方式
+					data:{uid:100,uname:'zhangsan'},//当前请求携带的参数
+					dataType:'json',//要求返回的数据类型
+					//当前请求成功时的回调函数
+					success:function(data){
+						console.log(data);
+					},
+					//当请求失败时的回调函数
+					error:function(){
+						alert('当前ajax请求失败');
+					},
+					//是否异步  true就是异步  false是同步。不写则默认是异步
+					async:true,
+					//请求超时时间：单位是毫秒，注意：设置请求超时事件只有在异步时才会生效
+					timeout:2000
+				})
+		})
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type='text/css'>
+			#tj{
+				width:100px;
+				height:50px;
+				border:1px solid red;
+				border-bottom:50px solid red;
+				border-radius:50px;
+				position:relative;
+			}
+			#tj::before{
+				content:'';
+				border:20px solid #fff;
+				width:10px;
+				height:10px;
+				background:red;
+				border-radius:50px;
+				position:absolute;
+				left:0px;
+				top:25px;
+			}
+			#tj::after{
+				content:'';
+				border:20px solid red;
+				width:10px;
+				height:10px;
+				background:#fff;
+				border-radius:50px;
+				position:absolute;
+				right:0px;
+				top:25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="tj">
+		</div>
+	</body>
+</html>

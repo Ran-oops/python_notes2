@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单</title>
+</head>
+<body>
+	<!-- form表单中 action 表示数据提交的地址url  method代表提交数据的方式方法 get  post 
+		get提交方式,数据在地址栏 可见,而且数据长度有限制 218k
+		post提交,地址栏不可见,数据长度 2m
+	-->
+	<form action="./8.html" method="post" enctype="multipart/form-data">
+		用户名: <input type="text" name="username" ><br>
+		密码: <input type="password" name="password"><br>
+		性别:
+		<label><input type="radio" name="sex" value="0">女</label>
+		<label><input type="radio" name="sex" value="1" checked>男</label>
+		<br>
+		兴趣:
+		<label><input type="checkbox" name="hobby[]" value="0" checked>睡觉</label>
+		<label><input type="checkbox" name="hobby[]" value="1">吃饭</label>
+		<label><input type="checkbox" name="hobby[]" value="2">约会</label>
+		<label><input type="checkbox" name="hobby[]" value="3" checked>打豆豆</label>
+		<br>
+		<!-- 如果表单中含有文件上传 
+			method提交方式必须为post 
+			form中必须有enctype属性
+				 enctype="multipart/form-data"
+		 -->
+		头像:
+		<input type="file" name="pic">
+		<br>
+		学历:
+		<select name="xueli" id="">
+			<option value="0">小学生</option>
+			<option value="1" selected>中学生</option>
+			<option value="2">高中生</option>
+			<option value="3">大学生</option>
+		</select>
+		<br>
+		个人简介:
+		<br>
+		<textarea name="" id="" cols="30" rows="10">这个人很懒,什么都没有留下....</textarea>
+		<br>
+		<!-- 隐藏域 -->
+		<input type="hidden" name="id" value="110">
+
+		<input type="submit" value="注册">
+		<input type="reset" value="重置">
+		<button>登录</button>
+
+		<input type="image" src="./images/reset.gif">
+		<input type="submit" value="注册" disabled>
+
+		<br>
+		<input type="text" value="abcdef" readonly>
+		<input type="text" value="abcdef" disabled>
+
+	</form>
+		
+
+</body>
+</html>

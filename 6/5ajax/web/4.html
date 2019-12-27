@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ajax的注意事项</title>
+</head>
+<body>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//同源策略
+	// 协议(http https ftp file....)  域名(ip 127.0.0.1 www.baidu.com ) 端口 (80 443 )
+	$.get('http://127.0.0.1:8000/cgi-bin/1.py',{},function(data){}) 
+	// $.get('/cgi-bin/1.py',{},function(data){}) 
+
+	//已拦截跨源请求：同源策略禁止读取位于 http://dianying.cn/ 的远程资源。
+	// $.get('http://dianying.cn',{},function(data){}) 
+
+
+
+	</script>
+</body>
+</html>

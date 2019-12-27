@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	div{
+		position: absolute;
+		top:50px;left:50px;
+		border-radius:50%;
+	}
+
+	.one{width: 500px;height: 500px;background: #369;}
+	.two{width: 400px;height: 400px;background: #969;}
+	.three{width: 300px;height: 300px;background: #966;}
+	.four{width: 200px;height: 200px;background: #996;}
+	.five{width: 100px;height: 100px;background: red;}
+
+	</style>
+</head>
+<body>
+	<div class="one">
+		<div class="two">
+			<div class="three">
+				<div class="four">
+					<div class="five"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+	<a href="./6.html">百度一下</a>
+
+
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	$('a').click(function(){
+		alert(2);
+
+		//阻止元素默认行为   a form
+		return false;
+	})
+
+	/*
+	事件冒泡:
+		当触发一个元素的事件时,会自动触发该元素父级和先辈级的同类型事件
+		造成事件的并发.导致页面混乱.
+
+	阻止事件冒泡:
+		在事件中
+		return false;
+	*/
+
+	//获取div绑定单击事件,改变颜色
+	$('div').click(function(){
+		$(this).css('background','#000');
+		return false;//阻止事件冒泡
+	})
+
+	</script>
+</body>
+</html>

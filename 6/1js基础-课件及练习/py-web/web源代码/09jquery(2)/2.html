@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标移动div</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+		}
+		#move{
+			width: 100px;
+			height: 100px;
+			background: #369;
+			position: absolute;
+			top:0px;left:0px;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="move"></div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//绑定鼠标按下事件
+	$('#move').mousedown(function(){
+		//改变鼠标光标样式
+		$(this).css('cursor','move');
+		//获取当前元素的宽高
+		var w  = $(this).width();
+		var h = $(this).height();
+		
+		//鼠标移动事件
+		$(window).mousemove(function(e){
+			//获取当前鼠标的位置
+			var x = e.pageX;
+			var y = e.pageY;
+
+			//计算当前元素移动的距离
+			var Ntop = y-(w/2);
+			var Nleft = x-(h/2); 
+
+			//设置
+			$('#move').css({top:Ntop+'px',left:Nleft+'px'})
+
+		})
+	})
+
+
+
+	//绑定鼠标抬起事件
+	$('#move').mouseup(function(){
+		//改变鼠标光标样式
+		$(this).css('cursor','default');
+
+		//解除元素的鼠标移动事件
+		$(window).unbind('mousemove');
+	})
+
+
+	</script>
+</body>
+</html>

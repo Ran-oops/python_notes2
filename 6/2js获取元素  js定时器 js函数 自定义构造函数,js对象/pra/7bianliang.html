@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>作用域</title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+		//全局变量
+		//var love=100;
+		//函数不要和变量名冲突  否则会覆盖的
+		function func(){
+			love=200;//在函数中不使用var定义的变量称为全局变量
+			//var love=300;//定义的变量称为局部变量在函数中使用var
+			//console.log(love);
+			
+		}
+		func();
+		console.log(love);
+		</script>
+	</body>
+</html>

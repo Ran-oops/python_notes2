@@ -1,0 +1,49 @@
+﻿	MySQL服务器的用户权限管理 
+=========================================
+-- 授权一个用户（zhangsan）密码123，可以对所有的库，所有的表做所有操作。
+mysql> grant all on *.* to zhangsan@'%' identified by '123';
+Query OK, 0 rows affected (0.17 sec)
+
+--刷新生效，否则就要重启MySQL服务才可以。
+mysql> flush privileges;
+Query OK, 0 rows affected (0.00 sec)
+
+--浏览当前MySQL用户信息
+mysql> select user,host,password from mysql.user;
++----------+-----------------+-------------------------------------------+
+| user     | host            | password                                  |
++----------+-----------------+-------------------------------------------+
+| root     | localhost       | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
+| root     | 127.0.0.1       |                                           |
+|          | localhost       |                                           |
+| zhangsan | %               | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
+| admin    | 192.168.112.132 | *23AE809DDACAF96AF0FD78ED04B6A265E05AA257 |
++----------+-----------------+-------------------------------------------+
+5 rows in set (0.00 sec)
+
+-- 移除一些权限
+-- revoke:只删除了用户权限，但没有删除这个用户
+mysql> revoke insert,delete on *.* from admin@192.168.112.132 identified by'123';
+
+-- 查看指定用户的权限信息
+mysql> show grants for xbb@localhost;
++------------------------------------------------------------------------------------------------------------+
+| Grants for xbb@localhost                                                                                   |
++------------------------------------------------------------------------------------------------------------+
+| GRANT USAGE ON *.* TO 'xbb'@'localhost' IDENTIFIED BY PASSWORD '*23AE809DDACAF96AF0FD78ED04B6A265E05AA257' |
++------------------------------------------------------------------------------------------------------------+
+
+--drop user:删除了整个用户及其权限（包括数据字典中的数据）
+mysql> drop user 'xbb'@'localhost';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select user,host from mysql.user;
++------------------+-----------+
+| user             | host      |
++------------------+-----------+
+| root             | 127.0.0.1 |
+| debian-sys-maint | localhost |
+| root             | localhost |
+| root             | wangxg    |
++------------------+-----------+
+4 rows in set (0.00 sec)

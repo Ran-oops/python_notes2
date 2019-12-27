@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>节点操作</title>
+	<style type="text/css">
+		.all{
+			width: 550px;
+			height: 500px;
+			border:1px solid red;
+		}
+
+		.item{
+			width: 100px;
+			height: 100px;
+			border-radius:50%;
+			float: left;
+			margin: 5px;
+			background: #369;
+		}
+
+	</style>
+</head>
+<body>
+	<button>在元素内部尾部添加元素</button>
+	<button>在元素内部头部添加元素</button>
+	<button>在元素外部尾部添加元素</button>
+	<button>在元素外部头部添加元素</button>
+	<button>删除第一个item</button>
+	<button>克隆元素第一个元素,放到最后</button>
+	<div class="all"></div>
+
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	$('button').eq(0).click(function(){
+		//调用函数去创建div
+		var newDiv = createDiv();
+		//在元素内部尾部插入元素
+		$('.all').append(newDiv);
+		// newDiv.appendTo('.all');
+	})
+
+	$('button').eq(1).click(function(){
+		//调用函数创建div
+		var newDiv = createDiv();
+
+		//在元素内部头部去添加元素
+		$('.all').prepend(newDiv);
+	})
+
+	$('button').eq(2).click(function(){
+		//调用函数创建div
+		var newDiv = createDiv();
+
+		//在元素外部尾部添加元素
+		$('.all').after(newDiv);
+	})
+
+
+	$('button').eq(3).click(function(){
+		//调用函数创建div
+		var newDiv = createDiv();
+
+		//在元素外部头部添加元素
+		$('.all').before(newDiv);
+	})
+
+	$('button').eq(4).click(function(){
+		//删除哪个元素
+		// $('.item').eq(0).remove();
+
+		//清空
+		$('.all').empty();
+		// $('body').empty();
+	})
+
+	//给item绑定单击事件.单击时进行删除
+	// $('.item').click(function(){
+	// 	alert(222);
+	// })
+	// $('.item').live('click',function(){
+	// 	// alert(222);//弹出一个提示框
+	// 	//弹出一个询问框,带有取消和确定按钮,返回布尔类型
+	// 	var res = confirm('您确定要删除这个元素码?');
+	// 	if(res){
+	// 		//删除
+	// 		$(this).remove();
+	// 	}
+	// })
+
+	//克隆
+	$('button').eq(5).click(function(){
+		//clone 能够克隆当前元素的子标签以及文本 ..
+		//如果在克隆时,需要克隆事件,在clone的方法添加参数 true
+		var cDiv = $('.all .item:first').clone(true);
+		$('.all').append(cDiv);
+	})
+
+
+	//封装函数进行div的创建
+	function createDiv(){
+		//创建标签 div
+		var newDiv = $('<div class="item"><span>love</span></div>');
+		// 设置随机颜色
+		var bg = 'rgb('+rand(0,255)+','+rand(0,255)+','+rand(0,255)+')';
+		newDiv.css('background',bg);
+
+		newDiv.click(function(){
+			alert(2);
+		})
+
+		//将创建出来的div返回
+		return newDiv;
+	}
+
+
+	//封装随机函数 
+	function rand(m,n){
+		return Math.floor(Math.random()*(n-m+1))+m;
+	}
+
+
+	</script>
+</body>
+</html>

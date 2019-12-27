@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type='text/css'>
+			/*标签[属性]*/
+			/*div[title]{
+				background-color:red;
+			}*/
+			/*如果去掉标签?*/
+			/*[title]{
+				background-color:green;
+			}*/
+			/*匹配标签的属性等于指定的值*/
+			/*div[title = "this is a test"]{
+				background-color:blue;
+			}*/
+			/*匹配属性值是由多个空格分隔的值 ，其中一个值等于val*/
+			/*div[title ~= "this"]{
+				background-color:red;
+			}*/
+
+			/*div[title ^= t]{
+				background-color:green;
+			}*/
+
+		/*	div[title $= 't']{
+				background-color:red;
+			}*/
+/*
+			div[title *= 's']{
+				background-color:green;
+			}*/
+
+			div[title |= "this"]{
+				background-color:red;
+			}
+			div[lang |= "en"]{
+				background-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<div title="this is a test">什么动物的牙最黑？蚂蚁牙黑</div>
+		<p title = "this is a test">为什么女人出轨叫老王?</p>
+		<div title="this a" lang="en-gb">而男人出轨却叫小三?</div>
+		<p title="test">因为王跟三之间只差一根棍</p>
+		<a title="this">少女和少妇怎么区别？你动，她动</a>
+		<div name="this-nihaoma" >人的一声又三个不足？余额不足、流量不足、电量不足</div>
+		<div title="his is a test">有多少人嘴里喊着努力，其实只是在床上想想呢?</div>
+	</body>
+</html>

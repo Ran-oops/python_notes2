@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type='text/css'>
+			input[type="text"]:enabled{
+				background:green;
+			}
+			input[type="text"]:disabled{
+				background-color:yellow;
+			}
+			input[type="radio"]:checked+label{
+				color:green;
+				font-size:30px;
+			}
+			::selection{
+				color:red;
+			}
+			::-moz-selection{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="">
+			<input type="text" name="user" value="徐达" readonly/></br>
+			<input type="text" name="username" value="庞龙" disabled/><br/>
+			<input type="text" name="admin" value="徐小"><br/>
+			<input type="radio" name="sex" value="0" id="nv"/><label for="nv">女</label>
+			<input type="radio" name="sex" value="1" id="nan" checked/><label for="nan">男</label>
+			<input type="radio" name="sex" value="2" id="yao"/><label for="yao">妖</label>
+		</form>
+		<hr/>
+		<p>上课不认真听讲原因有五，一是手里有个手机，二是心里有个美女，三是旁边坐个逗13，四是窗外有台挖掘机，五是智商不在服务区</p>
+
+		
+	</body>
+</html>

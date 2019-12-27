@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type='text/css'>
+			@media screen and (device-width:480px) and (device-height:800px){
+				li:nth-child(1){
+					background:red;
+				}
+				/*@import './css.css';*/
+			}
+			@media screen and (device-width:720px) and (device-height:1280px){
+				li:nth-child(2){
+					background:orange;
+				}
+			}
+			@media screen and (device-width:640px){
+				li:nth-child(3){
+					background:yellow;
+				}
+			}
+
+			@media screen and (device-height:1136px){
+				li:nth-child(4){
+					background:green;
+				}
+			}
+			/*@media screen and (device-width:1024px) and (device-height:768px){
+				li:nth-child(5){
+					background:blue;
+				}
+			}*/
+			@media screen and (min-width:800px) and (max-width:1200px){
+				li:nth-child(6){
+					background:purple;
+				}
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li>安卓手机480*800(屏幕分辨率) 红色</li>
+			<li>安卓pad 720*1280 橙色</li>
+			<li>iphone 4/4s 640*960   黄色</li>
+			<li>iphone 6/6s/6p/6sp/7/7p 640*1136 绿色</li>
+			<li>ipad 1024*768 蓝色</li>
+			<li>电脑  > 1024*768  紫色</li>
+		</ul>
+	</body>
+</html>

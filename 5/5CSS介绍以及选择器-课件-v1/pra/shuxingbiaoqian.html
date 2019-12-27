@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type='text/css'>
+			/*div[title]{
+				background-color:red;
+			}*/
+			/*[title]{
+				background:green;
+			}*/
+			/*div[title="this is test"]{
+				background:blue;
+			}*/
+			/*div[title $='t']{
+				background-color:green;
+			}*/
+			/*div[title*='s']{
+				background-color:green;
+			}*/
+			/*div[title ~="this"]{
+				background-color:red;
+			}*/
+			div[title^=t]{
+				background-color:green;
+			}
+		</style>
+	</head>
+	<body>
+		<div title="this is test">什么动物的牙最黑</div>
+		<p title="this is a test">I have a dream</p>
+		<div title="this">to help me reality</div>
+		<a title="I believe in angle">I have a dream</a>
+		<div name="this">to help me code with everything</div>
+	</body>
+</html>

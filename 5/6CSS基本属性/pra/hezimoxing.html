@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type='text/css'>
+		#father{
+			width:700px;
+			background:red;
+			overflow:hidden;
+		}
+		#top{
+			width:600px;
+			height:100px;
+			background:#abcdef;
+			float:left;
+		}
+		#left{
+			width:200px;
+			height:100px;
+			background:pink;
+			float:left;
+		}
+		#self{
+			width:200px;
+			height:100px;
+			background:green;
+			float:left;
+			/*margin-top:20px;
+			margin-left:20px;
+			margin-right:20px;
+			margin-bottom:20px;*/
+			/*简写属性*/
+			/*4个参数*/
+			/*margin:20px 30px 40px 50px;*/
+			/*3个参数*/
+			/*margin:20px 30px 40px;*/
+			/*2个参数*/
+			/*margin:20px 30px;*/
+			/*1个参数*/
+			margin:20px;
+		}
+		#right{ 
+			width:200px;
+			height:100px;
+			background:pink;
+			float:left;
+
+		}
+		#bottom{
+			width:600px;
+			height:100px;
+			background:#abcdef;
+			float:left;
+		}
+		#one{
+			width:800px;
+			height:300px;
+			background:green;
+			clear:both;
+			margin:10px auto;
+		}
+		#two{
+			width:500px;
+			height:200px;
+			background:red;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="father">
+			<div id="top">顶部元素</div>
+			<div id="left">左侧元素</div>
+			<div id="self">当前元素</div>
+			<div id="right">右侧元素</div>
+			<div id="bottom">底部元素</div>
+		</div>
+		<div id="one"></div>
+		<div id="two"></div>
+	</body>
+</html>

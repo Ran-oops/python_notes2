@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>使用定位来做一个导航条</title>
+		<style type='text/css'>
+			/*用一次没有学到的东西  清除标签中默认样式*/
+			ul,li,a{
+				margin:0;
+				padding:0;
+				text-decoration:none;
+			}
+			a{
+				color:#fff;
+			}
+			ul>li{
+				list-style:none;
+				width:150px;
+				height:40px;
+				background:#434343;
+				text-align:center;
+				line-height:40px;
+			}
+			ul{
+				background:red;
+				width:900px;
+				height:40px;
+				position:fixed;
+				top:0px;
+				left:8px;
+				/*bottom:0px;
+				right:0px;*/
+
+			}
+			li:hover{
+				background:#000;
+			}
+			li:nth-child(1){
+				position:absolute;
+			}
+			li:nth-child(2){
+				position:absolute;
+				left:150px;
+			}
+			li:nth-child(3){
+				position:absolute;
+				left:300px;
+			}
+			li:nth-child(4){
+				position:absolute;
+				left:450px;
+			}
+			li:nth-child(5){
+				position:absolute;
+				left:600px;
+
+			}
+			#content{
+				width:900px;
+				height:1500px;
+				background:yellow;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="">Bootstrap中文网</a></li>
+			<li><a href="">Bootstrap中文文档</a></li>
+			<li><a href="">Bootstrap中文网</a></li>
+			<li><a href="">Bootstrap中文网</a></li>
+			<li><a href="">Bootstrap中文网</a></li>
+
+		</ul>
+		<div id="content"></div>
+		a
+		
+	</body>
+</html>

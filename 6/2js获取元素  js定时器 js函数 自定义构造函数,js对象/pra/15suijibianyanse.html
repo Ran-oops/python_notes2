@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type='text/css'>
+			#one{
+				width:200px;
+				height:200px;
+				background:#369;
+			}
+			</style>
+	</head>
+	<body>
+		<div id='one' onclick='func()'></div>
+		<script type='text/javascript'>
+		var one=document.getElementById('one')
+		function func(){
+			//随机颜色
+			one.style.background='rgb('+rand(0,255)+','+rand(0,255)+','+rand(0,255)+')';
+		}
+		//封装随机函数
+		function rand(m,n){
+			return Math.floor(Math.random()*(n-m+1))+m;
+		}
+
+		</script>
+	</body>
+</html>

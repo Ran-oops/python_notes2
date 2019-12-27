@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+			//自定义构造函数
+			function person(name,age,sex){
+				this.name=name;
+				this.age=age;
+				this.sex=sex;
+				this.say=function(){
+					console.log('别说话，听');
+				}
+			}
+			//实例化对象
+			var zs= new person('张三',21,'男');
+			var ls= new person('李四',19,'男');
+			console.log(zs);
+			console.log(ls);
+			//for...in遍历
+			//for(var i in ls){
+				//console.log(i);
+			//	console.log(ls[i]);
+		//	}
+			console.log(ls.constructor);//查看当前对象的构造函数
+			//var obj=new Object();
+			var obj=new Array();
+			console.log(obj.constructor);
+
+		</script>
+	</body>
+</html>

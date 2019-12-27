@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>元素的操作</title>
+		<style type='text/css'>
+			#move{
+				width:200px;
+				height:200px;
+				background:#909;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="move">你就是傻瓜！</div>
+		<form action='' id='myform'>
+			用户名：<input type='text' name='username' >
+			密码：<input type='password' name='password'>
+		</form>
+		<button id='btn'></button>
+		<script type="text/javascript">
+			//获取元素
+			/*var m=document.getElementById('move');
+			//style 样式操作 只能操作行内样式，
+			//设置
+			m.style.width='300px';
+			m.style.color='red';
+			m.style.fontSize='20px';//注意。css中的双拼词，需要把横线去掉，将后面词变为首字母大写
+			m.style.textAlign='center';
+		//获取
+			var w=m.style.width;
+			console.log(w);*/
+		//文本操作  innerHTML
+		//设置
+		//m.innerHTML='I love U';
+		//获取
+		//var t=m.innerHTML;
+		//console.log(t);
+		//获取form表单
+		var myform=document.getElementById('myform');
+		var myform1=document.getElementById('btn');
+		//设置用户名的value
+		/*myform.username.value='张三三';
+		myform.password.value='123456'*/
+		//获取
+		//var v=myform.username.value;
+		//console.log(v);
+		//绑定单击事件
+		myform1.onclick=function(){
+			var v=myform.username.value;
+			console.log(v);
+		}
+		</script>
+	</body>
+</html>

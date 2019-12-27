@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	/**{margin: 0;padding: 0;}*/
+	#small{width: 400px;height: 400px;margin-top: 50px;
+		margin-left: 10px;position: absolute;
+	}
+
+	#big{width: 400px;height: 400px;margin-top: 50px;
+		margin-left: 420px;position: absolute;
+		overflow: hidden;display:none;
+	}
+	#move{
+		width: 100px;height: 100px;background: url('./images/bg.png');
+		position: absolute;top:0px;left:0px;
+		display: none;
+	}
+	#aa{position: absolute;top:0px;left:0px;
+		width: 1600px;height: 1600px;
+	}
+
+	</style>
+</head>
+<body>
+	<div id="small">
+		<img src="./images/2.jpg" width="100%">
+		<div id="move"></div>
+	</div>
+	<div id="big">
+		<img id="aa" src="./images/2.jpg" >
+	</div>
+	<script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//绑定鼠标移动事件
+	$('#small').mousemove(function(e){
+		//显示放大的图片和像素div
+		$('#move').show();
+		$('#big').show();
+
+		//获取当前鼠标的位置
+		var x = e.pageX;
+		var y = e.pageY;
+
+		//获取父级元素的top和lefy
+		var sT = $('#small').offset().top;
+		var sL = $('#small').offset().left;
+
+		//计算新的Top和Left
+		var newLeft = x-sL-($('#move').width()/2);
+		var newTop = y-sT-($('#move').height()/2);
+
+
+		//计算最大的top和left
+		var MaxLeft = $('#small').width()-$('#move').width();
+		var MaxTop = $('#small').height()-$('#move').height();
+
+
+		//检测越界
+		if(newTop <= 0){newTop = 0;}
+		if(newLeft <= 0){newLeft = 0;}
+		if(newTop >= MaxTop){newTop = MaxTop}
+		if(newLeft >= MaxLeft){newLeft = MaxLeft}
+
+		//设置
+		$('#move').css({top:newTop,left:newLeft});
+		
+
+		var aaa=newTop*4;
+		var bbb=newLeft*4;
+
+
+		$('#aa').css({top:-aaa,left:-bbb});
+	})
+
+
+	//绑定鼠标移出事件
+	$('#small').mouseout(function(){
+		//隐藏放大的图片和像素div
+		$('#move').hide();
+		$('#big').hide();
+	})
+
+
+
+	</script>
+</body>
+</html>

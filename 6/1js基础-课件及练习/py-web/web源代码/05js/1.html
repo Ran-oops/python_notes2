@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js使用场景</title>
+</head>
+<body>
+	<!--3, 注意 ,在 包含src属性的script标签内不能在书写js代码 -->
+	<script type="text/javascript" src="./1.js"></script>
+
+	<!-- 2. 在元素 (标签) 内书写事件属性  来触发js代码的执行 -->
+	<div onclick="alert('点我干啥?')" style="width: 200px;height: 200px;background: #369;"></div>
+	<a href="javascript:alert('点你咋滴')">点一下试试</a>
+	<a href="javascript:void(0)" onclick="alert('试试就试试')">再点一下试试</a>
+	
+	<!-- 1, 在html页面中任意位置 书写 script标签,在标签内写js代码 -->
+	<script type="text/javascript">
+		// alert('哎呦,不错哦');
+
+	</script>
+
+	<script type="text/javascript">
+
+
+	</script>
+
+
+</body>
+</html>

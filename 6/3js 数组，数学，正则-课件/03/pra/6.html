@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form id='my' action=''>
+			手机号：<input type='text' name='phone'><span id='r'></span><br/>
+			密码：<input type='password' name='password'><br/>
+			<input type='submit' value='注册'>
+		</form>
+
+
+		<script type='text/javascript'>
+			//获取
+			var my=document.getElementById('my')
+			var r=document.getElementById('r')
+			//定义一个全局变量，辅助绑定的onsubmit事件
+			var userok=false;
+
+
+			//绑定事件 onfocus获取焦点事件
+			my.phone.onfocus=function(){
+				r.innerHTML='&nbsp;请输入11位电话号码';
+				r.style.color='green';
+			}
+			//绑定丧失焦点事件 获取用户输入的值，用正则方法验证是否符合电话号码特征，符合则提示正确，不符合则提示错误
+			my.phone.onblur=function(){
+				var v=my.phone.value;
+				var reg=/^1\d{10}$/;
+				if(reg.test(v)){
+					r.innerHTML='√';
+					r.style.color='blue';
+					userok=true;
+				}else{
+					r.innerHTML='×';
+					r.style.color='red';
+					userok=false;
+				}
+			}
+			//绑定表单提交事件
+			my.onsubmit=function(){
+				//判断是否正确
+				if (userok){
+
+				}else{
+					//如果在事件绑定return false 就是阻止元素的默认行为
+					return false;
+				}
+
+				
+			}
+		</script>
+	</body>
+</html>

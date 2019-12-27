@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js对象</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//对象定义方式  内置对象方法
+	var obj = new Object();
+
+	//属性  .成员访问符 []
+		obj.name = '张三';
+		obj.sex = '男';
+		// obj['age'] = 21;
+		var a = 'age';//当属性名或方法名存在与一个变量中时,使用中括号的方式
+		obj[a] = 22;
+
+		//删除属性
+			// delete obj.age;
+		//获取
+			// alert(obj['age']);
+		//修改
+			obj.name = '李四';
+	//方法
+		obj.sing = function(){
+			alert('是谁在唱歌');
+		}
+		var d = 'dance';
+		// obj['dance'] = function(){
+		obj[d] = function(){
+			alert('在跳舞');
+		}
+
+		// obj[d]();
+		// obj.dance();
+
+
+	//json格式定义对象  快速定义方法 {属性名:属性值,....,...,}
+	// var tt = {name:'婷婷',sex:'女',sanwei:'85 65 80'};
+	var tt = {
+		name:'婷婷',
+		sex:0,
+		sanwei:'80 65 80',
+		dance:function(){
+			// alert('跳一个把');
+			alert(this.name);
+		}
+	}
+
+	// console.log(tt);
+
+	// console.log(tt.name);
+	// tt['dance']();
+
+	//使用自定义构造函数创建对象
+	function person(a,sex,age){
+		//对象的属性进行赋值
+		this.name = a;
+
+		//方法
+		this.info = function(){
+			alert(this.name);
+		}
+	}
+	//实例化对象
+	var r = new person('李思思');
+	var z = new person('张三三');
+
+	// r.info();
+	// z.info();
+
+	// console.log(r);
+
+
+	/*
+		this 单词本身 这个 意思
+
+		代表当前这个对象
+		谁调用了这个方法,创建了对象,this就代表谁
+	*/ 
+
+	/*
+		页面中最大的对象 window对象,代表当前打开的窗口
+		document 
+		页面中定义的全局变量,是window对象的属性
+		页面中定义的全局函数,是window对象的方法
+
+	*/
+	// var love = 'iloveyou';
+
+	// alert(window.love);
+
+	// for(var i in window){
+	//     document.write(i+'----'+window[i]+'<br>');
+	// }
+
+	// for(var i in tt){
+	//     document.write(i+'----'+tt[i]+'<br>');
+	// }
+
+	// //查看当前对象的构造函数是谁
+	var arr = [1,2,3,4];
+	var res = tt.constructor;
+	console.log(res);
+
+
+
+
+	</script>
+</body>
+</html>

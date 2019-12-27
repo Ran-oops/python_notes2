@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var obj = new Object();
+	obj.name = 'zhangsan';
+	obj.age = 10;
+	obj['sex'] = 'nan';
+	obj.sing = function(){
+		alert('cg')
+	}
+	var d = 'dance';
+	obj[d] = function(){
+		alert('tw');
+	}
+	obj['a'] = function(){
+		alert('aaa');
+	}
+
+	// obj.sing();
+	// obj.dance();
+	// obj.a();
+
+
+
+		var tt = {
+			name:'婷婷',
+			sex:10,
+			sanwei:'80 65 80',
+			dance:function(){
+				alert(this.name);
+			}
+		}
+		// tt['dance']();
+		// var a = tt.name;
+		// console.log(a);
+
+
+		function pen(name,color,price){
+			this.name = name;
+			this.color = color;
+			this.price = price;
+			this.say = function(){
+				alert('aaaaaa');
+			}
+		}
+		var p = new pen('铅笔','黑色',20);
+		console.log(p);
+		p.say();
+
+
+	</script>
+</body>
+</html>

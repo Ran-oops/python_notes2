@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div,ul,li,img,h3,p{
+			margin: 0;
+			padding: 0;
+			list-style:none;
+		}
+
+		ul{
+			float: left;
+			width: 25%;
+			height: 200px;
+		}
+
+		ul li{
+			text-align:center;
+			border:1px solid red;
+
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<li class="item" style="display: none;">
+		<h3>商品标题</h3>
+		<p>价格: <span>100元</span></p>
+		<img src="./images/0c0284bb404ac7213ef8cd1acdbfdc2f.jpg" width="200px" height="300px">
+	</li>
+	<ul>
+		
+
+	</ul>
+	<ul>
+		
+	</ul>
+	<ul>
+		
+	</ul>
+	<ul>
+		
+	</ul>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//全局变量
+	var p = 1;
+
+	//封装函数,进行ajax请求数据
+	function requestGoods(){
+		$.get('/cgi-bin/6.py',{p:p},function(data){
+			// console.log(data);
+			//处理数据 [{},{},{}]
+			for (var i = 0; i < data.length; i++) {
+				// console.log(data[i].title);
+				//先克隆
+				var newLi = $('.item').eq(0).clone();
+				newLi.find('h3').text(data[i].title);
+				newLi.find('span').text(data[i].price);
+				newLi.find('img').attr('src',data[i].pic);
+				newLi.show();
+				// console.log(newLi);
+				// 0 1 2 3 0 1 2 3 0 1 2 3
+				var ind = i%4;
+				$('ul').eq(ind).append(newLi)
+
+
+			};
+
+			//如果请求完成一次,让参数++
+			p++;
+		},'json')
+	}
+
+	requestGoods();
+
+
+	//绑定文档滚动事件
+	$(window).scroll(function(){
+		//获取整个文档的高度
+		var dH = $(document).height();
+		//获取可视区域高度
+		var cH = $(window).height();
+		//获取文档滚动距离
+		var dT = $(window).scrollTop();
+
+		//判断 是否触底,
+		if(dH == cH+dT){
+			requestGoods();
+		}
+	})
+
+
+	</script>
+</body>
+</html>

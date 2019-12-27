@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数据类型转换</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//数字类型转换 Number()  parseInt() parseFloat()
+
+	var n = '123';
+	var n = '123.12';
+	var n = '123abc';
+	var n = '123.12abc';
+	var n = 'abc123.12';
+	var n = true;
+	var n = false;
+
+	// console.log(Number(n));//整型和浮点都可以,如果是存数字,转数字,包含非数字时 转NaN,可以转布尔类型
+	// console.log(parseInt(n));//只能转成整型 如果字符串中首字母是非数字 直接转NaN
+	// console.log(parseFloat(n));//整型和浮点都可以 如果字符串中首字母是非数字 直接转NaN
+
+	//字符串类型转换 String()
+	// console.log(n,String(n),typeof(String(n)));
+
+
+	// js中数据为假的情况 false '' 0 0.0 NaN null undefined
+	// Boolean(value) - 把给定的值转换成 Boolean 型；
+	var n = false;
+	var n = 0;
+	var n = 0.0;
+	var n = NaN;
+	var n = '';
+	var n = null;
+	var n = new Object();//true
+	var n = new Array();//true
+	var n = function(){}
+	var n = undefined;//false
+	// console.log(Boolean(n));
+
+
+	//算 字 赋 比 逻 位 它
+	// var a = 2;
+	// a++;
+	// console.log(a);
+
+	//字符串链接
+	// var a  = 'abc';
+	// var b = 'bbb';
+	// var str = a+b;//进行字符串链接
+	// console.log(str);
+	var a = 100+100+'100';
+	var a = 100+'100'+100;
+	var a = '100'+100+100;
+
+	//在 python 中 . 作为成员访问符
+	// obj.name()
+
+	//在 php .作为链接符 ->成员访问符
+
+	//在js中 +做运算和链接  .作为成员访问符
+
+	console.log(a);
+
+	var a = true;
+	var b = true;
+
+	var c = a ? 10 : 1;
+	alert(c);
+
+
+	// if(!a){
+	// 	alert(1);
+	// }else{
+	// 	alert(2);
+	// }
+
+
+	/*if(a || b){
+		//真
+		alert(1);
+	}else{
+		//假
+		alert(2);
+	}*/
+
+
+	</script>
+</body>
+</html>

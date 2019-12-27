@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<select name="" id="city">
+		<option value="0">北京</option>
+		<option value="1">天津</option>
+		<option value="33">上海</option>
+		<option value="44">深圳</option>
+	</select>
+
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//绑定change 事件
+	$('#city').change(function(){
+		// console.log(22);
+		var v = $(this).val();
+		console.log(v);
+	})
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css选择器</title>
+	<style type="text/css">
+		/*组合选择符,并列选择器 多个标签都执行一个样式*/
+		html,body,div,ul,li{margin: 0;padding: 0;}
+		/*选择页面中所有的div标签*/
+		div{width: 50px;height: 50px;border:1px solid red;}
+		li{width: 60px;height: 20px;border:1px solid blue;list-style:none;}
+		/*选择页面中元素的id为 a1 的   id在页面中不要重复*/
+		#a1{background:#f39;}
+		
+		/*类选择符 找到页面中所有class=b1*/
+		.b1{background: #369;}
+		.b2{background: #696;}
+		/*空格 层级选择器  选择id为add里面的class=c1的元素*/
+	#add .c1{background: #963;}
+
+	#all div{width: 100px;height: 100px;border:1px solid green;}
+	</style>
+	<!-- <link rel="stylesheet" href="./1.css"> -->
+</head>
+<body>
+	<!-- <div style="width: 200px;height: 200px;border:1px solid pink;">iloveyou</div> -->
+	<!-- <div>iloveyou</div> -->
+
+	<div></div>
+	<div id="a1"></div>
+	<div></div>
+	<div class="b1 b2 b3"></div>
+	<div class="b1"></div>
+	<div class="b1"></div>
+	<hr>
+	<div id="add">
+		<div>
+			<div>
+				<div class="c1"></div>
+				<div class="c1"></div>
+			</div>
+		</div>
+	</div>
+	<div></div>
+	<div id="all">
+		<div ></div>
+		<div ></div>
+	</div>
+	
+
+	<div></div>
+	<br>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	var str = 'iloveyou';
+
+	// Number()  负责将其它类型的值,转为数字类型
+	var res = Number(str);
+
+	// console.log(str,typeof(str));
+	// console.log(res,typeof(res));
+
+
+	//任何值与NaN进行运算,得到结果 都是 NaN
+	var res = 100+NaN;
+
+
+	//任何值与NaN进行比较 得到的结果 都是 false  除了!=
+	var res = 100<NaN;
+	var res = 100>NaN;
+	var res = 100==NaN;
+	var res = NaN==NaN;
+	var res = NaN!=NaN;
+	var res = 100!=NaN;
+
+	//检测一个变量是否为NaN  只能使用 isNaN()
+
+	var a = NaN;
+	var res = isNaN(a);
+
+
+	console.log(res);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>test eval()</title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+		/*var str='var a=100';
+		eval(str)//把合法的js的字符串当成是js表达式来执行
+		alert(a)*/
+		var data='[1,2,3,4]';
+		//'var arr=[1,2,3,4]'
+		eval ('var arr='+data);
+		console.log(arr)
+		console.log(typeof(arr))
+
+
+
+		</script>
+	</body>
+</html>

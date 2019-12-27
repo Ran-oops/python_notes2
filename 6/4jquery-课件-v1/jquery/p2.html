@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>元素的操作</title>
+		<style type='text/css'>
+			.all{
+				width:200px;
+				height:200px;
+				border:1px solid red;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class='all'>ABC</div>
+		<div >ABC</div>
+		<div >ABC</div>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		//alert($)
+		//样式操作  设置单个值  设置的是行内样式  优先级高
+		//$('.all').css('background','cyan')
+		$('.all').css('fontSize','30px')
+		
+		//样式操作  设置多个值
+		//$('.all').css({width:'200px',height:'200px',background:'green'})
+
+		//var w=$('.all').css('width')//获取操作  获取操作的使用相对较少  常用来进行设置操作 这种方法不仅可以获取样式操作中设置的值，即24行21行设置的值，还可以获取在第7行设置的值
+		//console.log(w)
+
+		//class类的操作
+			//添加一个class类
+			/*$('div').eq(1).addClass('all');
+			//$('div').eq(2).addClass('all');
+			$('div').eq(1).addClass('a');//是又添加一个类 不是覆盖
+
+			//删除指定类
+			$('div').eq(1).removeClass('a');
+			//这样是删除所有类
+			$('div').eq(1).removeClass();*/
+
+			//切换  指的是原本没有的类 写了切换操作之后会存在  再写一遍又不存在 交替进行
+			//如果元素没有该类就是进行设置，如果有该类，就是移除
+			//$('div').eq(2).toggleClass('all');
+			//$('div').eq(2).toggleClass('all');
+
+		//attr 属性操作 设置元素的属性和值  也可以是重新赋值
+			//$('div').eq(2).attr('class','abc')
+			//$('div').eq(2).attr('id','ccc')
+			//$('div').eq(2).attr('love','I love U')
+			//获取
+			//var l=$('div').eq(2).attr('love');
+			//console.log(l);
+			
+
+		//文本操作  text() html()
+			//设置
+			//$('div').eq(2).html('love');
+			$('div').eq(2).html('<span style="color:red">love</span>');
+			//$('div').eq(2).text('love');
+			//$('div').eq(2).test('<span style="color:red">love</span>');//设置时不解析标签，只当做文本处理，所以不要用这种方法
+			
+			//获取
+			var h=$('div').eq(2).html();//获取时如果有子标签也能够获取
+			
+			var t=$('div').eq(2).text();//只能获取纯文本
+
+			console.log(h);
+			console.log(t);
+		</script>
+	</body>
+</html>

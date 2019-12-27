@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+	<head>
+	    <!--设置字符集-->
+	    <meta charset='utf-8'>
+	    <!--让IE开启它的兼容模式-->
+	    <meta http-equiv='X-UA-Compatible' content='IE-edge'>
+	    <!--让手机的屏幕端口正常显示-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!--上面3个标签必须放在最前面，任何其他内容都必须跟随其后-->
+	  
+	    <title>Bootstrap 101 Template</title>
+	    <!-- Bootstrap -->
+	    <link rel="stylesheet" href="./ppublic/css/bootstrap.min.css">
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="./ppublic/js/jquery-1.10.2.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="./ppublic/js/bootstrap.min.js"></script>
+	    <style type='text/css'>
+	    	body { padding-top: 93px; }
+	    	#one{
+				margin-top:9px;
+				margin-left:250px;
+			}
+			#two{
+				margin-left:9px;
+				margin-top:9px;
+			}
+			.t{
+				height:61px;
+				width:1169px;
+				margin:0px auto;
+				border:2px solid #ccc;
+				padding-left:15px;
+				line-height:61px;
+			}
+			#dao{
+				
+				height:39px;
+				line-height:39px;
+				
+				
+			}
+			.b{
+				width:1220px;
+				height:82px;
+				
+				margin:0px auto;
+
+			}
+			#pic{
+				height:79px;
+				width:79px;
+			}
+			#bt{
+				border-radius:50%;
+			}
+			#amount,#amountt,#price,#price2,#total,#total2,#exercise,#exercise2,#total3{
+				
+				text-align:center;
+			}
+			#goods1,#goods2{
+				line-height:82px;
+
+			}
+			#j1{
+				height:10px;
+				width:15px;
+				
+			}
+			#cont{
+				border:2px solid #ccc;
+				padding-bottom:10px;
+			}
+			
+			
+	    </style>
+	</head>
+	<body background="./h.jpeg">
+		<!--导航条start-->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<div class="container">
+		    		<div class="row">
+		    			<div class='col-md-offset-1'>
+
+				    			<ul class="nav navbar-nav">
+				    				<li><img src='./0.png' height='50px'/></li>
+						      		<li><a href="#">在线商城</a></li>
+						      		<li><a href="">坚果 3</a></li>
+						      		<li><a href="">坚果 Pro 2</a></li>
+						      		<li><a href="">Smartisan OS</a></li>
+						     		<li><a href="">欢喜云</a></li>
+						      		<li><a href="">应用下载</a></li>
+						      		<li><a href="">官方论坛</a></li>
+						      		<li><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal" id="one">
+						      			<span class="glyphicon glyphicon-user" >登录</span>
+						      		</button></li>
+					    			
+					    			<li><button type="button" class="btn btn-default btn-sm"  id="two">
+						      			<span class="glyphicon glyphicon-shopping-cart" ></span>
+						      		</button></li>
+					    		</ul>
+					    		</div>
+					</div>
+				</div>
+   
+		  	</div><!-- /.navbar-collapse -->
+		 </div>
+		</nav>
+		<!--导航条end-->
+
+		<div class='t'><font size='4'>购物清单</font></div>
+		<div class='container' id='cont'>
+			<div class='row' id='dao'class='col-xs-12 '>
+				<div class='col-md-6 col-xs-3' id='detail'>
+					   商品信息		    
+				</div>
+				<div class='col-md-6 '>
+					<div class='col-md-3 col-xs-2'id='price'>
+						<div>单价</div>
+					</div>
+					<div class='col-md-3 col-xs-2' id="amountt">
+						<div>数量</div>
+					</div>
+					<div class='col-md-3 col-xs-2' id='total'>
+						<div>小计</div>
+					</div>
+					<div class='col-md-3 col-xs-2' id='exercise'>
+						<div>操作</div>
+					</div>
+				</div>	 
+			</div><!--row end-->
+			
+			<div class='row' id='goods1'>
+
+				<div class='col-md-6 col-xs-3' id='detail2'>
+					    <input type="checkbox" value="">
+					    <img src='./17.png' id='pic'/>
+					    <div>坚果 3 绒布国旗保护套</div>	    
+				</div>
+				<div class='col-md-6 col-xs-12' id='price2'>
+					<div class='col-md-3 col-xs-2'>
+						<div><span>￥</span><span id=jia1>299.00</span></div>
+					</div>
+					<div class='col-md-3 col-xs-2'>
+						<div id='amount'>
+							<button type="button" class="btn btn-default btn-xs" id='btm1'>
+							  <span class="glyphicon glyphicon-minus"></span> 
+							</button>
+							<span id='j1'>1</span>
+							<button type="button" class="btn btn-default btn-xs" id='btp1'>
+							  <span class="glyphicon glyphicon-plus"></span> 
+							</button>
+						</div>
+					</div>
+					<div class='col-md-3 col-xs-2' id='total2'>
+						<div><span>￥</span><span id=jia1>299.00</span></div>
+					</div>
+					<div class='col-md-3 col-xs-2' id='exercise2'>
+						<button type="button" class="btn btn-default btn-xs" id='btr1'>
+						  <span class="glyphicon glyphicon-remove"></span> 
+						</button>
+					</div>
+				</div>	 
+			</div><!--row end-->
+			<br/>
+			<div class='row' id='goods2'>
+				<div class='col-md-6 col-xs-12' id='detail2'>
+					    <input type="checkbox" value="">
+					    <img src='./5.png' id='pic'/>
+					    <div>《深泽直人》</div>		    
+				</div>
+				<div class='col-md-6 col-xs-12' id='price2'>
+					<div class='col-md-3'>
+						<div><span>￥</span><span id=jia2>99.00</span></div>
+					</div>
+					<div class='col-md-3 col-xs-6'>
+						<div id='amount'>
+							<button type="button" class="btn btn-default btn-xs" id='btm2'>
+							  <span class="glyphicon glyphicon-minus"></span> 
+							</button>
+							<span id='j2'>1</span>
+							<button type="button" class="btn btn-default btn-xs" id='btp2'>
+							  <span class="glyphicon glyphicon-plus"></span> 
+							</button>
+						</div>
+					</div>
+					<div class='col-md-3 col-xs-6' id='total3'>
+						<div><span>￥</span><span id=jia2>99.00</span></div>
+					</div>
+					<div class='col-md-3 col-xs-6' id='exercise2'>
+						<button type="button" class="btn btn-default btn-xs" id='btr2'>
+						  <span class="glyphicon glyphicon-remove"></span> 
+						</button>
+					</div>
+				</div>	 
+			</div><!--row end-->
+			<hr/>
+			<div class='row'>
+				<div class='col-md-6 col-xs-12'>
+				    <button onclick='func(1)'>全选</button>
+				    <button onclick='func(2)'>全不选</button>
+				    <button onclick='func(3)'>反选</button>		    
+				</div>
+				<div class='col-md-6 col-xs-12' id='price2'>
+					<div class='col-md-4 col-xs-6'>
+						<span></span>
+					</div>
+					<div class='col-md-4 col-xs-6'>
+						<span></span>
+					</div>
+					<div class='col-md-4 col-xs-6'>
+						<button>现在结算</button>
+					</div>
+					
+				</div>	 
+			</div><!--row end-->
+
+		</div><!--container end-->
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		function func(opt){
+			//获取页面中所有的input标签 得出的结果是一个数组，然后通过这个数组获取元素、集合
+			var inps=document.getElementsByTagName('input');
+			//遍历
+			for (var i=0; i<inps.length;i++){
+				
+				if(opt==1){
+					//设置全部选中
+					inps[i].checked=true;
+				}else if(opt==2){
+					//设置全部取消选中
+					inps[i].checked=false;
+				}else{
+					inps[i].checked=!inps[i].checked;
+				}
+			}
+
+		}
+
+		$('#btp1').click(function(){
+			plusvalue=$('#j1').html();
+			plusvalue++;
+			$('#j1').html(plusvalue)
+			jia1=$('#jia1').html()
+			
+			pn=Number(plusvalue);
+			jn=	Number(jia1);
+			
+			$('#total2').html('￥'+pn*jn+'.00')
+			
+		})
+
+		$('#btm1').click(function(){
+			minusvalue=$('#j1').html();
+			if(minusvalue>1){
+				minusvalue--;
+				$('#j1').html(minusvalue)
+				jia1=$('#jia1').html()
+			
+				mn=Number(minusvalue);
+				jn=	Number(jia1);
+			
+				$('#total2').html('￥'+mn*jn+'.00')
+
+			}else{
+
+			}
+						
+		})
+
+		$('#btp2').click(function(){
+			plusvalue=$('#j2').html();
+			plusvalue++;
+			$('#j2').html(plusvalue)
+			jia2=$('#jia2').html()
+			
+			pn=Number(plusvalue);
+			jn=	Number(jia2);
+			
+			$('#total3').html('￥'+pn*jn+'.00')
+			
+		})
+
+		$('#btm2').click(function(){
+			minusvalue=$('#j2').html();
+			if(minusvalue>1){
+				minusvalue--;
+				$('#j2').html(minusvalue)
+				jia2=$('#jia2').html()
+			
+				mn=Number(minusvalue);
+				jn=	Number(jia2);
+			
+				$('#total3').html('￥'+mn*jn+'.00')
+
+			}else{
+
+			}
+						
+		})
+		//绑定操作按钮的删除操作
+		$('#btr1').click(function(){
+			$('#goods1').remove();
+			//alert(1)
+		})
+		$('#btr2').click(function(){
+			$('#goods2').remove();
+			//alert(1)
+		})
+
+
+		</script>
+
+		
+		
+
+
+		
+
+	</body>
+
+</html>

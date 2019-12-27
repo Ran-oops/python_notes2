@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img src='./1.jpg' id='im'/>
+
+		<script type='text/javascript'>
+			var im=document.getElementById('im');
+			//img标签的src属性
+			//获取
+			//	var s=im.src;
+			//	alert(s);
+			//设置
+			//im.src='./2.jpg';
+			//定义全局变量
+			var i=1;
+			//启动定时器
+			setInterval(function(){
+				i++;
+				im.src='./'+i+'.jpg';
+				//判断越界
+				if(i==5){
+					i=0;
+				}
+
+			},1000)
+		</script>
+	</body>
+</html>

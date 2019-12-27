@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>相关尺寸</title>
+	<style type="text/css">
+		body,div{
+			margin: 0;
+			padding: 0;
+		}
+
+		.all{
+			width: 500px;
+			height: 500px;
+			border:1px solid blue;
+			position: absolute;
+			top:200px;
+			left:300px;
+		}
+
+		.item{
+			width: 230px;
+			height: 220px;
+			background: #369;
+			position: absolute;
+			top:100px;
+			left:200px;
+
+		}
+
+		body{
+			width: 2000px;
+			height: 3000px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="item"></div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+	//6个页面相关尺寸  offset postion scrolltop scrollLeft width height
+
+	//获取元素距离文档偏移量
+	// var v = $('.item').offset();
+	// var t = $('.item').offset().top;
+	// var l = $('.item').offset().left;
+	// console.log(t,l);
+
+	//获取当前元素相对于父级元素的偏移量 指得是当前元素定位后距离父级元素的偏移
+	// var v = $('.item').position();
+	// var t = $('.item').position().top;
+	// var l = $('.item').position().left;
+
+	// console.log(v);
+	// console.log(t,l);
+
+	//获取文档滚动的距离  
+
+	// var t = $(window).scrollTop();
+	// var l = $(window).scrollLeft();
+	// console.log(t,l);
+
+	//设置文档的滚动距离
+	// $(window).scrollTop(200);
+	// $(window).scrollLeft(300);
+
+	//快速获取元素的宽高
+	// var w = $('.item').width();
+	// var h = $('.item').height();
+	// console.log(w,h);
+	//设置元素的宽高
+	// $('.item').width(200);
+	// $('.item').height(100);
+
+	//获取可视区域的宽高 
+	// var w = $(window).width();
+	// var h = $(window).height();
+	// console.log(w,h);
+
+	//获取整个文档的宽高
+	// var w = $(document).width();
+	// var h = $(document).height();
+	// console.log(w,h);
+
+
+
+	</script>
+</body>
+</html>

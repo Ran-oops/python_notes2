@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var arr = new Array(10);
+	var arr = new Array(1,2,3,4);
+	var arr = [5,6,7];
+	console.log(arr);
+
+	var arr = [1,2,3,'q','w',[4,5],{name:'xiaoming'},undefined,NaN,function(){}]
+	console.log(arr);
+	console.log(arr.length);
+
+	var n = arr.push('bbbb');
+	console.log(n)//数组长度
+	arr.pop();
+	console.log(arr);
+
+	var n = arr.unshift('aaa');
+	console.log(arr);
+	console.log(n);
+
+	var n = arr.shift();
+	console.log(arr);
+	console.log(n);
+
+	var arr = [1,2,3,4,5,6,7,8,9];
+	arr.splice(2,2,33,44);
+	console.log(arr);
+
+
+	var arr = [1,2,[11,22,[111,222]]]
+	var n = arr[2][1];
+	console.log(n);
+
+	var n1 = arr[2][2][1];
+	console.log(n1);
+
+
+
+	</script>
+</body>
+</html>

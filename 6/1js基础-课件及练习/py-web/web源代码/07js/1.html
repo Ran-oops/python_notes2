@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js数学对象 Math</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background: #369;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div id="btn"></div>
+	<script type="text/javascript">
+	var btn = document.getElementById('btn');
+		btn.onclick = function(){
+			var r = rand(0,255);
+			var g = rand(0,255);
+			var b = rand(0,255);
+			btn.style.background = 'rgb('+r+','+g+','+b+')';
+		}
+
+		//四舍五入
+		var res = Math.round(5.121);
+
+		//获取最大值
+		var res = Math.max(10,23,523,43,65,46,32,32);
+
+		// //获取最小值
+		var res = Math.min(12312,324,32,42,3,23,412,4332,21,3,-1);
+
+		// //获取绝对值
+		var res = Math.abs(-100);
+
+		// //退一取整
+		var res = Math.floor(1.9);
+
+		// //进一取整
+		var res = Math.ceil(1.1);
+
+		// //幂运算 用来获取x的y次方 2的3次方
+		var res = Math.pow(2,3);
+
+		// //开方运算 返回一个数的平方根
+		var res = Math.sqrt(9);
+
+		// =============================================
+
+		//随机数 0 - 1 之间的随机小数,有可能取到0,但是取不到1
+		var res = Math.random();
+
+		//0 - 9 随机小数
+		var res = Math.random()*10;
+
+		//0-9 随机整数
+		var res = Math.floor(Math.random()*10);
+
+		// 1 - 10随机整数
+		var res = Math.floor(Math.random()*10)+1;
+
+		//0 - 10 随机整数
+		var res =  Math.floor(Math.random()*11)+0;
+
+		//5 - 15 随机整数 15-5+1  
+		var res =  Math.floor(Math.random()*11)+5;
+
+		// 3 - 99 
+
+		// m - n  (n-m+1)+m
+		function rand(m,n){
+			return Math.floor(Math.random()*(n-m+1))+m;
+		}
+
+		var res = rand(20,30);
+
+
+
+
+
+		console.log(res);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 样式</title>
+	<style type="text/css">
+		#as{
+			width: 100px;
+			height: 100px;
+			background: #369;
+			
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="as" style="width: 200px;" class="abc def " abc="aabbcc">
+		<span style="color:red">2233</span>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//样式操作 
+		
+
+		//设置样式,单个样式  行内样式
+		//$('.as').css('border','2px solid red');
+		// $('.as').css('background','#969');
+		//设置样式,多个样式
+		// $('.as').css({border:'2px solid green',background:'#996',color:'red'});
+
+		//获取的是影响当前元素的样式 div.style.color
+		// var w = $('.as').css('width');
+		// console.log(w);
+
+	//class 属性操作
+		// $('#as').addClass('love');//找到元素,添加class
+		// $('#as').addClass('le');//找到元素,添加class
+
+		//移出class
+		// $('#as').removeClass();//可以移出指定了class ,如果不指定,移出所有class
+
+		//如果存在,则移出,如果不存在,则添加class
+		$('#as').toggleClass('myclass');
+
+	//文本操作 html() text();
+		//赋值
+		// $('#as').html('<span style="color:red">1122</span>');//赋值的内容会解析
+		// $('#as').text('<span style="color:red">2233</span>');//赋值时,任何内容都当做文本赋值操作
+		
+		//获取
+		// var r = $('#as').html();//获取时如果有子标签.也能获取
+		// var r1 = $('#as').text();//只获取文本
+
+		// console.log(r);
+		// console.log(r1);
+
+
+	//属性操作 
+		//赋值
+		// $('#as').attr('love','iloveyou');
+		//获取
+		// var r = $('#as').attr('class');
+
+		//移出属性
+		//$('#as').removeAttr('abc');
+
+		// console.log(r);
+	</script>
+</body>
+</html>

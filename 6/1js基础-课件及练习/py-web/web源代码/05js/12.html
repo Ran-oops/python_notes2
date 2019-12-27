@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>关于形参</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//函数的形参设置默认值,火狐支持.新版chrome支持,低版本ie不支持
+	// function love(a=1,b=2,c=3){
+	// 	console.log(a,b,c);
+	// 	// console.log(arguments);//在函数中使用,包含了当前函数调用时传递的所有参数 数组
+	// 	// alert('love');
+	// }
+
+	// love(1,2,3);
+	// love();//在使用函数时,如果没有传递参数,形参的默认值就是undefined
+	// love(1,2,3,4,5,6);//使用函数时,如果多传递参数,多的参数会被'忽略'
+
+	// love();
+
+
+
+	// -----------------------  作用域 ---------------------------------
+	// var love = 100;//全局变量
+
+	// //全局函数
+	// function func(){
+	// 	// var love = 200;//在函数内使用var定义的变量叫 局部变量
+	// 	// love = 200;//在函数可以直接使用函数外的全局变量,在函数内如果不加var定义变量,就叫全局变量
+	// 	//在函数内定义函数,局部函数,在全局内不能直接使用
+	// 	function abc(){
+	// 		alert('abc');
+	// 	}
+	// 	// abc();
+	// }
+
+	// func();
+
+	// abc();
+
+	// alert(love);
+
+	// -----------------------  优先级 --------------
+
+	/*
+		函数会在执行时,优先加载,如果在代码中还有变量的定义和函数名一样,那么变量会覆盖函数
+		注意,函数名和变量名千万不要冲突
+
+	*/
+	var love = 222;
+
+	function love(){
+		alert('111');
+	}
+
+
+
+	love();
+	// alert(love);
+
+	</script>
+</body>
+</html>

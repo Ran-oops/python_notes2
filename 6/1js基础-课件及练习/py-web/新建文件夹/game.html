@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>游戏</title>
+	<style type="text/css">
+	*{margin: 0;padding: 0;}
+	#all{width: 400px;height: 500px;border:1px solid blue;
+		margin-top: 10px;margin-left: 20px;position: relative;overflow: hidden;}
+	#me{width: 106px;height: 76px;position: absolute;left:0px;bottom:0px;}
+	.e{width: 116px;height: 82px;position:absolute;}
+	.b{width: 10px;height: 35px;background: url('./images/b.png');position: absolute;}
+	#boom{width: 150px;height:auto;position:absolute;display:none;}
+	</style>
+</head>
+<body>
+	<button onclick="changBg()">背景切换</button>
+	<div id="all">
+		<!-- 自己的飞机 -->
+		<div id="me"><img src="./images/me.png" alt=""></div>
+		<!-- 敌机 -->
+		<!-- <div class="e"><img src="./images/e1.png"></div> -->
+		<!-- 子弹 -->
+		<!-- <div class="b"></div> -->
+		<!-- 爆炸图 -->
+		<div id="boom"><img src="./images/boom.gif" width="100%"></div>
+	</div>
+	<script type="text/javascript">
+		//获取元素
+		var all = document.getElementById('all');
+		var me = document.getElementById('me');
+		//全局变量
+		var meStep = 2;//自己飞机的步进
+		var meInte = null;//自己飞机的定时器
+		var estep = 3;//敌机的移动步进
+		var bsTep = 5;//子弹的步进
+		var y = 0;
+		var backStep = 1;//
+		var bg = 1;
+
+		function changBg(){
+			if(bg == 1){
+				all.style.background = "url(./images/bg.jpg)";
+				bg = 0;
+			}else{
+				all.style.background = "url(./images/bg_1.jpg)";
+				bg = 1;
+			}
+		}
+
+		//背景移动
+		setInterval(function(){
+			var _x = 0;
+			var _y = y;
+			y += backStep;
+			all.style.backgroundPosition = _x+'px '+_y+'px';
+		},50);
+
+
+
+		//初始化飞机
+		init();
+		// 启动定时器,创建敌机
+		setInterval(function(){
+			createEnemy();
+
+		},1500);
+
+		// fire(); 发射子弹
+		function fire(){
+			//创建子弹
+			var b = document.createElement('div');
+			//添加class属性
+			b.className = 'b';
+			//设子弹的位置 top left
+			var _left = me.offsetLeft + me.offsetWidth/2;
+			var _top = all.offsetHeight - me.offsetHeight - 35;
+			b.style.left = _left-3 + 'px';
+			b.style.top = _top + 'px';
+			//将子弹插入游戏区
+			all.appendChild(b);
+
+			//让子弹飞
+			var inte = setInterval(function(){
+				//获取子弹的top
+				var t = b.offsetTop;
+				//计算新的top
+				var newTop = t - bsTep;
+				//检测越界
+				if(newTop <= -30){
+					//清除定时器
+					clearInterval(inte);
+					//清除子弹
+					all.removeChild(b);
+				}
+				//设置top
+				b.style.top = newTop + 'px';
+				//获取所有的敌机
+				var es = document.getElementsByClassName('e');
+				//遍历
+				for (var i = 0; i < es.length; i++) {
+					//获取敌机的位置
+					var minLeft = es[i].offsetLeft;
+					var maxLeft = minLeft + es[i].offsetWidth;
+					var minTop = es[i].offsetTop;
+					var maxTop = minTop + es[i].offsetHeight;
+					//检测碰撞
+					if(newTop>minTop && newTop<maxTop && _left>minLeft && _left<maxLeft){
+						//清除子弹和敌机
+						all.removeChild(b);
+						// all.removeChild(es[i]);
+						// 克隆新的爆炸图
+						var boom =  document.getElementById('boom');
+						var newBoom = boom.cloneNode(true);
+						//显示
+						newBoom.style.display = "block";
+						//修改位置
+						newBoom.style.left = minLeft + 'px';
+						newBoom.style.top = minTop+'px';
+						//把敌机替换为爆炸图
+						all.replaceChild(newBoom,es[i]);
+						//启动定时器消除爆炸
+						setTimeout(function(){
+							all.removeChild(newBoom);
+						},500);
+					}
+				};
+			},10);
+		}
+
+		//创建敌机
+		function createEnemy(){
+			//创建敌机
+			var en = document.createElement('div');
+			//设置class
+			en.setAttribute('class','e');
+			//创建img
+			var img= document.createElement('img');
+			//随机飞机
+			var n = rand(1,3);
+			//计算最大left
+			var maxLeft = all.offsetWidth - 116;
+			var _left = rand(0,maxLeft);
+			en.style.left = _left+'px';
+			//设置src属性
+			img.setAttribute('src','./images/e'+n+'.png');
+			//将img插入div中
+			en.appendChild(img);
+			//将飞机放入游戏区
+			all.appendChild(en);
+
+			var inte =setInterval(function(){
+				//获取敌机的top
+				var _t = en.offsetTop;
+				//计算新的top
+				var newTop = _t + estep;
+				//判断越界
+				if(newTop >= all.offsetHeight){
+					//清除定时器
+					clearInterval(inte);
+					//销毁敌机
+					all.removeChild(en);
+				}
+
+				//设置top
+				en.style.top = newTop + 'px';
+			},20);
+
+		}
+		//初始化操作 让飞机处理中间位置
+		function init(){
+			//获取游戏区的宽度
+			var allWidth = all.offsetWidth;
+			//获取自己飞机的宽度
+			var meWidth = me.offsetWidth;
+			//计算中间位置 区域宽度-飞机宽度 / 2
+			var _left = (allWidth-meWidth)/2;
+			//修改位置
+			me.style.left = _left + 'px';
+			all.style.background = "url(./images/bg.jpg)";
+
+		}
+
+		//winndow绑定键盘事件
+		window.onkeydown = function(e){
+			var k = e.keyCode;
+			// console.log(k);
+			switch(k){
+				//右
+				case 68:
+					moveRight();
+					break;
+				//左
+				case 65:
+					moveLeft();
+					break;
+				case 32:
+					fire();
+					break;
+			}
+		}
+		//moveRight(); 右
+		function moveRight(){
+			//检测定时器是否开启
+			if(meInte != null){return;}
+			//启动定时器
+			meInte = setInterval(function(){
+				//获取当前飞机距离左侧的偏移量
+				var _left = parseInt(getComputedStyle(me)['left'])
+				//计算新的left
+				var newLeft = _left + meStep;
+				//获取最大的left
+				var maxLeft = all.offsetWidth - me.offsetWidth;
+				//判断
+				if(newLeft >= maxLeft){
+					newLeft = maxLeft -2;
+				}
+				//设置
+				me.style.left = newLeft + 'px';
+			},10);
+		}
+
+		//moveLeft(); 右
+		function moveLeft(){
+			//检测定时器是否开启
+			if(meInte != null){return;}
+			//启动定时器
+			meInte = setInterval(function(){
+				//获取当前飞机距离左侧的偏移量
+				var _left = parseInt(getComputedStyle(me)['left'])
+				//计算新的left
+				var newLeft = _left - meStep;
+				//判断
+				if(newLeft <= 0){
+					newLeft = 0;
+				}
+				//设置
+				me.style.left = newLeft + 'px';
+			},10);
+		}
+
+		window.onkeyup = function(){
+			//清除定时器,并修改全局变量
+			clearInterval(meInte);
+			meInte = null;
+		}
+
+		//封装随机数
+		function rand(m,n){
+			var res = (Math.floor(Math.random()*10000)%(n-m+1))+m;
+			return res;
+		}
+	</script>
+</body>
+</html>

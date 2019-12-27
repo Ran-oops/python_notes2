@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>鼠标事件</title>
+	<style type="text/css">
+		.move{
+			width: 100px;
+			height: 100px;
+			background: #369;
+		}
+
+		body{
+			height: 2000px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="move" ></div>
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+
+
+	//单击事件
+	// $('.move').click(function(){
+	// 	console.log(111);
+	// })
+
+	//双击事件
+	// $(window).dblclick(function(){
+	// 	console.log(222);
+	// })
+
+	//鼠标按下事件 mousedown  鼠标抬起事件 mouseup
+	// $('.move').mousedown(function(){
+	// 	alert('大爷您好');
+	// })
+
+	//鼠标移入 mouseover  鼠标移出 mouseout  简写 hover
+	// $('.move').mouseover(function(){
+	// 	alert('鼠标移入');
+	// })
+
+	// $('.move').hover(function(){
+	// 	alert(11)
+	// },function(){
+	// 	alert(22)
+	// })
+
+	//鼠标移动事件
+	// $('.move').mousemove(function(){
+	
+
+
+	/*
+		在所有的鼠标事件中都可以获取当前鼠标的位置,
+		想要获取当前鼠标位置时,需要在该事件中传递一个事件对象 event  e
+		clientX,clientY
+		pageX  pageY
+
+	*/
+
+
+	//鼠标右键 oncontextmenu
+	window.oncontextmenu = function(){
+		$(window).mousemove(function(e){
+		//当前鼠标位置的获取相对于浏览器的窗口00点
+		// var x = e.clientX;
+		// var y = e.clientY;
+
+		//当前鼠标位置的获取相对于整个文档的00点
+		var x = e.pageX;
+		var y = e.pageY;
+
+		console.log(x,y);
+		
+
+		$('.move').css({top:x+'px',left:y+'px'})
+	})
+		alert(00)
+
+		return false;
+	}
+
+	/*
+		扩展自定义右键菜单
+		1,html+css菜单布局
+		2,绑定鼠标右键事件,阻止默认行为 ,显示自定义的菜单
+		3,点击右键时获取鼠标的位置,
+		4,给自定义菜单设置偏移
+
+	*/
+
+
+
+	</script>
+</body>
+</html>

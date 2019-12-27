@@ -1,0 +1,25 @@
+<!doctype html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>jquery test</title>  
+<script src='jquery-1.8.3.min.js'></script>  
+</head>  
+  
+<body>  
+  <input type="checkbox" name="check" value="one"/>one<br/>  
+  <input type="checkbox" name="check" value="two"/>two<br/>  
+  <input type="checkbox" name="check" value="three"/>three<br/>  
+  <input type="checkbox" name="check" value="four"/>four<br/>  
+  <input type="checkbox" name="check" value="five"/>five<br/>  
+  <input type="checkbox" name="check" value="six"/>six<br/>  
+  <input type="checkbox" name="check" value="seven"/>seven<br/>  
+  <button name="sub">提交</button>  
+<script type="text/javascript">  
+    $("button[name=sub]").click(function(){  
+        var len = $("input:checkbox:checked").length;  
+        alert("你一共选中了"+len+"个复选框");  
+    })  
+</script>  
+</body>  
+</html>  

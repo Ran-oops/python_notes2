@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随机点名</title>
+	<style type="text/css">
+		.all{
+			margin: 0 auto;
+			width: 500px;height: 500px;
+			text-align:center;
+		}
+		#names{
+			width: 200px;height: 100px;
+			border:1px solid blue;
+			margin: 100px auto;
+			line-height:100px;
+			font-size:25px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div id="names">
+			豆豆
+		</div>
+		<button id="btn">开始</button>
+	</div>
+	<script type="text/javascript">
+	//定义数组 名字
+	var arr = ['张三','李四','王五','赵六','田七','王八','张飞','刘备','貂蝉','大乔','小乔','孙尚香','蔡文姬','甄姬'];
+
+	//获取元素对象
+	var names = document.getElementById('names');
+	var btn = document.getElementById('btn');
+	var isStart = false;
+	var init = 0;
+
+	//绑定单击事件
+	btn.onclick = function(){
+
+		if(isStart){
+			//清除定时器,修改全局变量
+			clearInterval(init);
+			isStart = false;
+			btn.innerHTML = '开始';
+
+			return;//如果走到该区间,程序立即结束并返回
+		}
+
+		//启动定时器
+		init = setInterval(function(){
+			//随机名字
+			var len = arr.length-1;
+			var r = rand(0,len);
+			names.innerHTML = arr[r];
+			btn.innerHTML = '停止';
+			//修改全局变量
+			isStart = true;
+		},50)
+	}
+
+	//封装随机函数
+	function rand(m,n){
+		return Math.floor(Math.random()*(n-m+1))+m;
+	}
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器</title>
+	<style type="text/css">
+		.a{
+			height: 50px;
+			width: 50px;
+			border: 10px solid blue;
+			font: 20px/50px '华文行楷';
+			text-align:center;
+			background:#62ABD9;
+		}
+		.a:hover{
+			background:#BEDEF2;
+			font:25px/50px '华文行楷';
+		}
+
+		.b:before{
+			content: 'Hello';
+		}
+		.b:after{
+			content: 'world!';
+		}
+	</style>
+</head>
+<body >
+	<center>
+		<div class="a">点我</div><hr>
+		<div class="b">啊哈哈哈</div>
+	</center>
+</body>
+</html>

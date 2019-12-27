@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式字符串方法</title>
+</head>
+<body>
+	<script type='text/javascript'>
+		var str='18291893776@139.com';
+		var reg=/^\w+@\w+\.(com|cn|org|net|gov)$/
+		//字符串方法
+		var res3=str.match(reg);//把字符串进行正则的匹配，如果存在返回结果[数组]，不存在返回null
+		console.log(res3);
+
+
+	</script>
+	
+
+</body>
+</html>

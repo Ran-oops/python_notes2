@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js函数</title>
+</head>
+<body>
+	<button onclick="live()">调用函数</button>
+	<a href="javascript:miss()">点击一下</a>
+
+	<script type="text/javascript">
+	var live = function(){
+		alert("f")
+	}
+
+	var miss = new Function("alert('miss')")
+	</script>
+</body>
+</html>

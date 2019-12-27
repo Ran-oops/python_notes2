@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//对象定义方法
+		var obj = new Object();
+		obj.name = 'zhangsan';
+		obj.sex = 'nan';
+		// var a = 'age'
+		obj['age'] = 22;
+
+		obj.sing = function(){
+			alert('changge');
+		}
+		obj['dance'] = function(){
+			alert('tiaowu');
+		}
+		// obj.sing();
+		// obj.dance();
+
+
+		var tt = {name:'tingting',sex:0,sanwei:'80 65 80',dance:function(){
+			alert(this.sanwei)
+		}}
+		// tt.dance();
+		// tt['dance']();
+		// console.log(tt);
+		// console.log(tt.name);
+
+		for(var y in tt){
+			document.write(y+'---'+tt[y]+'<br>')
+		}
+
+
+		function person(a,sex,age){
+			this.name = a;
+			this.info = function(){
+				alert(this.name);
+			}
+		}
+		var r = new person('lisisi');
+		var z = new person('zhangsan');
+		// r.info();
+		// z.info();
+
+		var love = 'iloveyou';
+		alert(love);
+		alert(window.love);
+
+		for(var i in window){
+			document.write(i+'---'+window[i]+'<br>');
+		}
+
+		var arr = [1,2,3,4,5];
+		var res = arr.constructor;
+		console.log(res);
+
+	</script>
+</body>
+</html>

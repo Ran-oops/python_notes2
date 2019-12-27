@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>js正则表达式</title>
+	</head>
+	<body>
+		<a href='./phone/one.py'>手机</a>
+		<script type='text/javascript'>
+		var str='\r\n $18291aa8937 7615349237aa468love';
+		//正则表达式
+		//var reg=new RegExp('love');
+		//var reg=new RegExp('\\w');//转义字符需要再次转译，因此不常用，\w代表的就是字母数字或下划线
+		//推荐用法
+		//var reg=/\w/;//用//做边界符
+		//普通字符
+		
+		//转义字符
+		//var reg=/\w/;//单个字母数字下划线
+		//var reg=/\W/;//单个非字母数字下划线
+		//var reg=/\d/;//单个数字
+		//var reg=/\D/;//单个非数字
+		//var reg=/\s/;//单个空白字符
+		//var reg=/\S/;//单个非空白字符
+		//转义字符
+
+		//元字符 . * + ? {} [] () | ^ $
+		//var reg=/./;//除了换行之外的任意单个字符
+		//var reg=/\d*/;//匹配0次或多次
+		//var reg=/a*/;
+		//var reg=/a+/;//匹配一次或多次
+		//var reg=/a+?/;//禁止贪婪 找到1个就回来吧
+		//var reg=/a*?/;//直接门都没进，没找就回来了
+		//var reg=/\d{2}/;//限制匹配的次数
+		//var reg=/\w{2,5}/;//限制匹配次数2次到5次
+		//var reg=/[a-z,0-9,A-Z,_]/;//限制范围
+		var reg=/.*\d{4}\w*/;
+		var reg=/.*(\d{4})\w*/;//子组 首先小括号内的正则规则是作为整个规则来使用的，匹配完成后，单独将小括号的内容作为一个元素输出
+		var str="<a href='./phone/one.py'>手机</a>"
+		var reg=/<a href='(.*)'>(.*)<\/a>/
+
+		var str='18291893776@139.comcn';
+		var reg=/^\w+@\w+\.(com|cn|org|net|gov)/;
+
+
+
+		//元字符
+		//方法有两种 test exec
+		var res1=reg.test(str);//返回布尔类型，如果存在返回true
+		var res2=reg.exec(str);//按照正则规则匹配，如果存在返回结果，[数组]，如果不存在返回null;
+		/*console.log(res2[1]);
+		console.log(res2[2]);*/
+		console.log(res1);
+		console.log(res2);
+		</script>
+	</body>
+</html>

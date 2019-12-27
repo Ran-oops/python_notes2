@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button>异步</button>
+		<button>同步</button>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		//定义一个全局变量
+		var love=100;
+		/*$('button').eq(0).click(function(){
+			$.get('/cgi-bin/p2.py',function(data){
+				love=200;
+			})
+			//处理其它工作
+			alert(love)
+		})*/
+
+		$('button').eq(1).click(function(){
+			//对ajax进行全局配置
+			$.ajaxSetup({
+				async:false
+			})
+			//发送ajax请求
+			$.get('/cgi-bin/p2.py',function(data){
+				love=200;
+			})
+			//处理其它工作
+			alert(love)
+		})
+
+
+
+		</script>
+
+
+	</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//new Array() []
+
+	// var arr = new Array(6);//如果只有一个数字,代表定义当前数组元素的个数,值为undefined
+	// var arr = new Array(1,2,3,4);
+
+
+	// var arr = [5];//直接定义数组元素
+
+	//数组中元素的值,可以为任意类型
+	var arr = [1,1.1,'love',true,null,{name:'zhangsan'},undefined,NaN,function(){alert(2)},[11,22]];
+
+	//属性 length
+	// console.log(arr.length);
+
+	//指定下标进行数组元素的添加
+	// arr[10] = '10010';
+	//在js中数组永远保持下标的连续
+	// arr[20] = '20010';
+
+	//arr[] = 'aaa';//向数组中添加元素时,必须指定下标,或使用数组的方法才可以
+	// arr[arr.length] = 11;
+	//方法
+	var n = arr.push('aaa');//向数组的尾部添加元素,返回最新的数组长度
+	var n = arr.pop();//弹出数组中最后一个元素,返回弹出的元素
+
+	var n = arr.unshift('bbb');//向数组的头部压入元素,并返回数组最新长度
+	var n = arr.shift();//弹出数组中第一个元素,并返回弹出的元素
+
+	var arr = [1,2,3,4,5,6,7];
+
+	//splice() 在数组中增加或删除成员
+
+	// var n = arr.splice(2,1);//从哪个下标开始,删除几个元素,返回删除的元素,数组形式返回
+	// var n = arr.splice(2,2,33,44,55,66,77);
+	// var n = arr.splice(3,0,44);
+
+
+	// console.log(n);
+	// console.log(arr.length);
+	// console.log(arr);
+
+	//多维数组
+	// var arr = [1,2,3,[11,22,33,[111,222,333]]];
+
+	// console.log(arr[3][3][1]);
+	// console.log(arr.length);
+
+	var arr = [];
+
+	arr[0] = 'a';
+	arr[1] = 'b';
+
+	arr['a'] = 'aaaa';//对象添加属性
+
+	// console.log(arr['a']);
+	console.log(arr);
+	console.log(arr.length);
+
+	// var obj = {0:'a',1:'b',a:'aaa'};
+	// console.log(obj);
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>随机点名</title>
+		<style type='text/css'>
+			#names{
+				width:200px;
+				height:200px;
+				border:2px solid #369;
+				margin:100px auto;
+				margin-bottom:0px;
+				text-align:center;
+				line-height:200px;
+				font-size:40px;
+
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="names">随机点名</div>
+		<br/>
+		<center>
+			<button onclick='start()'>开始</button>
+			<button onclick='end()'>停止</button>
+		</center>
+		<script type='text/javascript'>
+		//全局变量
+		//获取页面中的标签
+		var names=document.getElementById('names');
+		//定义数组
+		var arr=['马欢','侯杰','马娅','慕蓉','谢帖','李显静','顺利','小军','田园红','张尧'];
+		//定时器  定义全局变量  方便清除
+		var init=0;
+		
+		//封装随机点名函数
+		function start(){
+			//启动定时器
+			init=setInterval(function(){
+				//随机下标
+				var n=rand(0,arr.length-1);
+				//赋值文本
+				names.innerHTML=arr[n];
+
+			},100)
+		}
+
+		//停止点名
+		function end(){
+			clearInterval(init);
+		}
+
+		//封装随机函数
+		function rand(m,n){
+			return Math.floor(Math.random()*(n-m+1))+m;
+		}
+
+		</script>
+	</body>
+</html>

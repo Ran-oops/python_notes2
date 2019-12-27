@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="but" type="button" value="(5)确认">
+	<script type="text/javascript">
+	var but = document.getElementById('but');
+	
+	var i = 5;
+	setInterval(
+		function(){
+
+			i--;
+			if(i<=0){
+				but.value = "确认"
+			}else{
+				but.value = "("+i+")确认";
+			}
+		},1000);
+
+	</script>
+
+</body>
+</html>

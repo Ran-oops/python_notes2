@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js函数</title>
+</head>
+<body>
+	<button onclick="live()">函数调用</button>
+	<a href="javascript:miss()">点击一下</a>
+	<script type="text/javascript">
+
+	//函数定义方式
+
+	// love();//可以在声明函数前进行调用
+	//1 
+	function love(){
+		alert('哎呦');
+	}
+
+	// love();
+
+	// live();//表达式方式定义函数不能在函数定义前调用
+	//2.表达式方式定义函数  匿名函数
+	var live = function(){
+		alert('不错哦');
+	}
+
+	// live();
+
+	// miss();
+	//3,构造函数形式,不推荐
+	var miss = new Function('alert("miss")');
+
+	// miss();
+
+	</script>
+</body>
+</html>

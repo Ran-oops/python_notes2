@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>ajax的基本操作，post方法</h1>
+		<button>post方法</button>
+		<br/>
+		<div id='t'></div>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+			$('button').click(function(){
+				//ajax post方法的使用
+				//参数1 请求的URL  参数2，当前请求时携带的参数（必须要用json格式）  参数3，回调函数
+				$.post('/cgi-bin/p1.py',{love:'i love u',a:100,b:200},function(data){
+					console.log(data);
+				})
+			})
+
+		</script>
+	</body>
+</html>

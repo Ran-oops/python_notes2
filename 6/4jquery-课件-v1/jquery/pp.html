@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>二级菜单</title>
+        <style type='text/css'>
+            ul,li h3{
+                margin:0px;
+                padding:0px;
+                list-style:none;
+            }
+            .all li{
+                width:100px;
+                height:50px;
+                text-align:center;
+                line-height:50px;
+                font-size:20px;
+                border:1px solid red;
+                position:relative;
+            }
+            .menu{
+                width:500px;
+                height:300px;
+                border:1px solid red;
+                position:absolute;
+                top:5px;
+                left:100px;
+                display:none;
+            }
+            .menu li{
+                float:left;
+                width:100px;
+                height:50px;
+                font-size:20px;
+                border:none;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class='all'>
+            <li>
+                <h3>服装</h3>
+                <div class='menu'>
+                     <ul>
+                         <li>男装</li>
+                         <li>女装</li>
+                         <li>童装</li>
+                     </ul>
+                </div>
+            </li>
+
+            <li>
+                <h3>电器</h3>
+                <div class='menu'>
+                     <ul>
+                         <li>电视</li>
+                         <li>冰箱</li>
+                         <li>洗衣机</li>
+                     </ul>
+                </div>
+            </li>
+
+            <li>
+                <h3>手机</h3>
+                <div class='menu'>
+                     <ul>
+                         <li>华为</li>
+                         <li>小米</li>
+                         <li>三星</li>
+                     </ul>
+                </div>
+            </li>
+
+            <li>
+                <h3>电脑</h3>
+                <div class='menu'>
+                     <ul>
+                         <li>笔记本</li>
+                         <li>平板</li>
+                         <li>一体机</li>
+                     </ul>
+                </div>
+            </li>
+
+        </ul>
+        <script style='text/javascript' src='jquery-1.8.3.min.js'></script>
+        <script style='text/javascript'>
+            //获取li 绑定鼠标移入事件
+            $('.all li').mouseover(function(){
+                //console.log(1)
+                $(this).find('.menu').css('display','block')
+            })
+            //获取li 绑定鼠标移出事件
+            $('.all li').mouseout(function(){
+                //console.log(2)
+                $(this).find('.menu').css('display','none')
+            })
+
+
+        </script>
+
+    </body>
+</html>

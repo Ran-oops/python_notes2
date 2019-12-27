@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+		function love(){
+			alert('love');
+			//return 2;//任意数据类型都可以返回，包括函数
+			return function(){
+				alert(222);
+			}
+			
+		}
+
+		//在函数中如果没有指定返回数据，默认返回undefined	
+		var s =love();
+		console.log(s);
+		s();
+		
+		</script>
+	</body>
+</html>

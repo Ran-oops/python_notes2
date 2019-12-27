@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>放大镜</title>
+	<style type="text/css">
+	body,div,img,ul,li{
+		margin: 0;
+		padding: 0;
+	}
+	#small{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top:100px;left:100px;
+	}
+	#move{
+		width: 100px;
+		height: 100px;
+		background: url(./images/bg.png);
+		position: absolute;
+		top:0px;left:0px;
+		display: none;
+	}
+	#big{
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		top:100px;left:510px;
+		overflow: hidden;
+		display: none;
+	}
+
+	li{
+		list-style:none;
+	}
+
+	#uimg{
+		width: 300px;
+		height: 80px;
+		position: absolute;
+		top:510px;left:100px;
+	}
+	#uimg li{
+		width: 80px;
+		height: 80px;
+		border:1px dashed #333;
+		float: left;margin-right: 5px;
+
+	}
+
+
+
+
+	</style>
+</head>
+<body>
+	<div id="small">
+		<img id="simg" src="./images/2.jpg" alt="" width="100%">
+		<div id="move"></div>
+	</div>
+	<div id="big">
+		<img id="bimg" src="./images/2.jpg" style="position: absolute;">
+	</div>
+	<ul id="uimg">
+		<li><img src="./images/2.jpg" width="100%"></li>
+		<li><img src="./images/3.jpg" width="100%"></li>
+	</ul>
+
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//声明全局变量
+	var newT = 0;
+	var newL = 0;
+
+	//绑定鼠标移入事件
+	$('#small').mouseover(function(){
+		// 显示小块和大图
+		$('#move').show();
+		$('#big').show();
+
+		// ---------------------------
+		// 比例
+		var mx = $('#big').width()/$('#bimg').width();
+		var my = $('#big').height()/$('#bimg').height();
+
+		//计算小div的宽高
+		var moveW = $('#small').width()*mx;
+		var moveH = $('#small').height()*my;
+
+
+		//设置小div的宽高
+		$('#move').css({width:moveW+'px',height:moveH+'px'});
+
+	})
+
+	//鼠标移动事件
+	$('#small').mousemove(function(e){
+		//调用函数 进行小div的移动设置
+		MoveStep(e);
+
+		//求左侧small的宽高
+		var sW = $('#small').width();
+		var sH = $('#small').height();
+
+		//当前小div移动的距离  计算比例
+		var xp = newL/sW;
+		var yp = newT/sH;
+
+		//右侧未缩放的大图 bimg 宽高
+		var bW = $('#bimg').width();
+		var bH = $('#bimg').height();
+
+		//计算移动距离
+		var NL = bW*xp;
+		var NT = bH*yp;
+
+		//设置右侧大图的移动
+		$('#bimg').css({top:-NT+'px',left:-NL+'px'});
+
+	})
+
+	//绑定鼠标离开事件
+	$('#small').mouseout(function(){
+		// 显示小块和大图
+		$('#move').hide();
+		$('#big').hide();
+	})
+
+
+	//封装函数 进行小div的移动设置
+	function MoveStep(e){
+		//获取当前鼠标移动时的坐标
+		var x = e.clientX;
+		var y = e.clientY;
+
+		//获取small元素距离文档的偏移
+		var sT = $('#small').position().top;
+		var sL = $('#small').position().left;
+
+		//当前小div的宽高的一半
+		var mw = $('#move').width()/2;
+		var mh = $('#move').height()/2;
+
+		//计算
+		 newT = y-sT-mh;
+		 newL = x-sL-mw;
+
+		//越界判断
+		if(newT <= 0){newT = 0}
+		if(newL <= 0){newL = 0}
+		//获取最大的left和top
+		var MaxLeft = $('#small').width() - $('#move').width();
+		var MaxTop = $('#small').height() - $('#move').height();
+		if(newT >= MaxTop){newT = MaxTop}
+		if(newL >= MaxLeft){newL = MaxLeft}
+
+		//设置小div移动
+		$('#move').css({top:newT+'px',left:newL+'px'});
+	}
+
+	//给li绑定单击事件
+	$('#uimg li').click(function(){
+		//获取图片的src属性
+		var s = $(this).find('img').attr('src');
+		//修改两张图片的src属性
+		$('#simg').attr('src',s);
+		$('#bimg').attr('src',s);
+	})
+
+
+	</script>
+</body>
+</html>

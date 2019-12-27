@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+</head>
+<body>
+	<input type="text" id="num1"><br>
+	<input type="text" id="num2"><br>
+	<button onclick="func(1)">+</button>
+	<button onclick="func(2)">-</button>
+	<button onclick="func(3)">*</button>
+	<button onclick="func(4)">/</button>
+	<br>
+	<p id="result"></p>
+
+	<script type="text/javascript">
+		// var num1 = document.getElementById('num1');
+		// var num2 = document.getElementById('num2');
+		// var result = document.getElementById('result');
+
+		// 加
+		function func(num){
+			var n1 = Number(num1.value);
+			var n2 = Number(num2.value);
+
+			if(num==1){
+				var res = n1+'+'+n2+'='+(n1+n2);
+			}else if(num == 2){
+				var res = n1+'-'+n2+'='+(n1-n2);
+			}else if(num == 3){
+				var res = n1+'*'+n2+'='+(n1*n2);
+			}else if(num == 4){
+				var res = n1+'/'+n2+'='+(n1/n2);
+			}
+			result.innerHTML = res;
+		};
+
+	</script>
+</body>
+</html>

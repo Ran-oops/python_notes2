@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>响应式布局</title>
+	<style type="text/css">
+		.all{
+	    		width: 100%;
+	    		height: 500px;
+	    		border:1px solid red;
+	    	}
+	    .item{
+	    		width: 25%;
+	    		height: 300px;
+	    		float: left;
+	    	}
+	
+		@media (max-width:768px){
+		    .item{
+	    		width: 50%;
+	    		height: 300px;
+	    		float: left;
+	    	}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="item" style="background: #f39;"></div>
+		<div class="item" style="background: #996;"></div>
+		<div class="item" style="background: #963;"></div>
+		<div class="item" style="background: #666;"></div>
+	</div>
+</body>
+</html>

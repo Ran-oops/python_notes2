@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute</title>
+	<style type="text/css">
+		body{
+			margin: 0;padding: 0;
+			height: 2000px;
+		}
+		.all{
+			width: 500px;height: 500px;border:1px solid red;
+			position: relative;
+		}
+
+		.item{
+			width: 100px;
+			height: 100px;
+			background: #369;
+
+			position: absolute;
+			/*position: fixed;*/
+			top:100px;
+			left:200px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="all"></div>
+	<div class="all">
+		<div class="item" style="z-index:4">1</div>
+		<div class="item" style="z-index:2">2</div>
+		<div class="item" style="z-index:3">3</div>
+	</div>
+</body>
+</html>

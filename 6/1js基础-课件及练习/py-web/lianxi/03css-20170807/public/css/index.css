@@ -1,0 +1,144 @@
+div,table,tr,td,form,a,input,img{
+	margin: 0;
+	padding: 0;
+}
+/*框架 添加边框*/
+.frame{
+	width: 1332px;
+	height: 1806px;
+	background: #F1F2F6;
+}
+a{
+	text-decoration: none;
+}
+
+/*网页头header */
+.logs{
+	width: 960px;
+	margin: 0 auto;
+}
+	/*log区*/
+.logs{
+	height: 95px;
+}
+.logs div{
+	float: left;
+	width: 300px;
+}
+.logs .zi{
+	margin-top: 50px;
+}
+.logs .form{
+	width: 360px;
+	margin-top: 20px;
+}
+.form .btn{
+	width: 65px;
+}
+.form{
+	font-size: 10px;
+}
+
+
+ 	/*导航区*/
+.navigation{
+	width: 100%;
+	height: 45px;
+	background: #075991;
+}
+.navigation .nav{
+	width: 960px;
+	margin: 0 auto;
+}
+.nav li{
+	width: 95px;
+	float: left;
+	list-style: none;
+	line-height: 45px;
+	text-align: center;
+}
+.nav a{
+	color: #FFF4E3;
+	font: 14px/45px "微软雅黑";
+}
+.nav .active{
+	background: #1170B2;
+}
+.nav a:hover{
+	color: yellow;
+}
+
+
+/*内容主体区域*/
+.body{
+	width: 960px;
+	height: 1280px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+	/*搜索区*/
+.sousuo{
+	height: 33px;
+	background: #F5F8FD;
+	padding-top: 8px;
+	padding-left: 55px;
+}
+.sousuo .ss{
+	font-size: 16px;
+
+}
+.sousuo a,span{
+	font: 14px/17px "微软雅黑";
+	color: #07599E;
+}
+.sousuo span{
+	font-weight: bold;
+	color: #333333;
+}
+
+
+	/*展示区*/
+.zhanshi{
+	height: 325px;
+	background-repeat: no-repeat;
+	margin-top: 12px;
+}
+.zhanshi div{
+	float: left;
+}
+.zhanshi .src{
+	width: 173px;
+	margin: 5px;
+}
+
+
+	/*相关消息提示：info 情报区*/
+.info{
+	height: 63px;
+	background: #4BCC60;
+	padding: 7px 5px;
+}
+
+	/*技术交流区*/
+.jishu{
+	height: 280px;
+	background: blue;
+}
+.jishu div{
+	background: url(../img/h.png);
+}
+.jishu a{
+	float: right;
+	margin-right: 20px;
+}
+.jishu h3{
+	margin-left: 50px;
+}
+
+
+
+	/*兄弟连*/
+.xdl{
+	height: 200px;
+	background: yellow;
+}

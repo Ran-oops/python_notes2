@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	// var str = 'var a = 100';
+
+	// eval(str);//把合法的js的字符串当成js表达式来执行
+
+
+	// alert(a);
+
+
+	// var data = '[1,2,3,4]';
+
+	// 'var arr = [1,2,3,4]'
+
+	var data = '{a:100,b:200}';
+
+
+	eval('var arr = '+data);
+
+	console.log(arr);
+	console.log(typeof(arr));
+
+
+
+
+	</script>
+</body>
+</html>

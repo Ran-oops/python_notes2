@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>关于事件</title>
+		<style type='text/css'>
+			.item{
+				width:100px;
+				height:100px;
+				background:#f39;
+				float:left;
+				margin:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class='item'>1</div>
+		<br/>
+		<a href='www.baidu.com'>百度一下</a>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+			//获取元素 基本绑定方法  元素对象.事件（事件处理程序）
+				//绑定单击事件
+				/*$('.item').click(function(){
+					alert('2')
+				})
+				//绑定双击事件
+				$('.item').dblclick(function(){
+					alert(8);
+				})*/
+
+			//页面加载完毕事件  即指的是将17行的写到37行，如果没有加载完毕事件的这个函数，就无法实现
+			/*$(function(){
+				//获取元素
+				$('.item').click(function(){
+					alert(1);
+				})
+			})*/
+
+			//bind 方法绑定事件
+			/*$('.item').bind('click',function(){
+				alert(3);
+			})*/
+
+			//live 动态绑定 一般针对动态创建的元素进行事件的绑定 在高版本中移出了这个方法
+			/*$('.item').live('click',function(){
+				alert(4);
+			})
+			//创建元素
+			var newdiv=$('<div class="item">2</div>')
+			$('div');
+			//添加元素
+			$('body').append(newdiv);*/
+
+			//解除事件绑定
+				//解除元素的指定事件类型
+				//$('.item').unbind('click')
+				//解除元素的所有事件类型
+				//$('.item').unbind();
+				
+			//事件触发  触发一个元素的指定事件
+			//$('.item').trigger('click');
+			
+			//元素的默认行为,例如a form表单都可以单击时触发跳转或者提交，
+			$('a').click(function(){
+				alert(2);
+				return false;
+			})
+		</script>
+		<!--<div class='item'></div>-->
+	</body>
+</html>

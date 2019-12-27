@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+	<head>
+	    <!--设置字符集-->
+	    <meta charset='utf-8'>
+	    <!--让IE开启它的兼容模式-->
+	    <meta http-equiv='X-UA-Compatible' content='IE-edge'>
+	    <!--让手机的屏幕端口正常显示-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!--上面3个标签必须放在最前面，任何其他内容都必须跟随其后-->
+	  
+	    <title>Bootstrap 101 Template</title>
+	    <!-- Bootstrap -->
+	    <link rel="stylesheet" href="./ppublic/css/bootstrap.min.css">
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="./ppublic/js/jquery-1.10.2.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="./ppublic/js/bootstrap.min.js"></script>
+	    <style type='text/css'>
+	    	#one{
+				margin-top:9px;
+				margin-left:250px;
+			}
+			#two{
+				margin-left:9px;
+				margin-top:9px;
+			}
+
+            body { padding-top: 93px; }
+           #small{
+				width:300px;
+				height:471px;
+				
+				/*margin-left:110px;*/
+				position:absolute;
+			}
+			#move{
+				width:100px;
+				height:100px;
+				background:url('./bg.png');
+				position:absolute;
+				top:0px;
+				left:0px;
+				display:none;
+			}
+			#big{
+				width:300px;
+				height:471px;
+				
+				margin-left:350px;
+				overflow:hidden;
+				display:none;
+				position:absolute;
+
+			}
+			#con{
+				border:2px solid red;
+			}
+			#btn{
+				background:#FCE9E8;
+				border-radius:40%;
+				color:#671C25;
+			}
+			#c1,#c2,#c3,#c4{
+				width:30px;
+				height:30px;
+				border-radius:50%;
+				border:1px solid #ccc;
+			}
+			#c1{
+				background:#671C25;
+			}
+			#c2{
+				background:#E2D5C7;
+			}
+			#c3{
+				background:#202020;
+			}
+			#c4{
+				background:#FFFFFF;
+			}
+			#s{
+				border:1px solid #618BDF;
+				height:72px;
+				width:230px;
+				margin-bottom:10px;
+				border-radius:5%;
+				padding-top:18px;
+				text-align:center;
+			}
+			ul{
+				list-style:none;
+			}
+	    </style>
+	    
+	</head>
+
+	<body>
+		<!--导航条start-->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    	<div class="container">
+		    		<div class="row">
+		    			<div class='col-md-offset-1'>
+
+				    			<ul class="nav navbar-nav">
+				    				<li><img src='./2.png' height='50px'/></li>
+						      		<li><a href="#">在线商城</a></li>
+						      		<li><a href="">坚果 3</a></li>
+						      		<li><a href="">坚果 Pro 2</a></li>
+						      		<li><a href="">Smartisan OS</a></li>
+						     		<li><a href="">欢喜云</a></li>
+						      		<li><a href="">应用下载</a></li>
+						      		<li><a href="">官方论坛</a></li>
+						      		<li><button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal" id="one">
+						      			<span class="glyphicon glyphicon-user" >登录</span>
+						      		</button></li>
+					    			
+					    			<li><button type="button" class="btn btn-default btn-sm"  id="two">
+						      			<span class="glyphicon glyphicon-shopping-cart" ></span>
+						      		</button></li>
+					    		</ul>
+					    		</div>
+					</div>
+				</div>
+   
+		  	</div><!-- /.navbar-collapse -->
+		 </div>
+		</nav>
+		<!--导航条end-->
+	
+			<div class='container'>
+				<div class='row'>
+					<div class='col-md-5 col-xs-12'>
+						<div id="small">
+							<img src='./1.png' class="img-responsive" width='100%'>
+							<div id='move'></div>
+						</div>
+						<div id='big'>
+							<img id='bimg'src='./1.png' style='position:absolute;top:0px;'>
+						</div>
+					</div>
+
+					<div class='col-md-7 col-xs-12'>
+						<div><h3>坚果 Pro 2</h3></div>
+						<div>骁龙 ™ 660 处理器 · 1200 万 + 500 万像素双摄像头 · 3500mAh 大电池 · 18W 快速充电 · 人脸解锁 + 指纹解锁</div>
+						<hr/>
+						<div class='col-md-2 col-xs-6'>
+							<div><h5>促销活动</h5></div>
+						</div>
+						<div class='col-md-10 col-xs-12'>
+							<div><button id="btn">买赠</button>&nbsp;购坚果 Pro 、坚果 Pro 2 部分型号赠 69元自拍杆</div>
+							<br/>
+							<div><button id="btn">活动</button>&nbsp;初夏特卖 全场最高优惠 1199 元<a>进一步了解详情></a></div>
+							<hr/>
+						</div>
+						
+					
+						<div class='col-md-2 col-xs-6'>
+							<div><h5>颜色选择</h5></div>
+						</div>
+						
+						<div class='col-md-10 col-xs-12'>
+							<div class='col-md-4  col-xs-6'>								
+									<div id="c1"></div>酒红色
+							</div>
+
+							<div class='col-md-4 col-xs-8'>
+								<div id="c2"></div>浅金色
+							</div>
+
+							<div class='col-md-4 col-xs-8'>
+								<div id="c3"></div>炭黑色（细红线版）
+							</div>
+
+							<div class='col-md-4 col-xs-8'>
+								<div id="c4"></div>纯白色（限量版）
+							</div>
+
+						</div>
+
+						<div class='col-md-2 col-xs-6'>
+							<div><h5>容量选择</h5></div>
+						</div>
+						
+						<div class='col-md-10 col-xs-12'>
+							<hr/>
+							<div class='col-md-6 col-xs-12'>
+								<div id="s"><h4>4G + 32GB</h4></div>
+							</div>
+							<div class='col-md-6 col-xs-12'>
+								<div id="s"><h4>4G + 64GB</h4></div>
+							</div>
+							<div class='col-md-6 col-xs-12'>
+								<div id="s"><h4>6G + 64GB</h4></div>
+							</div>
+							<div class='col-md-6 col-xs-12'>
+								<div id="s"><h4>6G + 128GB</h4></div>
+							</div>
+							<div class='col-md-6 col-xs-12'>
+								<div id="s"><h4>6G + 256GB</h4></div>
+							</div>
+
+						</div>			
+
+					</div>
+
+				</div>
+				<hr/>
+				<div class='row'>
+					<div class="col-md-12 col-xs-12">
+						<h3>技术规格</h3>
+					</div>
+				</div>
+				<hr/>
+				<div class='row'>
+					<div class='col-md-3 col-xs-6'>
+						<div><h4>容量和内存</h4></div>
+						</div>
+						<div class='col-md-9 col-xs-12'>
+							<div class='col-md-2 col-xs-6'></div>
+							<div class='col-md-2 col-xs-6'>
+								<ul>
+									<li><strong>4 + 32 版</strong></li>
+									<li>32GB 机身存储</li>
+									<li>4GB 内存</li>
+								</ul>
+							</div>
+							<div class='col-md-2 col-xs-6'>
+								<ul>
+									<li><strong>4 + 64 版</strong></li>
+									<li>64GB 机身存储</li>
+									<li>4GB 内存</li>
+								</ul>
+							</div>
+							
+							<div class='col-md-2 col-xs-6'>
+								<ul>
+									<li><strong>6 + 64 版</strong></li>
+									<li>64GB 机身存储</li>
+									<li>6GB 内存</li>
+								</ul>
+							</div>
+
+							<div class='col-md-2 col-xs-6'>
+								<ul>
+									<li><strong>6 + 128 版</strong></li>
+									<li>128GB 机身存储</li>
+									<li>6GB 内存</li>
+								</ul>
+							</div>
+							<div class='col-md-2 col-xs-6'>
+								<ul>
+									<li><strong>6 + 256 版</strong></li>
+									<li>256GB 机身存储</li>
+									<li>6GB 内存</li>
+								</ul>
+								
+							</div>
+							
+						</div>
+					</div>
+				
+				<div class='row'>
+					<div class='col-md-3 col-xs-6'>
+						<div><h4>外观</h4></div>
+					</div>
+
+					<div class='col-md-9 col-xs-12'>
+						<hr/>
+						<table class="table table-bordered"">
+							<tr>
+								<td></td>
+								<td><center>4 + 32 版</center></td>
+								<td><center>4 + 64 版</center></td>
+								<td><center>6 + 64 版</center></td>
+								<td><center>6 + 128 版</center></td>
+								<td><center>6 + 256 版</center></td>
+							</tr>
+							<tr>
+								<td><strong><center>碳黑色（细红线版）</center></strong></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+							</tr>
+							<tr>
+								<td><strong><center>酒红色</center></strong></td>
+								<td></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+							</tr>
+							<tr>
+								<td><strong><center>浅金色</center></strong></td>
+								<td></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td><strong><center>纯白色（限量版）</center></strong></td>
+								<td></td>
+								<td></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td><center><font color='green' class="glyphicon glyphicon-ok-circle"></font></center></td>
+								<td></td>
+							</tr>
+							
+						  
+						</table>
+					</div>
+				</div><!--row end-->
+				
+				<div class='row'>
+					<div class='col-md-3 col-xs-6'>
+						<div><h4>机身尺寸和重量</h4></div>
+					</div>
+
+					<div class='col-md-9 col-xs-12'>
+						<hr/>
+						<img src='./3.png' class="img-responsive"/>
+					</div>
+				</div><!--row end-->
+
+				<div class='row'>
+					<div class='col-md-3 col-xs-6'>
+						<div><h4>处理器平台</h4></div>
+					</div>
+
+					<div class='col-md-9 col-xs-12'>
+						<hr/>
+						<ul>
+							<li>Qualcomm® 骁龙™ 660 八核处理器</li>
+							<br/>
+							<li>旗舰级 Kryo 架构</li>
+							<br/>
+							<li>单核最高主频可达 2.2GHz</li>
+							<br/>
+							<li>Adreno™ 512 GPU</li>
+						</ul>
+					</div>
+				</div><!--row end-->
+
+				<div class='row'>
+					<div class='col-md-3 col-xs-6'>
+						<div><h4>内置应用</h4></div>
+					</div>
+
+					<div class='col-md-9 col-xs-12'>
+						<hr/>
+						<img src='./4.png'/>
+					</div>
+				</div><!--row end-->
+
+			</div>
+			<script type="text/javascript" src="./jquery-1.8.3.min.js"></script>
+			<script type="text/javascript">
+			//绑定鼠标移动事件
+			$('#small').mouseover(function(e){
+				//显示放大的图片和像素div
+				$('#move').show();
+				$('#big').show();
+
+				//获取当前鼠标位置
+				var x=e.pageX;
+				var y=e.pageY;
+				//获取父级元素的top和left
+				var st=$('#small').offset().top;
+				var sl=$('#small').offset().left;
+				//计算新的Top和left;
+				
+				var newleft=x-sl-($('#move').width()/2);
+				var newtop=y-st-($('#move').height()/2);
+				
+				//计算最大的top和left
+				var maxleft=$('#small').width()-$('#move').width();
+				var maxtop=$('#small').height()-$('#move').height();
+				//检测越界
+				if(newtop<=0){
+					newtop=0;
+				}
+				if(newleft<=0){newleft=0;}
+				if(newtop>=maxtop){newtop=maxtop}
+				if(newleft>=maxleft){newleft=maxleft}
+
+				//设置
+				$('#move').css({top:newtop,left:newleft});
+
+				//计算比例
+				var xp=newleft/$('#small').width();
+				var yp=newtop/$('#small').height();
+
+				//计算移动距离
+				var nt=$('#bimg').width()*yp;
+				var nl=$('#bimg').height()*xp;
+				//设置右侧大图移动
+				$('#bimg').css({top:-nt,left:-nl});
+				$('#move').css({top:newtop,left:newleft});
+				//---------
+				//计算小像素块的宽高
+				var nw=($('#big').width()/$('#bimg').width())*$('#small').width();
+				var nh=($('#big').height()/$('#bimg').height())*$('#small').height();
+				//设置
+				$('move').css({width:nw,height:nh})
+
+			})
+			</script>
+			<!--放大镜end-->
+			<!--底部start-->
+		<br/>
+		<br/>
+		<hr/>
+		<footer class="footer ">
+	    	<div class="container">
+		    	<div class='row'>      
+		            <div class="col-md-9">		            	
+		            	
+		            	<div class='col-xs-4 col-md-2'>
+		              		<h4>订单服务</h4>
+		              			<ul class="list-unstyled">
+		                			<li><a href="">购买指南</a></li>
+		                			<li><a href="">支付方式</a></li>
+		                			<li><a href="/links/">运货政策</a></li>
+		              			</ul>
+	            		</div>
+
+			            <div class="col-xs-4 col-md-2">
+			            	<h4>服务支持</h4>
+			              	<ul class="list-unstyled">
+			                	<li><a href="">售后服务</a></li>
+			                	<li><a href="">维修门店</a></li>
+			                	<li><a href="">零售门店</a></li>
+			              	</ul>
+			            </div>
+
+
+			            <div class="col-xs-4 col-md-2">
+			            	<h4>自助服务</h4>
+			              	<ul class="list-unstyled">
+			                	<li><a href="">热点资讯</a></li>
+			                	<li><a href="">预约购买</a></li>
+			                	<li><a href="">订单物流</a></li>
+			              	</ul>
+			            </div>
+
+
+			            <div class="col-xs-4 col-md-2">
+			            	<h4>媒体中心</h4>
+			            	<ul class="list-unstyled">
+				                <li><a href="">新闻动态</a></li>
+				                <li><a href="">官方视频</a></li>
+				                <li><a href="">图片资源</a></li>
+			              	</ul>
+			            </div>
+
+
+			            <div class="col-xs-4 col-md-2">
+			            	<h4>关于公司</h4>
+			            	<ul class="list-unstyled">
+				                <li><a href="">公司简介</a></li>
+				                <li><a href="">加入我们</a></li>
+				                <li><a href="">联系我们</a></li>
+			              	</ul>
+			            </div>
+
+
+						<div class="col-xs-4 col-md-2">
+			            	<h4>关注我们</h4>
+			              	<ul class="list-unstyled">
+				                <li><a href="">新浪微博</a></li>
+				                <li><a href="">官方微信</a></li>
+				                <li><a href="">官方贴吧</a></li>
+			              	</ul>
+			            </div>	  
+	        	</div>
+
+				<div class='col-xs-12 col-md-3'>
+					
+						<p align="right"><strong><font size=5>4000-626-5666</font></strong></p>
+						<p align="right">周一至周日 9:00-18:00（仅收市话费）</p>
+						<p align="right"><button><a href=''>在线帮助</a></button></p>
+					
+				</div>
+	      	</div>	      
+	      	<hr/>
+
+	      	<div class="row footer-bottom">
+	        
+	        	<div><center>Copyright,Smartisan Digital Co, Ltd All Rights Reserved.北京锤子数码科技有限公司 |法律声明|隐私条款|开发者中心</center></div>
+	        	<div><center><a href=''>京ICP备11008151号&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010802014853</a></center></div>
+	       
+	      	</div>
+	    
+	  	</footer>
+		<!--底部end-->
+
+		
+	</body>
+</html>

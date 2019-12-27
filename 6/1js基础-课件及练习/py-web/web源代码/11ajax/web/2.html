@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button>异步</button>
+	<button>同步</button>
+
+	<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+	<script type="text/javascript">
+	//全局变量
+	var love = 100;
+
+	$('button').eq(0).click(function(){
+
+		//发送ajax请求
+		$.get('/cgi-bin/2.py',function(data){
+			love = 200;
+		})
+
+		//处理其它工作
+		alert(love);
+	})
+
+	$('button').eq(1).click(function(){
+		//ajax方法
+		$.ajax({
+			url:'/cgi-bin/2.py',//当前请求的url
+			type:'post',//当前请求的方式
+			data:{uid:100,uname:'zhangsan'},//当前请求携带的参数
+			//当请求成功时的回调函数
+			success:function(data){
+				console.log(data);
+				love = 200;
+			},
+			//当请求失败时的回调函数
+			error:function(){
+				alert('当前ajax请求失败');
+			},
+			//是否异步 true异步,false同步
+			async:false,
+			//请求超时时间,单位 毫秒,注意,设置请求超时时间,只有在异步时生效
+			timeout:2000
+		})
+
+		alert(love);
+	})
+
+
+	</script>
+</body>
+</html>

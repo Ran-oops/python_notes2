@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>fangdajing</title>
+		<style type='text/css'>
+			*{
+				margin:0px;
+				padding:0px;
+			}
+			#small{
+				width:400px;
+				height:400px;
+				margin-top:50px;
+				margin-left:10px;
+				position:absolute;
+			}
+			#move{
+				width:100px;
+				height:100px;
+				background:url('./images/bg.png');
+				position:absolute;
+				top:0px;
+				left:0px;
+				display:none;
+			}
+			#big{
+				width:400px;
+				height:400px;
+				margin-top:50px;
+				margin-left:420px;
+				overflow:hidden;
+				display:none;
+				position:absolute;
+
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="small">
+			<img src='./images/2.jpg' width='100%'>
+			<div id='move'></div>
+		</div>
+		<div id='big'>
+			<img id='bimg'src='./images/2.jpg' style='position:absolute;top:0px;left:-200px'>
+		</div>
+		<script type='text/javascript' src='jquery-1.8.3.min.js'></script>
+		<script type='text/javascript'>
+		//绑定鼠标移动事件
+		$('#small').mouseover(function(e){
+			//显示放大的图片和像素div
+			$('#move').show();
+			$('#big').show();
+
+			//获取当前鼠标位置
+			var x=e.pageX;
+			var y=e.pageY;
+			//获取父级元素的top和left
+			var st=$('#small').offset().top;
+			var sl=$('#small').offset().left;
+			//计算新的Top和left;
+			
+			var newleft=x-sl-($('#move').width()/2);
+			var newtop=y-st-($('#move').height()/2);
+			
+			//计算最大的top和left
+			var maxleft=$('#small').width()-$('#move').width();
+			var maxtop=$('#small').height()-$('#move').height();
+			//检测越界
+			if(newtop<=0){
+				newtop=0;
+			}
+			if(newleft<=0){newleft=0;}
+			if(newtop>=maxtop){newtop=maxtop}
+			if(newleft>=maxleft){newleft=maxleft}
+
+			//设置
+			$('#move').css({top:newtop,left:newleft});
+
+			//计算比例
+			var xp=newleft/$('#small').width();
+			var yp=newtop/$('#small').height();
+
+			//计算移动距离
+			var nt=$('#bimg').width()*yp;
+			var nl=$('#bimg').height()*xp;
+			//设置右侧大图移动
+			$('#bimg').css({top:-nt,left:-nl});
+			$('#move').css({top:newtop,left:newleft});
+			//---------
+			//计算小像素块的宽高
+			var nw=($('#big').width()/$('#bimg').width())*$('#small').width();
+			var nh=($('#big').height()/$('#bimg').height())*$('#small').height();
+			//设置
+			$('move').css({width:nw,height:nh})
+
+		})
+
+		</script>
+	</body>
+	</html>

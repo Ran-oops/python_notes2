@@ -1,0 +1,154 @@
+/*公共样式区*/
+div,ul,li,p,a,table,tr,td,input,form{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration:none;
+	color:#000;
+}
+.divs{
+	width: 100%;
+	height: 10px;
+}
+
+.all{
+	width: 1332px;
+	/*height: 2000px;*/
+	background: #F1F2F6;
+}
+
+/*头开始*/
+.header{
+	height: 140px;
+	background: #F1F2F6;
+}
+
+/*logo区*/
+
+.header .logos{
+	width: 960px;
+	height: 95px;
+	margin: 0 auto;
+	
+}
+
+.logos div{
+	width: 300px;
+	height: 100%;
+	float: left;
+}
+
+
+.logos .by img{
+	margin-top:40px;
+}
+
+.logos .form{
+	width: 360px;
+	
+}
+
+.logos .btn_z{
+	background: #F2A406;
+	border:none;
+}
+.logos table{
+	margin-top: 20px;
+	font-size:12px;
+}
+
+.form table tr{
+	padding: 15px;
+}
+.logos .form .btn{
+	width: 65px;
+	border-radius:3px;
+}
+
+.form .btn_img{
+	background: url(../img/button.png);
+}
+
+
+/*导航区*/
+.header .navs{
+	width: 100%;
+	background: #075991;
+}
+
+.navs .nav{
+	width: 960px;
+	margin: 0 auto;
+	height:45px;
+}
+
+.nav ul li{
+	list-style: none;
+	float: left;
+	width: 95px;
+	line-height: 45px;
+	text-align: center;
+
+}
+.nav .active{
+	background: #1170B2;
+}
+.nav li a{
+	color:#fff;
+	font-size: 14px;
+}
+
+.nav li a:hover{
+	color:yellow;
+}
+
+
+
+
+/*头结束*/
+
+
+/*内容开始*/
+.body{
+	width: 960px;
+	/*height: 1500px;*/
+	/*border:1px solid green;*/
+	margin: 0 auto;
+}
+
+.body .ss{
+	width: 100%;
+	height: 40px;
+	border:1px solid #D2E4F8;
+	border-top:none;
+	background: #f39;
+}
+
+/*展示区*/
+.body .banner{
+	
+	height: 325px;
+	background: #696;
+}
+
+.bantou{
+	height: 78px;
+	background: #939;
+}
+
+.ban-qu{
+	height: 280px;
+	background: #966;
+}
+
+/*内容结束*/
+
+
+/*尾部*/
+.footer{
+	width: 960px;
+	height: 180px;
+	background: #911;
+	margin: 0 auto;
+}

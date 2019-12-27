@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type='text/css'>
+			#abc{
+				width:200px;
+				height:100px;
+				background:#369;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<script type='text/javascript'>
+		//文档加载完毕事件 onload
+		window.onload=function(){
+			var a=document.getElementById('abc');
+			//console.log(a)
+			//style 设置行内样式
+			a.style.background='green';
+			//获取元素后绑定事件
+			a.onclick = function(){
+				alert('nihao')
+			}
+		}
+		
+		
+
+		</script>
+		<div id="abc">1</div>
+	</body>
+</html>

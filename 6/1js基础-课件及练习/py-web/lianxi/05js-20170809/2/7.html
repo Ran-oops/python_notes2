@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+	window.onload = function(){
+		var abc = document.getElementById('abc');
+		abc.innerHTML = "mylove";
+
+		 //设置背景字体
+		abc.style.background="#936";
+		abc.style.color="red";
+		abc.style.fontSize="30px";
+
+		var size = abc.style.fontSize;
+		// document.write(size);
+		console.log(size);
+
+		var co = abc.style.color;
+		console.log(co);
+
+		var bg = abc.style.background;
+		console.log(bg);
+
+
+		abc.onclick = function(){
+			abc.style.background='#963';
+		}
+
+
+
+	}
+	</script>
+	<div id="abc" style="width: 100px">love</div>
+</body>
+</html>

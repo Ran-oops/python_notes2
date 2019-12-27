@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浮动</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+		}
+
+		.clearfix:after,.clearfix:before{
+			content:"";
+			display:table;
+		}
+
+		.a,.b,.c{
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			
+			/*display:inline-block;*/
+			/*float: left;*/
+		}
+
+		.a{
+			background: blue;
+			display: inline-block;
+		}
+		.b{
+			background: red;
+			display: inline-block;
+		}
+		.c{
+			background: #FEFE37;
+			display: inline-block;
+			/*float: left;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="a">a</div>
+	<div class="b">b</div>
+	<div class="c">c</div>
+</body>
+</html>
